@@ -3,6 +3,7 @@
   
  # Team
    | **Nama** | **NIM** | **Role** |
+   | --- | --- | --- |
    | Alvina Maharani Hasibuan | G64190004 | **Project Manager** |
    | Andi Muhammad Alifikri | G64190005 | **Back- End** |
    | Emilia Syafitri | G64189001 | **Front- End** |
