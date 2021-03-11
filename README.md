@@ -19,6 +19,7 @@
     Figma
     MySql
     Apache Server
+    
   ## Hardware
     Laptop Dengan Spesifikasi 
     Processor : AMD Ryzen 5 4600HGraphics 
