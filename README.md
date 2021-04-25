@@ -1,4 +1,6 @@
 # Gagyok
+![agyok (5)](https://user-images.githubusercontent.com/65324407/114561585-e3c0f300-9c97-11eb-9a60-630cede5b925.png)
+
   Gagyok merupakan aplikasi website yang dibuat sebagai marketplace yang nantinya akan menjadi pasar untuk melakukan transaksi jual beli online produk Korea Selatan. Aplikasi ini akan di design sebagaimana marketplace pada umumnya. Aplikasi ini dirancang kepada pengguna yang ingin membeli produk Korea. Gagyok akan memiliki fitur yang bisa melihat informasi mengenai perkembangan Korea Selatan dan juga fitur tambahan yang mana pengguna dapat mendengarkan playlist lagu dari band yang ada di Korea.
   
  # Team
@@ -7,7 +9,7 @@
    | Alvina Maharani Hasibuan | G64190004 | **Project Manager** |
    | Andi Muhammad Alifikri | G64190005 | **Back- End** |
    | Emilia Syafitri | G64189001 | **Front- End** |
-   | Felliany Dwisusanta | G64190113 | **UI/ UX Designer** |
+   | Feliany Dwisusanta | G64190113 | **UI/ UX Designer, Front- End** |
  
 
    
