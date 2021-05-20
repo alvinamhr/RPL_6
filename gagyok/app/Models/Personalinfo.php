@@ -5,12 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Product extends Model
+class Personalinfo extends Model
 {
     use HasFactory;
-
-    public function orderdetail() 
-    {
-        return $this->hasMany('OrderDetail','barang_id', 'id');
-    }
 }

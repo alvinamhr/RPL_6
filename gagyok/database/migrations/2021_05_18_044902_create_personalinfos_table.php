@@ -14,6 +14,7 @@ class CreatePersonalinfosTable extends Migration
     public function up()
     {
         Schema::create('personalinfos', function (Blueprint $table) {
+            $table->id();
             $table->bigInteger('user_id')->references('id')->on('users');
             $table->string('phone_number');
             $table->string('user_email')->references('email')->on('users');

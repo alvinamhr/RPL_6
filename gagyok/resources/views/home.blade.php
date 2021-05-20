@@ -1,6 +1,6 @@
 <!-- FUNGSI EXTENDS DIGUNAKAN UNTUK ME-LOAD MASTER LAYOUTS YANG ADA, KARENA INI ADALAH HALAMAN HOME MAKA KITA ME-LOAD LAYOUTS ADMIN.BLADE.PHP -->
 <!-- KETIKA MELOAD FILE BLADE, MAKA EKSTENSI .BLADE.PHP TIDAK PERLU DITULISKAN -->
-@extends('layouts.admin')
+@extends('layouts.app')
 
 <!-- TAG YANG DIAPIT OLEH SECTION('TITLE') AKAN ME-REPLACE @YIELD('TITLE') PADA MASTER LAYOUTS -->
 @section('title')
@@ -42,7 +42,7 @@
                                     <div class="callout callout-primary">
                                         <small class="text-muted">Perlu Dikirim</small>
                                         <br>
-                                        <strong class="h4">0</strong>
+                                        <strong class="h4">APA 0</strong>
                                     </div>
                                 </div>
                                 <div class="col-md-3">
