@@ -14,10 +14,18 @@ class CreateOrdersTable extends Migration
     public function up()
     {
         Schema::create('orders', function (Blueprint $table) {
+<<<<<<< HEAD
             $table->bigIncrements('id'); 
             $table->integer('user_id');   
-            $table->date('tanggal');
-            $table->integer('total_price');   
+            $table->date('order_date');
+            $table->string('invoice')->unique();
+            $table->string('customer_id');
+
+            $table->string('customer_name');
+            $table->string('customer_phone');
+            $table->string('customer_address');
+            $table->unsignedBigInteger('district_id');
+            $table->integer('subtotal');
             $table->timestamps();
         });
     }

@@ -37,12 +37,12 @@
 
     <footer class="app-footer">
         <div>
-            <a href="https://vinajelek">Gagyok</a>
-            <span>&copy; 2021 Vina badut.</span>
+            <a href="https://gagyok">Gagyok</a>
+            <span>&copy; 2021 Vina.</span>
         </div>
         <div class="ml-auto">
             <span>Powered by</span>
-            <a href="https://vinajelek">Vina Jelek</a>
+            <a href="https://gagyok">Vina</a>
         </div>
     </footer>
     

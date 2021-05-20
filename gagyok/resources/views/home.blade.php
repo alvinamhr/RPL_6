@@ -1,13 +1,15 @@
+<<<<<<< HEAD
 <!-- FUNGSI EXTENDS DIGUNAKAN UNTUK ME-LOAD MASTER LAYOUTS YANG ADA, KARENA INI ADALAH HALAMAN HOME MAKA KITA ME-LOAD LAYOUTS ADMIN.BLADE.PHP -->
 <!-- KETIKA MELOAD FILE BLADE, MAKA EKSTENSI .BLADE.PHP TIDAK PERLU DITULISKAN -->
 @extends('layouts.app')
+=======
+@extends('layouts.admin')
+>>>>>>> 5f6f0b876ec20226b1ac755b71ea292e76bdeb68
 
-<!-- TAG YANG DIAPIT OLEH SECTION('TITLE') AKAN ME-REPLACE @YIELD('TITLE') PADA MASTER LAYOUTS -->
 @section('title')
     <title>Dashboard</title>
 @endsection
 
-<!-- TAG YANG DIAPIT OLEH SECTION('CONTENT') AKAN ME-REPLACE @YIELD('CONTENT') PADA MASTER LAYOUTS -->
 @section('content')
 <main class="main">
     <ol class="breadcrumb">
