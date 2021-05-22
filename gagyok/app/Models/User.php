@@ -41,8 +41,9 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    // satu user bisa banyak pesanan
     public function order() 
     {
-        return $this->hasMany('App\Order','user_id', 'id');
+        return $this->hasMany('App\Models\Order','user_id', 'id');
     }
 }

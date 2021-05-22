@@ -21,7 +21,7 @@ class CreateProductsTable extends Migration
             $table->string('product_stock');
             $table->string('product_desc',);
             $table->string('product_category',);
-            $table->double('product_discount',11, 2);
+            $table->double('product_discount',11, 2)->nullable();
             $table->foreign('product_category')->references('category_name')->on('categories');
             $table->timestamps();
         });

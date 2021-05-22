@@ -9,13 +9,15 @@ class OrderDetail extends Model
 {
     use HasFactory;
 
+    //  satu detail pesanan dihubungkan ke satu barang
     public function product()
     {
-        return $this->belongsTo('App\Product','product_id', 'id');
+        return $this->belongsTo('App\Models\Product','product_id', 'product_id');
     }
 
+    // satu detail pesanan dihubungkan ke satu pesanan
     public function order() 
     {
-        return $this->belongsTo('App\Order','order_id', 'id');
+        return $this->belongsTo('App\Models\Order','order_id', 'id');
     }
 }

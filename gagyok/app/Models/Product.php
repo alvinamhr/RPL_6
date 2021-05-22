@@ -9,8 +9,15 @@ class Product extends Model
 {
     use HasFactory;
 
-    public function orderdetail() 
+    // satu produk id boleh banyak pesanan detail
+    public function order_detail() 
     {
-        return $this->hasMany('OrderDetail','barang_id', 'id');
+        return $this->hasMany('App\Models\OrderDetail','product_id', 'id');
+    }
+
+    // satu produk hanya boleh satu kategori
+    public function category() 
+    {
+        return $this->belongsTo('App\Models\Category','product_category', 'category_name');
     }
 }
