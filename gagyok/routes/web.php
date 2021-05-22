@@ -15,7 +15,7 @@ use App\Http\Controllers\Auth\LoginController;
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('welcome');
 });
 
 // Authentication
@@ -23,4 +23,5 @@ Route::get('/', function () {
 // Route::post('/login', [LoginController::class, 'store']);
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
+Route::get('/category', [App\Http\Controllers\CategoryController::class, 'index'])->name('category');
