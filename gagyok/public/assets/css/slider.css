@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@700&display=swap');
+
+/* Frame 2 */
+/* .slider {
+    position: absolute;
+    width: 2168px;
+    height: 910px;
+    left: 69px;
+    top: 505px;
+} */
+
+/* Rectangle 29 */
+.bg-slider {
+    display: flex;
+    position: absolute;
+    width: 95%;
+    height: 450px;
+    margin-left: 2.5%;
+    margin-top: 12.5%;
+
+    background: #BFB8DA;
+    border-radius: 5px;
+
+    /*pengaturan durasi lama tampil gambar bisa di atur di bawah ini*/
+	animation-name:slider;
+	animation-duration:16s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count:infinite;
+	-webkit-animation-name:slider;
+	-webkit-animation-duration:16s;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-iteration-count:infinite;
+	-moz-animation-name:slider;
+	-moz-animation-duration:16s;
+	-moz-animation-timing-function: ease-in-out;
+	-moz-animation-iteration-count:infinite;
+	-o-animation-name:slider;
+	-o-animation-duration:16s;
+	-o-animation-timing-function: ease-in-out;
+	-o-animation-iteration-count:infinite;
+}
+
+
+/* 0b249b5cf13b709eed9162cf64e804b9-removebg-preview 1 */
+.img-slider {
+    display: flex;
+    position: absolute;
+    width: 50%;
+    margin-left: 5%;
+    margin-top: -17.5%;
+}
+
+/* 23s07spk984rgrnaia21v210204-CHILL_1_-removebg-previewSREZ 1 */
+.img2-slider {
+    display: flex;
+    position: absolute;
+    width: 20%;
+    margin-left: 70%;
+    margin-top: -15%;
+}
+
+/* 3CE SOFT MATTE LIPSTICK #CHILL MOVE */
+.capt-slider {
+    position: absolute;
+    width: 25%;
+    margin-left: 67.5%;
+    margin-top: 5%;
+
+    font-family: 'Playfair Display SC', serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 34px;
+    text-align: center;
+
+    color: #843D3E;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* terbaru */
+.title-slider {
+    position: absolute;
+    margin-left: 67.5%;
+    margin-top: -17.5%;
+
+    font-family: 'Playfair Display SC', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 68px;
+    line-height: 160px;
+
+    color: #843D3E;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* klik disini */
+.btn-slider {
+    position: absolute;
+    width: 186px;
+    height: 34px;
+    margin-left: 73%;
+    margin-top: 12.5%;
+
+    font-family: 'Playfair Display SC', serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 32px;
+    text-align: center;
+
+    color: #843D3E;
+    background: #FFFFFF;
+    border: transparent;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+}
