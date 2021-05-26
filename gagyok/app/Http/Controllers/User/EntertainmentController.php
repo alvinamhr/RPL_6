@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\User;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class CategoryController extends Controller
+class EntertainmentController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -23,7 +24,7 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        return view('user.category');
+        return view('user.entertainment.index');
     }
 
     /**
@@ -55,7 +56,7 @@ class CategoryController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('user.entertainment.show');
     }
 
     /**

@@ -188,29 +188,39 @@ a:active {
 /* warna link */
 .topnav a {
     float: left;
-  color: #6670AD;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  font-family: Cormorant SC;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 17px;
-  line-height: 64px;
+    color: #6670AD;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: 'Cormorant SC', serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 64px;
+}
+
+.topnav a:link {
+    background-color: rgb(255, 255, 255);
+    color: #6670AD;
+}
+.topnav a:visited {
+    background-color: rgb(255, 255, 255);
+    color: #6670AD;
 }
 
 /* ganti warna link ketika mouse lewat*/
 .topnav a:hover {
     background-color: rgb(255, 255, 255);
-    color: black;
+    color: #C35258;
 }
 
 /* ganti warna link yang aktif */
-.topnav a.active {
+.topnav a:active {
     text-decoration-line: underline;
-    text-decoration-color: rgba(102, 112, 173, 0.8);
     text-decoration-thickness: 4px;
+    text-decoration-color: #6670AD;
+    animation-timing-function: linear;
 }
 
 .nav-links-btn {
@@ -325,7 +335,7 @@ a:active {
     cursor: pointer;
 }
 
-.chart {
+.cart {
     display: flex;
 
     position: absolute;
@@ -356,28 +366,211 @@ a:active {
     cursor: pointer;
 }
 
-footer {
-    display: flex;
-    flex-wrap: wrap;
-    flex-shrink: 0;
-    align-items: center;
-    justify-content: flex-end;
-    padding: 0.75rem;
-    border-top: 1px solid #dee2e6;
-    border-bottom-right-radius: calc(0.3rem - 1px);
-    border-bottom-left-radius: calc(0.3rem - 1px);
- }
+.section-footer {
+    background-color: transparent;
+    width: 100%;
+    height: 170px;
+}
 
-.footer > * {
-    margin: 0.25rem;
+footer{
+	position: fixed;
+	bottom: 0;
+}
+
+@media (max-height:800px){
+	footer { position: static; }
+	header { padding-top:40px; }
+}
+
+
+.footer-distributed{
+	background-color: #6670AD;
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+	padding: 50px 50px 60px 50px;
+	margin-top: 80px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+	width: 30%;
+}
+
+.footer-distributed h3{
+	font-family: 'Cormorant SC', serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 85px;
+
+    color: #C35258;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	margin: 0;
+}
+
+/* The company logo */
+
+.footer-distributed .footer-left img{
+	width: 50%;
+}
+
+.footer-distributed h3 span{
+	color:  #e0ac1c;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+	color:  #ffffff;
+	margin: 20px 0 12px;
+}
+
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+	color:  #8f9296;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+	width: 35%;
+}
+
+
+.footer-distributed .footer-center i{
+	background-color:  #33383b;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+	vertical-align: middle;
+	margin:0;
+}
+
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+	color:  #e0ac1c;
+	text-decoration: none;;
+}
+
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+	width: 30%;
+}
+
+.footer-distributed .footer-company-about{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+	display: block;
+	color:  #ffffff;
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+	margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+/* Here is the code for Responsive Footer */
+/* You can remove below code if you don't want Footer to be responsive */
+
+
+@media (max-width: 880px) {
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+	}
+
+}
+
+.section {
+    padding: 180px 0;
+    position: relative;
+}
+
+.section-two {
+    padding: 60px 0;
+    position: relative;
 }
 
 .home-kategori {
     display: flex;
-
-    position: absolute;
-    margin-top: 50%;
-    margin-left: 2.5%;
 }
 
 .container-catalog {
@@ -385,7 +578,7 @@ footer {
     height: 320px;
     padding: 0px;
     background-color: transparent;
-    margin-left: 10px;
+    margin-left: 20px;
     margin-top: 50px;
 
     box-sizing: border-box;
@@ -396,15 +589,12 @@ footer {
 
 .home-hiburan {
     display: flex;
-
-    position: absolute;
-    margin-top: 110%;
-    margin-left: 2.5%;
+    margin-top: 5%;
 }
 
 .text-section {
     position: absolute;
-    width: 100%;
+    width: 97.5%;
     
     font-family: 'Cormorant SC', serif;
     font-style: normal;
@@ -419,6 +609,8 @@ footer {
     color: #6670AD;
     
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    margin-left: 10px;
 }
 
 .home-hiburan-row {
@@ -503,4 +695,241 @@ footer {
     justify-self: end;
     margin-right: 5%;
     margin-top: 4%;
+}
+
+.container-kategori {
+    width: 1160px;
+    height: 380px;
+    border: 5px transparent;
+    margin-left: 100px;
+    padding: 5px;
+    box-sizing: border-box;
+
+    background-color: transparent;
+    display:flex;
+}
+
+.container-best-seller {
+    width: 915px;
+    height: 370px;
+    padding: 0px auto;
+    background-color: transparent;
+    margin-top: 50px;
+
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.section-title-kategori {
+    position: absolute;
+    width: 170px;
+    margin-top: 100%;
+
+    font-family: 'Playfair Display', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+
+    color: #6670AD;
+    background: #FFFFFF;
+    border: none;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.section-title-kategori:link {
+    color: #6670AD;
+    text-decoration: none;
+}
+
+.section-title-kategori:visited {
+    color: #6670AD;
+}
+
+.section-title-kategori:hover {
+    color: #C35258;
+}
+
+.section-title-kategori:active {
+    color: #C35258;
+}
+
+.bg-kategori {
+    display: flex;
+    position: absolute;
+    width: 170px;
+    height: 170px;
+
+    background: #BFB8DA;
+    border-radius: 5px;
+}
+
+.best-seller {
+    position: absolute;
+    margin-top: -1%;
+
+    font-family: 'Cormorant SC', serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 78px;
+    text-align: center;
+
+    color: #6670AD;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.best-seller-box {
+    display: flex;
+    position: relative;
+
+    width: 220px;
+    height: 370px;
+
+    border: 2px solid #6670AD;
+    box-sizing: border-box;
+
+    filter: drop-shadow(0px 10px 15px rgba(0, 0, 0, 0.25));
+    border-radius: 5px;
+}
+
+.merk-kategori {
+    position: absolute;
+    width: 220px;
+    margin-top: 210px;
+
+    font-family: 'Cormorant SC', serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 58px;
+    text-align: center;
+
+    color: #514E4F;
+    background-color: transparent;
+    border: none;
+    
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.nama-produk {
+    position: absolute;
+    width: 220px;
+    margin-top: 260px;
+
+    font-family: 'Playfair Display', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+
+    color: #C35258;
+    background-color: transparent;
+    border: none;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.price {
+    position: absolute;
+    width: 220px;
+    margin-top: 300px;
+
+    font-family: 'Playfair Display', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 53px;
+    text-align: center;
+
+    color: #000000;
+    background-color: transparent;
+    border: none;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+
+.pic-product {
+    position: relative;
+
+    width: 220px;
+    height: 210px;
+}
+
+.line {
+    position: absolute;
+    width: 1240px;
+    height: 2px;
+    margin-top: 450px;
+    margin-left: -150%;
+
+    background: #9A9A9A;;
+    opacity: 0.5;
+    border: 1px solid #6670AD;
+}
+
+.container-trending {
+    width: 550px;
+    height: 420px;
+    padding: 0px auto;
+    background: transparent;
+    
+    margin-top: 10%;
+    margin-left: 50%;
+
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.date {
+    position: absolute;
+    margin-left: 29%;
+
+    font-family: 'Playfair Display', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 27px;
+    text-align: right;
+
+    color: #C35258;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+
+.bg-hiburan {
+    width: 100%;
+    height: 67%;
+    padding: 5px auto;
+    
+    margin-top: 7.5%;
+
+    background: #BFB8DA;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+
+.caption-trending {
+    position: absolute; 
+    width: 550px;
+    margin-top: 25%;
+
+    font-family: 'Playfair Display', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 40px;
+    text-align: center;
+
+    color: #C35258;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }

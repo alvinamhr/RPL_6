@@ -26,17 +26,7 @@
     </head>
 
     <body>
-        <!-- Loader -->
-        <div id="preloader">
-            <div id="status">
-                <div class="spinner">
-                    <div class="double-bounce1"></div>
-                    <div class="double-bounce2"></div>
-                </div>
-            </div>
-        </div>
-        <!-- Loader -->
-        
+     
         <!-- Navbar STart -->
         <div class="nav-container">
             <nav class="navbar navbar-expand-lg fixed-top bg-white shadow">
@@ -48,7 +38,7 @@
                 </div>
                 <ul class="nav-menu topnav">
                     <li><a href="/home" class="nav-links">BERANDA</a></li>
-                    <li><a href="/category" class="nav-links">CATEGORY</a></li>
+                    <li><a href="/category" class="nav-links">KATEGORI</a></li>
                     <li><a href="/entertainment" class="nav-links">HIBURAN</a></li>
                     <li class="dropdown">
 							<a href="/profile" class="dropdown-toggle" data-toggle="dropdown"><img src="{{asset('assets/image/user.jpg')}}" class="img-circle" alt="Avatar"  width="20px" height="20px"> <span>{{auth()->user()->name}}</span></a>
@@ -67,8 +57,8 @@
                             <input type="button" name="search_button" id="search_button" class="search">
                         </form>
                     </div>
-                    <div class="chart">
-                        <a class="navbar-brand" href="{{ url('/home') }}">
+                    <div class="cart">
+                        <a class="navbar-brand" href="/cart">
                             <img src="{{ asset('assets/icons/keranjang.svg') }}">
                         </a>
                     </div>
@@ -84,9 +74,55 @@
         @yield('content')        
 
         <!-- Footer Start -->
-        <footer>            
-                <p>© Copyright Gagyok 2021. Developed by Victory.</p>
-        </footer>
+        <footer class="footer-distributed">
+
+			<div class="footer-left">
+            <img src="{{ asset('assets/image/logo.png') }}" alt="Gagyok">
+				<h3>TENTANG GAGYOK</h3>
+
+				<p class="footer-links">
+					<a href="/home">Beranda</a>
+					|
+					<a href="/category">Kategori</a>
+					|
+					<a href="/entertainment">Hiburan</a>
+					|
+					<a href="/profile">Profile</a>
+				</p>
+
+				<p class="footer-company-name">© Copyright Gagyok 2021. Developed by Victory.</p>
+			</div>
+
+			<div class="footer-center">
+				<div>
+					<i class="fa fa-map-marker"></i>
+					  <p><span>309 - Rupa Solitaire,
+						 Bldg. No. A - 1, Sector - 1</span>
+						Mahape, Navi Mumbai - 400710</p>
+				</div>
+
+				<div>
+					<i class="fa fa-phone"></i>
+					<p>+91 22-27782183</p>
+				</div>
+				<div>
+					<i class="fa fa-envelope"></i>
+					<p><a href="mailto:support@eduonix.com">support@eduonix.com</a></p>
+				</div>
+			</div>
+			<div class="footer-right">
+				<p class="footer-company-about">
+					<span>About the company</span>
+					We offer training and skill building courses across Technology, Design, Management, Science and Humanities.</p>
+				<div class="footer-icons">
+					<a href="#"><i class="fa fa-facebook"></i></a>
+					<a href="#"><i class="fa fa-twitter"></i></a>
+					<a href="#"><i class="fa fa-instagram"></i></a>
+					<a href="#"><i class="fa fa-linkedin"></i></a>
+					<a href="#"><i class="fa fa-youtube"></i></a>
+				</div>
+			</div>
+		</footer>
 
         <!-- javascript -->
         <script src="{{ asset('app-assets/vendors/js/vendors.min.js') }}"></script>
