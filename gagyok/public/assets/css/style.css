@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@700&display=swap');
 
@@ -836,14 +836,14 @@ footer{
 }
 
 .container-cart {
-    width: 1210px;
-    height: 950px;
+    width: 1260px;
+    height: 650px;
     border: 5px transparent;
     margin-left: 50px;
     padding: 5px;
     box-sizing: border-box;
 
-    background-color: burlywood;
+    background-color: transparent;
     display:flex;
 }
 
@@ -855,15 +855,16 @@ footer{
 
 .row-cart {
     position: absolute;
-    width: 1200px;
-    height: 26%;
+    width: 1250px;
+    height: 35%;
     margin-top: 7%;
     background: rgba(191, 184, 218, 0.3);
 }
+
 .ringkasan-belanja-cart {
     position: absolute;
-    width: 1200px;
-    height: 26%;
+    width: 1250px;
+    height: 14%;
     margin-top: 36%;
     background: rgba(191, 184, 218, 0.3);
 }
@@ -897,9 +898,10 @@ footer{
 }
 
 .btn-hapus-cart {
-    width: 25%;
+    width: 20%;
     height: 5%;
     margin-top: 80%;
+    margin-left: 20%;
 
     background: rgba(255, 0, 0, 0.75);
     border: 1px solid #000000;
@@ -1003,4 +1005,52 @@ input[type=number]::-webkit-outer-spin-button {
 .produk-cart {
     margin-left: -210px;
     margin-top: 215px;
+}
+
+.ringkasan-text-cart {
+    margin: 10px 0 0 20px;
+    font-family: 'Playfair Display', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 21px;
+    line-height: 23px;
+    text-align: left;
+
+    color: #C35258;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.total-harga-cart {
+    margin-left: 20px;
+    font-family: 'Playfair Display', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 19px;
+    line-height: 76px;
+
+    color: #C35258;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.btn-checkout {
+    position: absolute;
+    width: 150px;
+    height: 38px;
+    margin-top: 5%;
+
+    background: #6670AD;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    
+    font-family: 'Playfair Display', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 21px;
+    line-height: 23px;
+
+    color: #FFFFFF;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
