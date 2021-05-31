@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Category;
+use App\Models\Product;
+
 
 class CategoryController extends Controller
 {
@@ -21,10 +24,38 @@ class CategoryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    
     public function index()
     {
-        return view('user.category');
+        $categories = Product::all()->groupBy('product_category');
+        // dd($categories);
+        return view('user.fikri.categoryfikri', compact('categories'));
     }
+
+    public function detailCategory($categoryName)
+    {
+        $categories = Product::where('product_category', $categoryName)->get();
+        // dd($namaCategory);
+        $namaCategory = Category::where('category_name', $categoryName)->first();
+        // dd($namaCategory);
+        return view('user.fikri.categoryDetailFikri', compact('categories', 'namaCategory'));
+    }
+
+
+    public function detailProduk($id)
+    {
+        $product = Product::where('product_id', $id)->first();
+        // dd($product);
+        return view('user.fikri.produkDetailFikri', compact('product'));
+    }
+
+
+
+    // public function detail()
+    // {
+    //     g 
+    // }
 
     /**
      * Show the form for creating a new resource.

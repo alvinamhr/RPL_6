@@ -17,6 +17,7 @@ class CreateOrdersTable extends Migration
             $table->bigIncrements('id'); 
             $table->integer('user_id');   
             $table->date('order_date');
+            $table->string('status');
             $table->integer('subtotal');
             $table->timestamps();
         });

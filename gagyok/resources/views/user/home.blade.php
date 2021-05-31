@@ -34,65 +34,40 @@
     <span class="section text-section">KATEGORI</span>
     <div class="row row-cols-3">
             <div class="container-catalog">
-                <div class="col">
-                    <div class="align-items-center bg-home">
-                        <img src="{{ asset('assets/image/Beranda/Kategori/1.makeup.png') }}" width="300px" height="300px" alt="...">
-                        <button type="button" class="caption-home">make up</button>
+                
+                {{-- kategori --}}
+                @foreach ($categories as $category)
+
+                    <div class="col-md-4" style="width: 25rem; height: 25rem;" >
+                        <div class="align-items-center bg-home" style="margin-left:5%">
+                            <img src="{{ url('assets/image/Kategori') }}/{{$category->category_image}}" width="300px" height="300px" alt="...">
+                            <a href="{{url('category')}}/{{$category->category_name}}" type="button" class="caption-home">{{$category->category_name}}</a>
+                        </div>
                     </div>
-                </div>
-                <div class="col">
-                    <div class="align-items-center bg-home" style="margin-left:5%">
-                        <img src="{{ asset('assets/image/Beranda/Kategori/2.skincare.png') }}" width="300px" height="300px" alt="...">
-                        <button type="button" class="caption-home">skincare</button>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="align-items-center bg-home" style="margin-left:10%">
-                        <img src="{{ asset('assets/image/Beranda/Kategori/3.mode.png') }}" width="300px" height="300px" alt="...">
-                        <button type="button" class="caption-home">mode</button>
-                    </div>
-                </div>
-            </div>
-            <div class="container-catalog">
-                <div class="col">
-                    <div class="align-items-center bg-home">
-                        <img src="{{ asset('assets/image/Beranda/Kategori/4.elektronik.png') }}" width="300px" height="300px" alt="...">
-                        <button type="button" class="caption-home">elektronik</button>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="align-items-center bg-home" style="margin-left:5%">
-                        <img src="{{ asset('assets/image/Beranda/Kategori/5.makanan.png') }}" width="300px" height="300px" alt="...">
-                        <button type="button" class="caption-home">makanan</button>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="align-items-center bg-home" style="margin-left:10%">
-                        <img src="{{ asset('assets/image/Beranda/Kategori/6.koleksipenggemar.png') }}" width="300px" height="300px" alt="...">
-                        <button type="button" class="caption-home">koleksi penggemar</button>
-                    </div>
-                </div>
+
+                @endforeach
             </div>
     </div>
+    
 </div>
 <div class="home-hiburan">
     <span class="section text-section">HIBURAN</span>
     <div class="row row-cols-3">
         <div class="container-catalog">
-            <div class="col">
+            <div class="col" style="margin-left:50px">
                 <div class="align-items-center bg-home">
                     <img src="{{ asset('assets/image/Beranda/Hiburan/1.k-pop.png') }}" width="300px" height="300px" alt="...">
                     <button type="button" class="caption-home">k-pop</button>
                 </div>
             </div>
             <div class="col">
-                <div class="align-items-center bg-home" style="margin-left:5%">
+                <div class="align-items-center bg-home">
                     <img src="{{ asset('assets/image/Beranda/Hiburan/2.k-drama.png') }}" width="300px" height="300px" alt="...">
                     <button type="button" class="caption-home">k-drama</button>
                 </div>
             </div>
             <div class="col">
-                <div class="align-items-center bg-home" style="margin-left:10%">
+                <div class="align-items-center bg-home">
                     <img src="{{ asset('assets/image/Beranda/Hiburan/3.k-food.png') }}" width="300px" height="300px" alt="...">
                     <button type="button" class="caption-home">k-food</button>
                 </div>

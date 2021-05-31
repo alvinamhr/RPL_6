@@ -24,4 +24,14 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
-Route::get('/category', [App\Http\Controllers\CategoryController::class, 'index'])->name('category');
+Route::get('/category', [App\Http\Controllers\CategoryController::class, 'index'])->name('category'); //ini untuk produk kategory keseluruhan
+
+Route::get('category/{product_category}', [App\Http\Controllers\CategoryController::class, 'detailCategory']); //ini untuk menampilkan isi produk apa saja dalam satu kategori
+
+Route::get('produk/{product_id}', [App\Http\Controllers\CategoryController::class, 'detailProduk']); //ini untuk detail produk sebelum dipesan
+
+Route::post('order/{product_id}', [App\Http\Controllers\OrderController::class, 'keranjang']); //ini untuk memasukkan keranjang
+
+Route::get('checkout', [App\Http\Controllers\OrderController::class, 'checkout']); //ini untuk masuk ke halaman checkout
+
+
