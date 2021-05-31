@@ -48,26 +48,8 @@
 								<li><a href="#"><i class="lnr lnr-cog"></i> <span>Settings</span></a></li>
 								<li><a href="/logout"><i class="lnr lnr-exit"></i> <span>Logout</span></a></li>
 							</ul>
-						</li>
+					</li>
                 </ul>
-                <div class="nav-btn">
-                    <div class="search">
-                        <form action="" method="get">
-                            <input type="text" name="search_text" id="search_text" placeholder="Cari...."/>
-                            <input type="button" name="search_button" id="search_button" class="search">
-                        </form>
-                    </div>
-                    <div class="cart">
-                        <a class="navbar-brand" href="/cart">
-                            <img src="{{ asset('assets/icons/keranjang.svg') }}">
-                        </a>
-                    </div>
-                    <div class="notif">
-                        <a class="navbar-brand" href="{{ url('/home') }}">
-                            <img src="{{ asset('assets/icons/notifikasi.svg') }}">
-                        </a>
-                    </div>
-                </div>
             </nav>
         </div>
     
@@ -99,7 +81,7 @@
 
         <!-- Main Js -->
         <script src="{{ asset('js/app.js') }}"></script>
-        <script src="{{ asset('js/jquery.js')"></script>
-            <script src="{{ asset('js/plugins.js')"></script>
+        <script src="{{ asset('js/jquery.js') }}"></script>
+        <script src="{{ asset('js/plugins.js') }}"></script>
     </body>
 </html>

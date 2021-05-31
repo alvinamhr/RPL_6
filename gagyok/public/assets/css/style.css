@@ -384,163 +384,64 @@ footer{
 
 
 .footer-distributed{
-	background-color: #6670AD;
+	background-color: #BFB8DA;
 	box-sizing: border-box;
 	width: 100%;
-	text-align: left;
 	font: bold 16px sans-serif;
-	padding: 50px 50px 60px 50px;
+	padding: 10px;
 	margin-top: 80px;
 }
 
 .footer-distributed .footer-left,
-.footer-distributed .footer-center,
 .footer-distributed .footer-right{
 	display: inline-block;
-	vertical-align: top;
+	vertical-align: bottom;
 }
 
 /* Footer left */
-
 .footer-distributed .footer-left{
+    margin-top: 2.5%;
+    margin-left: 5%;
 	width: 30%;
+}
+
+.footer-distributed .gagyok {
+    font-family: 'Cormorant SC', serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 38px;
+    line-height: 43px;
+
+    color: #6670AD;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin: 0;
 }
 
 .footer-distributed h3{
 	font-family: 'Cormorant SC', serif;
     font-style: normal;
     font-weight: bold;
-    font-size: 36px;
-    line-height: 85px;
+    font-size: 24px;
+    line-height: 35px;
 
     color: #C35258;
 
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-	margin: 0;
+	margin-bottom: 20%;
 }
 
-/* The company logo */
-
-.footer-distributed .footer-left img{
-	width: 50%;
-}
-
-.footer-distributed h3 span{
-	color:  #e0ac1c;
-}
-
-/* Footer links */
-
-.footer-distributed .footer-links{
-	color:  #ffffff;
-	margin: 20px 0 12px;
-}
-
-.footer-distributed .footer-links a{
-	display:inline-block;
-	line-height: 1.8;
-	text-decoration: none;
-	color:  inherit;
-}
-
-.footer-distributed .footer-company-name{
-	color:  #8f9296;
-	font-size: 14px;
-	font-weight: normal;
-	margin: 0;
-}
-
-/* Footer Center */
-
-.footer-distributed .footer-center{
+/* Footer Right */
+.footer-distributed .footer-right{
 	width: 35%;
 }
 
-
-.footer-distributed .footer-center i{
-	background-color:  #33383b;
-	color: #ffffff;
-	font-size: 25px;
-	width: 38px;
-	height: 38px;
-	border-radius: 50%;
-	text-align: center;
-	line-height: 42px;
-	margin: 10px 15px;
-	vertical-align: middle;
-}
-
-.footer-distributed .footer-center i.fa-envelope{
-	font-size: 17px;
-	line-height: 38px;
-}
-
-.footer-distributed .footer-center p{
+.footer-distributed .footer-right p{
 	display: inline-block;
-	color: #ffffff;
+	color: rgba(81, 78, 79, 1);
 	vertical-align: middle;
 	margin:0;
 }
-
-.footer-distributed .footer-center p span{
-	display:block;
-	font-weight: normal;
-	font-size:14px;
-	line-height:2;
-}
-
-.footer-distributed .footer-center p a{
-	color:  #e0ac1c;
-	text-decoration: none;;
-}
-
-
-/* Footer Right */
-
-.footer-distributed .footer-right{
-	width: 30%;
-}
-
-.footer-distributed .footer-company-about{
-	line-height: 20px;
-	color:  #92999f;
-	font-size: 13px;
-	font-weight: normal;
-	margin: 0;
-}
-
-.footer-distributed .footer-company-about span{
-	display: block;
-	color:  #ffffff;
-	font-size: 18px;
-	font-weight: bold;
-	margin-bottom: 20px;
-}
-
-.footer-distributed .footer-icons{
-	margin-top: 25px;
-}
-
-.footer-distributed .footer-icons a{
-	display: inline-block;
-	width: 35px;
-	height: 35px;
-	cursor: pointer;
-	background-color:  #33383b;
-	border-radius: 2px;
-
-	font-size: 20px;
-	color: #ffffff;
-	text-align: center;
-	line-height: 35px;
-
-	margin-right: 3px;
-	margin-bottom: 5px;
-}
-
-/* Here is the code for Responsive Footer */
-/* You can remove below code if you don't want Footer to be responsive */
-
 
 @media (max-width: 880px) {
 
@@ -932,4 +833,174 @@ footer{
     color: #C35258;
 
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.container-cart {
+    width: 1210px;
+    height: 950px;
+    border: 5px transparent;
+    margin-left: 50px;
+    padding: 5px;
+    box-sizing: border-box;
+
+    background-color: burlywood;
+    display:flex;
+}
+
+.header-cart {
+    width: 100%;
+    height: 70px;
+    background: rgba(191, 184, 218, 0.5);
+}
+
+.row-cart {
+    position: absolute;
+    width: 1200px;
+    height: 26%;
+    margin-top: 7%;
+    background: rgba(191, 184, 218, 0.3);
+}
+.ringkasan-belanja-cart {
+    position: absolute;
+    width: 1200px;
+    height: 26%;
+    margin-top: 36%;
+    background: rgba(191, 184, 218, 0.3);
+}
+
+.header-text-cart {
+    margin-left: 5px;
+    font-family: 'Cormorant SC', serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 20px;
+    text-align: center;
+    margin-top: 20px;
+
+    color: #000000;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.box-product-cart {
+    position: absolute;
+    width: 214px;
+    height: 280px;
+
+    background: #FFFFFF;
+    border: 2px solid #6670AD;
+    box-sizing: border-box;
+
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+}
+
+.btn-hapus-cart {
+    width: 25%;
+    height: 5%;
+    margin-top: 80%;
+
+    background: rgba(255, 0, 0, 0.75);
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 5px;
+    filter: drop-shadow(0px 10px 15px rgba(0, 0, 0, 0.25));
+
+    font-family: 'Cormorant SC', serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 20px;
+
+    color: #FFFFFF;
+    text-shadow: 0px 10px 15px rgba(0, 0, 0, 0.25);
+}
+
+.text-harga-cart {
+    font-family: 'Playfair Display', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 21px;
+    text-align: center;
+
+    color: #000000;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+input[type="number"] {
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+  
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+  
+.number-input {
+    border: 1px solid rgb(0, 0, 0);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    display: inline-flex;
+}
+  
+.number-input,
+.number-input * {
+    box-sizing: border-box;
+}
+  
+.number-input button {
+    outline:none;
+    -webkit-appearance: none;
+    background-color: white;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    cursor: pointer;
+    margin: 0;
+    position: relative;
+}
+  
+.number-input button:before,
+.number-input button:after {
+    display: inline-block;
+    position: absolute;
+    content: '';
+    width: 1rem;
+    height: 2px;
+    background-color: #212121;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    transform: translate(-50%, -50%);
+}
+
+.number-input button.plus:after {
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+  
+.number-input input[type=number] {
+    font-family: 'Playfair Display', sans-serif;
+    max-width: 4rem;
+    padding: .5rem;
+    border: solid rgb(116, 116, 116);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-width: 0 1px;
+    font-size: 1.5rem;
+    height: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.merk-cart {
+    margin-left: -210px;
+    margin-top: 170px;
+}
+
+.produk-cart {
+    margin-left: -210px;
+    margin-top: 215px;
 }

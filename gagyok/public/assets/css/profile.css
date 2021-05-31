@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;500;600;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin-top: 2em;
+}
+
+h1{
+    font-style: normal;
+    font-weight: 800;
+    font-family: 'Cormorant SC', serif;
+}
+
+h2{
+    font-style: normal;
+    font-weight: 800;
+    font-family: 'Cormorant SC', serif;
+}
+
+.tabel-biodata{
+    width: 40%;
+    margin-left: 50px;
+    font-family: 'Cormorant SC', serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.ubah-bio {
+    position: absolute;
+    
+    font-family: 'Playfair Display', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 23px;
+
+    color: #C35258;
+    text-shadow: 0px 10px 15px rgba(0, 0, 0, 0.25);
+}
+
+.address-button{
+    background-color: #41CC66;
+    border: 3px solid #41CC66;
+    border-radius: 5px;
+    box-shadow: 0.4px 0.4px grey;
+    height: 2.5em;
+    width: 10em;
+    margin-right: 0.5em;
+}
+
+.address-button a {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Playfair Display', serif;
+    font-weight: bolder;
+    font-size: 17px;
+}
+
+.change-address {
+    background-color: rgba(255, 0, 0, 1);
+    border: 3px solid rgba(255, 0, 0, 1);
+    border-radius: 5px;
+    box-shadow: 0.4px 0.4px grey;
+    height: 2.5em;
+    width: 10em;
+}
+
+.change-address a {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.container-alamat{
+    border: 1px solid #6670AD;
+    border-radius: 10px;
+    background-color: rgba(191, 184, 218, 0.3);
+    height: 190px;
+    width: 700px;
+}
+
+.container-foto{
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 312px;
+    width: 240px;
+}
+
+.photo-button{
+    border: 1px solid grey;
+    background-color: white;
+    height: 3em;
+    width: 15em;
+    border-radius: 5px;
+    box-shadow: 1px 1px grey;
+    font-size: 15px;
+    margin: .5em .4em ;
+}
+
+.photo-button a{
+    color: black;
+    font-family: 'Cormorant SC', serif;
+    font-weight: bold;
+    font-size: 1.3em;
+    text-decoration: none;
+    
+}
+
+.taro-foto{
+    height: 220px;
+    width: 225px;
+    margin: 6px;
+    background: #C4C4C4;
+
+    font-family: 'Cormorant SC', serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 26px;
+
+    color: #000000;
+    text-align: center;
+}
+
+.foto-bio{
+    display: flex;
+}
+
+.nama{
+    line-height: 3em;
+}
+
+.email{
+    line-height: 3em;
+}
+
+.notel{
+    line-height: 3em;
+}
+
+h6{
+    color: #000;
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.isi-alamat{
+    color: #000;
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+    margin: 1em;
+}
+
+.end-gagyok{
+    height: 15em;
+    width: 100em;
+    background-color: rgba(191, 184, 218, 0.3);
+}
+
+.tentang{
+    font-family: 'Cormorant SC', serif;
+    margin: 2em;
+    margin-top: 2em;
+}
+
+.atas{
+    color: #6670AD;
+    padding-top: 2em;
+    text-shadow: 0.4px 0.4px grey;
+    font-weight: bolder;
+    font-size: 25px;
+}
+
+.tentang a{
+    color: rgba(195, 82, 88, 1);
+    text-shadow: 0.4px 0.4px grey;
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 23px;
+}
+
+.container-profile {
+    width: 1160px;
+    height: 120%;
+    margin: 2.5% 0 0 5%;
+    padding: 0px auto;
+    box-sizing: border-box;
+
+    background-color: transparent;
+    display:flex;
+}
+
+.input-image {
+    margin: 5px;
+    width: 228px;
+    height: 60px;
+    font-family: 'Cormorant SC', serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    
+    color: #000000;
+    background-color: transparent;
+
+    border: 2px solid #000000;
+    box-sizing: border-box;
+
+    filter: drop-shadow(0px 10px 15px rgba(0, 0, 0, 0.25));
+    border-radius: 5px;
+}
+
+.input-image:hover {
+    color: #C35258;
+}
