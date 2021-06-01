@@ -20,4 +20,5 @@ Route::get('/entertainment', [App\Http\Controllers\User\EntertainmentController:
 Route::get('/entertainment/{entertainment}', [App\Http\Controllers\User\EntertainmentController::class, 'show']);
 Route::get('/cart', [App\Http\Controllers\User\CartController::class, 'index'])->name('cart');
 Route::get('/profile', [App\Http\Controllers\User\ProfileController::class, 'index'])->name('profile');
+Route::get('/checkout', [App\Http\Controllers\User\CheckoutController::class, 'index'])->name('checkout');
 

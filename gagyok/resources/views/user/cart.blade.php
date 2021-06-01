@@ -75,7 +75,7 @@
                     </div>
                 </div>
                 <div class="col-md-auto">
-                    <div class="total-harga-cart" style="font-weight: bold; margin-top: 30%" >
+                    <div class="total-harga-cart" style="font-weight: bold; margin-top: 30%">
                         <span>IDR Harga</span>
                     </div>
                 </div>
