@@ -10,6 +10,7 @@ use Carbon\Carbon;
 use Alert;
 
 
+
 class OrderController extends Controller
 {
     /**
@@ -27,12 +28,17 @@ class OrderController extends Controller
 
     public function index()
     {
-        //
+        return view('user.fikri.profilFikri');
     }
 
+    public function detailProduk($id)
+    {
+        $product = Product::where('product_id', $id)->first();
+        // dd($product);
+        return view('user.fikri.produkDetailFikri', compact('product'));
+    }
 
-
-// Fungsi MASUKKAN KERANJANG untuk Mengambil data dati user saat user menekan tambahkan ke keranjang
+// Fungsi MASUKKAN KERANJANG untuk Mengambil data dari user saat user menekan tambahkan ke keranjang
     public function keranjang(Request $request, $idBarang)
     {
 
@@ -91,14 +97,12 @@ class OrderController extends Controller
         $order -> subtotal = $order -> subtotal + ($product->product_price*$request->order_qty);
         $order -> update();
         // dd($order_detail); ////ini untuk mengecek apakah querry order sudah betul atau tidak
-
-        
         
         Alert::success('SUKSES', 'Telah Ditambahkan Ke Keranjang'); //mau pake sweet alert tapi udah dicoba ribuan kali tetep ngak mau muncul alertnya
         // sweet alertnya dari link https://realrashid.github.io/sweet-alert/
 
-
-        return redirect('category');
+        
+        return redirect('checkout');
     }
 
 
@@ -109,6 +113,21 @@ class OrderController extends Controller
         $order_details = OrderDetail::where('order_id', $orders->id)->get();
         // dd($order_details, $order);
         return view('user.fikri.checkoutFikri', compact('orders', 'order_details'));
+    }
+
+    // FUNGSI DELETE ISI KERANJANG
+    public function delete($id)
+    {
+        $order_detail = OrderDetail::where('id', $id)->first();
+
+        $order = Order::where('id', $order_detail->order_id)->first();
+        $order->subtotal =$order->subtotal - $order_detail->price;
+        $order -> update();
+
+        $order_detail->delete();
+
+        Alert::error ('SUKSES', 'Telah Dihapus dari Keranjang'); 
+        return redirect('checkout');
     }
 
 

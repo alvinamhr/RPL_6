@@ -28,10 +28,14 @@ Route::get('/category', [App\Http\Controllers\CategoryController::class, 'index'
 
 Route::get('category/{product_category}', [App\Http\Controllers\CategoryController::class, 'detailCategory']); //ini untuk menampilkan isi produk apa saja dalam satu kategori
 
-Route::get('produk/{product_id}', [App\Http\Controllers\CategoryController::class, 'detailProduk']); //ini untuk detail produk sebelum dipesan
+Route::get('produk/{product_id}', [App\Http\Controllers\OrderController::class, 'detailProduk']); //ini untuk detail produk sebelum dipesan
 
 Route::post('order/{product_id}', [App\Http\Controllers\OrderController::class, 'keranjang']); //ini untuk memasukkan keranjang
 
 Route::get('checkout', [App\Http\Controllers\OrderController::class, 'checkout']); //ini untuk masuk ke halaman checkout
+
+Route::delete('checkout/{id}', [App\Http\Controllers\OrderController::class, 'delete']); // ini untuk melakukan delete isi keranjang
+
+Route::get('profil', [App\Http\Controllers\OrderController::class, 'index']);
 
 

@@ -2,7 +2,7 @@
 
 @section('content')
 
-{{-- Nanti dihapus aja ini cuman buat konten yang dibawahnya ngak ketutupan sama navbar gatau navbarnyya gimana supaya ngak menutup konten--}}
+{{-- Nanti dihapus aja ini cuman buat konten yang dibawahnya ngak ketutupan sama navbar, gatau gimana supaya navbarnya ngak menutup konten--}}
 <div class="container" style.margin-top ="200px">            
     <br>
     <br>
@@ -56,7 +56,7 @@
                                         <td align="right">Rp. {{ number_format($order_detail->product->product_price) }}</td>
                                         <td align="right">Rp. {{ number_format($order_detail->price) }}</td>
                                         <td>
-                                            <form action="{{ url('checkout')}}" method="post">
+                                            <form action="{{ url('checkout')}}/{{$order_detail->id}}" method="post">
                                                 @csrf
                                                 {{ method_field('DELETE') }}
                                                 <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Anda yakin akan menghapus data ?');"><i class="fa fa-trash"></i></button>

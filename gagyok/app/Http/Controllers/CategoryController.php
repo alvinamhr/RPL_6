@@ -43,12 +43,7 @@ class CategoryController extends Controller
     }
 
 
-    public function detailProduk($id)
-    {
-        $product = Product::where('product_id', $id)->first();
-        // dd($product);
-        return view('user.fikri.produkDetailFikri', compact('product'));
-    }
+    
 
 
 

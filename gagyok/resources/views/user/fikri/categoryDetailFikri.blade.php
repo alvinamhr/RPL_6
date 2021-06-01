@@ -3,7 +3,7 @@
 @section('content')
 
 
-{{-- Nanti dihapus aja ini cuman buat card yang dibawahnya ngak ketutupan sama navbar gatau navbarnyya gimana supaya ngak menutup konten--}}
+{{-- Nanti dihapus aja ini cuman buat card yang dibawahnya ngak ketutupan sama navbar gatau navbarnyya gimana supaya ngak menutup konten--}}    
 <div class="container" style.margin-top ="200px">            
     <br>
     <br>
