@@ -1,13 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\User;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Category;
-use App\Models\Product;
 
-
-class CategoryController extends Controller
+class EntertainmentController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -24,33 +22,10 @@ class CategoryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-
-    
     public function index()
     {
-        $categories = Product::all()->groupBy('product_category');
-        // dd($categories);
-        return view('user.fikri.categoryfikri', compact('categories'));
+        return view('user.entertainment.index');
     }
-
-    public function detailCategory($categoryName)
-    {
-        $categories = Product::where('product_category', $categoryName)->get();
-        // dd($namaCategory);
-        $namaCategory = Category::where('category_name', $categoryName)->first();
-        // dd($namaCategory);
-        return view('user.fikri.categoryDetailFikri', compact('categories', 'namaCategory'));
-    }
-
-
-    
-
-
-
-    // public function detail()
-    // {
-    //     g 
-    // }
 
     /**
      * Show the form for creating a new resource.
@@ -81,7 +56,7 @@ class CategoryController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('user.entertainment.show');
     }
 
     /**

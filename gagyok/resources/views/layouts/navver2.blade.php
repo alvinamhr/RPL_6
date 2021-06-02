@@ -12,10 +12,6 @@
 
         <!-- Bootstrap -->
         <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        
-        
-
         <!-- BEGIN: Vendor CSS-->
         <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/vendors/css/vendors.min.css') }}">
         <!-- END: Vendor CSS-->
@@ -27,23 +23,10 @@
         <link href="{{ asset('assets/css/slider.css') }}" rel="stylesheet" type="text/css" />
         <link href="{{ asset('css/colors/default.css') }}" rel="stylesheet">
 
-        {{-- Font awesome --}}
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     </head>
 
     <body>
-        
-        <!-- Loader -->
-        <div id="preloader">
-            <div id="status">
-                <div class="spinner">
-                    <div class="double-bounce1"></div>
-                    <div class="double-bounce2"></div>
-                </div>
-            </div>
-        </div>
-        <!-- Loader -->
-        
+     
         <!-- Navbar STart -->
         <div class="nav-container">
             <nav class="navbar navbar-expand-lg fixed-top bg-white shadow">
@@ -65,35 +48,8 @@
 								<li><a href="#"><i class="lnr lnr-cog"></i> <span>Settings</span></a></li>
 								<li><a href="/logout"><i class="lnr lnr-exit"></i> <span>Logout</span></a></li>
 							</ul>
-						</li>
+					</li>
                 </ul>
-                <div class="nav-btn">
-                    <div class="search">
-                        <form action="" method="get">
-                            <input type="text" name="search_text" id="search_text" placeholder="Cari...."/>
-                            <input type="button" name="search_button" id="search_button" class="search">
-                        </form>
-                    </div>
-
-                    <div class="chart">
-                        {{-- dibawah ini untuk menampilkan jumlah orderan pada navbar yang ada didalam keranjang belanja--}}
-                        @php
-                            $main_order = \App\Models\Order::where('user_id',Auth::user()->id)->where('status', 0)->first();
-                            $notif = \App\Models\OrderDetail::where('order_id', $main_order->id)->count();
-                        @endphp
-                        <a class="nav-link" href="{{ url('/checkout') }}">
-                            <img src="{{ asset('assets/icons/keranjang.svg') }}">
-                            <span class="badge badge-danger">{{$notif}}</span>
-                        </a>
-                        {{-- sampai disini notifnya --}}
-                    </div>
-                    
-                    <div class="notif">
-                        <a class="navbar-brand" href="{{ url('/home') }}">
-                            <img src="{{ asset('assets/icons/notifikasi.svg') }}">
-                        </a>
-                    </div>
-                </div>
             </nav>
         </div>
     
@@ -125,14 +81,7 @@
 
         <!-- Main Js -->
         <script src="{{ asset('js/app.js') }}"></script>
-        <script src="{{ asset('js/jquery.js')}}"></script>
-        <script src="{{ asset('js/plugins.js')}}"></script>
-        
-        {{-- Sweet Alert --}}
-        {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> --}}
-        {{-- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> --}}
-        @include('sweetalert::alert')
-        
-        
+        <script src="{{ asset('js/jquery.js') }}"></script>
+        <script src="{{ asset('js/plugins.js') }}"></script>
     </body>
 </html>
