@@ -5,7 +5,7 @@ namespace App\Http\Controllers\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class ProfileController extends Controller
+class AddressController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -24,7 +24,7 @@ class ProfileController extends Controller
      */
     public function index()
     {
-        return view('user.profile.index');
+        return view('user.profile.alamat.empty');
     }
 
     /**
@@ -34,7 +34,7 @@ class ProfileController extends Controller
      */
     public function create()
     {
-        //
+        return view('user.profile.alamat.create');
     }
 
     /**
@@ -67,7 +67,7 @@ class ProfileController extends Controller
      */
     public function edit($id)
     {
-        return view('user.profile.edit');
+        return view('user.profile.alamat.edit');
     }
 
     /**

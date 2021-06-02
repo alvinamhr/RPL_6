@@ -5,7 +5,7 @@ namespace App\Http\Controllers\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class ProfileController extends Controller
+class NotifikasiController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -24,7 +24,7 @@ class ProfileController extends Controller
      */
     public function index()
     {
-        return view('user.profile.index');
+        return view('user.notification');
     }
 
     /**
@@ -67,7 +67,7 @@ class ProfileController extends Controller
      */
     public function edit($id)
     {
-        return view('user.profile.edit');
+        //
     }
 
     /**

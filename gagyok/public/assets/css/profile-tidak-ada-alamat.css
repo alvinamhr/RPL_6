@@ -8,46 +8,53 @@
 }
 
 body{
-    margin-top: 2em;
+    margin-top: 10em;
 }
 
-h1{
+h4{
+    padding-left: 30px;
     font-style: normal;
-    font-weight: 800;
+    font-weight: 600;
     font-family: 'Cormorant SC', serif;
+    color: #6670AD;
+    text-shadow: 0.4pt 0.4pt grey;
 }
 
 h2{
+    padding-left: 60px;
+    font-style: normal;
+    font-weight: 800;
+    font-family: 'Cormorant SC', serif;
+
+}
+
+h3{
+    padding-left: 60px;
     font-style: normal;
     font-weight: 800;
     font-family: 'Cormorant SC', serif;
 }
 
 .tabel-biodata{
-    width: 100%;
+    width: 40%;
     margin-left: 50px;
     font-family: 'Cormorant SC', serif;
     font-weight: bold;
     font-size: 20px;
 }
 
-.ubah-bio {
-    position: absolute;
-    
-    font-family: 'Playfair Display', sans-serif;
-    font-style: normal;
+.ubah-bio a {
+    color:  rgba(195, 82, 88, 1);
+    text-decoration: none;
+    font-family: 'Playfair Display', serif;
     font-weight: bold;
-    font-size: 21px;
-    line-height: 23px;
-
-    color: #C35258;
-    text-shadow: 0px 10px 15px rgba(0, 0, 0, 0.25);
+    text-shadow: 1px 1px grey;
 }
 
 .address-button{
     background-color: #41CC66;
     border: 3px solid #41CC66;
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: 0.4px 0.4px grey;
     height: 2.5em;
     width: 10em;
@@ -62,29 +69,15 @@ h2{
     font-size: 17px;
 }
 
-.change-address {
-    background-color: rgba(255, 0, 0, 1);
-    border: 3px solid rgba(255, 0, 0, 1);
-    border-radius: 5px;
-    box-shadow: 0.4px 0.4px grey;
-    height: 2.5em;
-    width: 10em;
-}
 
-.change-address a {
-    color: #fff;
-    text-decoration: none;
-    font-family: 'Playfair Display', serif;
-    font-size: 17px;
-    font-weight: bold;
-}
 
 .container-alamat{
     border: 1px solid #6670AD;
     border-radius: 10px;
     background-color: rgba(191, 184, 218, 0.3);
-    height: 190px;
-    width: 700px;
+    height: 3.8em;
+    width: 12em;
+    margin-left: 60px;
 }
 
 .container-foto{
@@ -115,23 +108,22 @@ h2{
 }
 
 .taro-foto{
-    height: 220px;
-    width: 225px;
-    margin: 6px;
-    background: #C4C4C4;
-
-    font-family: 'Cormorant SC', serif;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 26px;
-
-    color: #000000;
-    text-align: center;
+    border: 1px solid grey;
+    height: 13.9em;
+    width: 13.9em;
+    margin: .8em .4em ;
+    border-radius: 5px;
+    box-shadow: 1px 1px grey;
 }
 
 .foto-bio{
     display: flex;
+    padding-left: 60px;
+}
+
+.buttons{
+    padding-left: 60px;
+
 }
 
 .nama{
@@ -186,54 +178,4 @@ h6{
     text-decoration: none;
     font-weight: bolder;
     font-size: 23px;
-}
-
-.container-profile {
-    width: 1160px;
-    height: 120%;
-    margin: 2.5% 0 0 5%;
-    padding: 0px auto;
-    box-sizing: border-box;
-
-    background-color: transparent;
-    display:flex;
-}
-
-.input-image {
-    margin: 5px;
-    width: 228px;
-    height: 60px;
-    font-family: 'Cormorant SC', serif;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 22px;
-    
-    color: #000000;
-    background-color: transparent;
-
-    border: 2px solid #000000;
-    box-sizing: border-box;
-
-    filter: drop-shadow(0px 10px 15px rgba(0, 0, 0, 0.25));
-    border-radius: 5px;
-}
-
-.input-image:hover {
-    color: #C35258;
-}
-
-.container-alamat-noadd{
-    border: 1px solid #6670AD;
-    border-radius: 10px;
-    background-color: rgba(191, 184, 218, 0.3);
-    height: 3.8em;
-    width: 12em;
-}
-
-.isi-alamat-noadd {
-    color: #000;
-    font-family: 'Playfair Display', serif;
-    font-size: 17px;
-    margin: 1em;
 }
