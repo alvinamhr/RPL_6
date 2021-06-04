@@ -3,14 +3,9 @@
 namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
-use App\Models\Product;
-use App\Models\Order;
-use App\Models\OrderDetail; 
-use Auth;
-use Carbon\Carbon;
 use Illuminate\Http\Request;
 
-class CartController extends Controller
+class AddressController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -29,13 +24,8 @@ class CartController extends Controller
      */
     public function index()
     {
-        $orders = Order::where('user_id', Auth::user()->id)->where('status',0)->first(); 
-        $order_details = OrderDetail::where('order_id', $orders->id)->get();
-        // dd($order_details, $order);
-        return view('user.cart', compact('orders', 'order_details'));
-        // return view('user.cart');
+        return view('user.profile.alamat.empty');
     }
-
 
     /**
      * Show the form for creating a new resource.
@@ -44,7 +34,7 @@ class CartController extends Controller
      */
     public function create()
     {
-        //
+        return view('user.profile.alamat.create');
     }
 
     /**
@@ -77,7 +67,7 @@ class CartController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('user.profile.alamat.edit');
     }
 
     /**
@@ -98,15 +88,8 @@ class CartController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function delete($id)
+    public function destroy($id)
     {
-        $order_detail = OrderDetail::where('id', $id)->first();
-
-        $order = Order::where('id', $order_detail->order_id)->first();
-        $order->subtotal =$order->subtotal - $order_detail->price;
-        $order -> update();
-
-        $order_detail->delete();
-        return redirect('cart');
+        //
     }
 }

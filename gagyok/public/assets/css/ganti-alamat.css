@@ -1,0 +1,153 @@
+.container-form-alamat .overlay {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.container-isi-form{
+    color:  rgba(195, 82, 88, 1);
+    text-decoration: none;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    position: absolute;
+    top: 19%;
+    left: 30%;
+    background: rgba(191, 184, 218, 1);
+    width: 30em;
+    height: 25em;
+    z-index: 2;
+    text-align: left;
+    padding: 1em;
+    box-sizing: border-box;
+    box-shadow:  1px 1px #6670AD;
+    text-shadow:  0.5px 0.5px grey;
+    border-radius: 10px;
+    border: 1px solid #6670AD;
+}
+
+.judul{
+    text-align: center;
+}
+
+.input-nama-alamat{
+    border: 1px solid #6670AD;
+    border-radius: 8px;
+    width: 32.7em;
+    height: 2em;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    color: rgba(195, 82, 88, 1);
+    margin-bottom: 12px;
+    box-shadow: 1px 1px grey;
+}
+
+.input-nama{
+    border: 1px solid #6670AD;
+    border-radius: 8px;
+    width: 20.7em;
+    height: 2em;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    color: rgba(195, 82, 88, 1);
+    margin-bottom: 12px;
+    box-shadow: 1px 1px grey;
+}
+
+.input-nomor{
+    border: 1px solid #6670AD;
+    border-radius: 8px;
+    width: 11em;
+    height: 2em;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    color: rgba(195, 82, 88, 1);
+    margin-bottom: 12px;
+    box-shadow: 1px 1px grey;
+}
+
+.input-kota-kec{
+    border: 1px solid #6670AD;
+    border-radius: 8px;
+    width: 21.7em;
+    height: 2em;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    color: rgba(195, 82, 88, 1);
+    margin-bottom: 12px;
+    box-shadow: 1px 1px grey;
+}
+
+.input-kodepos{
+    border: 1px solid #6670AD;
+    border-radius: 8px;
+    width: 10em;
+    height: 2em;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    color: rgba(195, 82, 88, 1);
+    margin-bottom: 12px;
+    box-shadow: 1px 1px grey;
+}
+
+.input-alamat{
+    border: 1px solid #6670AD;
+    border-radius: 8px;
+    width: 32.7em;
+    height: 2em;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    color: rgba(195, 82, 88, 1);
+    margin-bottom: 10px;
+    box-shadow: 1px 1px grey;
+}
+
+.submits{
+    margin-left: 25%;
+}
+
+.submit-ubah{
+    border: 1px solid rgba(65, 204, 102, 1);
+    background-color: rgba(65, 204, 102, 1);
+    box-shadow: 0.7px 0.7px grey;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    font-size: 1em;
+    color: #fff;
+    border-radius: 5px;
+    height: 2.3em;
+    width: 7em;
+}
+
+.submit-batal{
+    border: 1px solid rgba(255, 0, 0, 1);
+    background-color: rgba(255, 0, 0, 1);
+    box-shadow: 1px 1px grey;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    font-size: 1em;
+    text-shadow: 1px 1px grey;
+    color: #fff;
+    border-radius: 5px;
+    height: 2.3em;
+    width: 7em;
+    margin-right: 5px;
+}
+
+.kota-pos{
+    display: flex;
+}
+
+.bagian-kodepos{
+    margin-left: 9.5px;
+}
+.nama-nomor{
+    display: flex;
+}
+
+.bagian-nomor{
+    margin-left: 9.5px;
+}
