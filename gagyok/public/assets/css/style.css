@@ -856,7 +856,7 @@ footer{
 .row-cart {
     position: absolute;
     width: 1250px;
-    height: 35%;
+    height: auto;
     margin-top: 7%;
     background: rgba(191, 184, 218, 0.3);
 }

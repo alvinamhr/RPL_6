@@ -22,7 +22,7 @@ class CartController extends Controller
         $orders = Order::where('user_id', Auth::user()->id)->where('status',0)->first(); 
         $order_details = OrderDetail::where('order_id', $orders->id)->get();
         // dd($order_details, $order);
-        return view('user.fikri.checkoutFikri', compact('orders', 'order_details'));
+        return view('user.cart', compact('orders', 'order_details'));
         // return view('user.cart');
     }
 
@@ -96,8 +96,6 @@ class CartController extends Controller
         $order -> update();
 
         $order_detail->delete();
-
-        Alert::error ('SUKSES', 'Telah Dihapus dari Keranjang'); 
-        return redirect('checkout');
+        return redirect('cart');
     }
 }

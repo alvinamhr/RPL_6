@@ -81,7 +81,7 @@
                             $main_order = \App\Models\Order::where('user_id',Auth::user()->id)->where('status', 0)->first();
                             $notif = \App\Models\OrderDetail::where('order_id', $main_order->id)->count();
                         @endphp
-                        <a class="nav-link" href="{{ url('/checkout') }}">
+                        <a class="nav-link" href="{{ url('/cart') }}">
                             <img src="{{ asset('assets/icons/keranjang.svg') }}">
                             <span class="badge badge-danger">{{$notif}}</span>
                         </a>

@@ -30,12 +30,10 @@
         </button>
     </div>
 </section>
-
-{{-- KATEGORI --}}
 <section class="section">
     <div class="container-catalog position-relative">
         <div class="home-kategori">
-            <span class="section text-section">KATEGORI</span>
+            <span class="text-section">KATEGORI</span>
             <div class="row row-cols-3">
                 <div class="container-catalog"> 
                     {{-- kategori --}}
@@ -45,17 +43,16 @@
                             <div class="align-items-center bg-home" style="margin-left:5%">
                                 <img src="{{ url('assets/image/Kategori') }}/{{$category->category_image}}" width="300px" height="300px" alt="...">
                                 {{-- <a href="{{url('category')}}/{{$category->category_name}}" type="button" class="caption-home">{{$category->category_name}}</a> --}}
-                                <button href="{{url('category')}}/{{$category->category_name}}" type="button" class="caption-home">make up</button>
+                                <button onclick="window.location='{{url('category')}}/{{$category->category_name}}'" type="button" class="caption-home">{{$category->category_name}}</button>
                             </div>
                         </div>
                     @endforeach
-                </div>
+                </div> 
             </div>
+
         </div>
     </div>
 </section>
-
-{{-- HIBURAN --}}
 <section class="section">
     <div class="container-catalog position-relative">
         <div class="home-hiburan">

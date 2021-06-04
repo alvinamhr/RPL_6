@@ -102,7 +102,7 @@ class OrderController extends Controller
         // sweet alertnya dari link https://realrashid.github.io/sweet-alert/
 
         
-        return redirect('checkout');
+        return redirect('cart');
     }
 
 

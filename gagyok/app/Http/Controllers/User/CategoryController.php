@@ -28,7 +28,7 @@ class CategoryController extends Controller
     {
         $categories = Product::all()->groupBy('product_category');
         // dd($categories);
-        return view('user.fikri.categoryfikri', compact('categories'));
+        return view('user.category.index', compact('categories'));
     }
 
     /**
@@ -64,7 +64,7 @@ class CategoryController extends Controller
         // dd($namaCategory);
         $namaCategory = Category::where('category_name', $categoryName)->first();
         // dd($namaCategory);
-        return view('user.fikri.categoryDetailFikri', compact('categories', 'namaCategory'));
+        return view('user.category.show', compact('categories', 'namaCategory'));
         // return view('user.category.show');
     }
 
