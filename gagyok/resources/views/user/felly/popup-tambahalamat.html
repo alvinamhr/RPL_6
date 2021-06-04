@@ -5,13 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>tambah alamat</title>
-<<<<<<< HEAD:gagyok/resources/views/user/felly/popup-tambahalamat.html
-    <link rel="stylesheet" href="tambah-alamat.css">
-=======
     <link href="{{ asset('assets/css/tambah-alamat.css') }}" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/vendors/css/vendors.min.css') }}">
     <script src="{{ asset('app-assets/vendors/js/vendors.min.js') }}"></script>
->>>>>>> 9dbdf89fca3646afc1067f066316d147e477ea9f:gagyok/resources/views/user/profile/alamat/create.blade.php
 </head>
 <body>
     <div class="container-form-alamat">

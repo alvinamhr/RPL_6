@@ -78,9 +78,7 @@
                         <span>IDR {{ number_format($orders->subtotal) }}</span>
                     </div>
                 </div>
-            </div>
-            
-              
+            </div>   
         </div>
         @endforeach 
         <div class="ringkasan-belanja-cart">
