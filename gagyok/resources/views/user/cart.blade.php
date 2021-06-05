@@ -36,8 +36,6 @@
         @endphp
         @foreach($order_details as $order_detail)
         <div class="row-cart">
-
-            
             @php
                 $count++;
             @endphp
@@ -50,13 +48,11 @@
                             <span class="merk-kategori merk-cart">{{ $order_detail->product->product_name }}</span>
                             <span class="nama-produk produk-cart">{{ $order_detail->product->product_short_desc }}</span>
                         </label>
-                        
                             <form action="{{ url('cart')}}/{{$order_detail->id}}" method="post">
                                 @csrf
                                 {{method_field('DELETE')}}
                                 <button type="submit" class="btn-hapus-cart" onclick="return confirm('Anda yakin akan menghapus data ?');">HAPUS</button>
                             </form>
-                        
                     </div>
                 </div>
                 <div class="col-sm-3">
@@ -75,12 +71,13 @@
                 </div>
                 <div class="col-auto">
                     <div class="text-harga-cart">
-                        <span>IDR {{ number_format($orders->subtotal) }}</span>
+                        <span>IDR {{ number_format($order_detail->price) }}</span>
                     </div>
                 </div>
-            </div>   
+            </div>  
+            @endforeach  
         </div>
-        @endforeach 
+        
         <div class="ringkasan-belanja-cart">
             <div class="row">
                 <div class="col">
@@ -97,7 +94,7 @@
                     </div>
                 </div>
                 <div class="col col-lg-2">
-                    <button class="btn-checkout" href="#">Checkout</button>
+                    <a href="{{url('checkout')}}"> <button class="btn-checkout" >Checkout</button></a> 
                 </div>
               </div>
         </div>

@@ -4,6 +4,11 @@ namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Auth;
+use App\Models\User;
+use App\Models\Personalinfo;
+
+
 
 class ProfileController extends Controller
 {
@@ -24,7 +29,11 @@ class ProfileController extends Controller
      */
     public function index()
     {
-        return view('user.profile.index');
+        $user = User::where('id', Auth::user()->id)->first();
+        $profile = Personalinfo::where('user_id', Auth::user()->id)->first();
+        // dd($user);
+        // dd($profile);
+        return view('user.profile.index', compact('user', 'profile'));
     }
 
     /**

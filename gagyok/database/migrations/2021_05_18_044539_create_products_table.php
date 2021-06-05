@@ -18,7 +18,7 @@ class CreateProductsTable extends Migration
             $table->char('product_name',100);
             $table->string('product_image');
             $table->double('product_price', 11, 2);
-            $table->string('product_stock');
+            $table->integer('product_stock')->default(11);
             $table->string('product_short_desc',100);
             $table->string('product_long_desc',255)->nullable();
             $table->string('product_category',);

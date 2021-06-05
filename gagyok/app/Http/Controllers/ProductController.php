@@ -1,35 +1,32 @@
 <?php
 
-namespace App\Http\Controllers\User;
-
-use App\Http\Controllers\Controller;
-use App\Models\Category;
-use App\Models\Product;
+namespace App\Http\Controllers;
 use Illuminate\Http\Request;
+use Auth;
+use App\Models\Product;
+use App\Models\Order;
+use App\Models\OrderDetail; 
 
-class CategoryController extends Controller
+class ProductController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-    
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
+
+     // user harus login
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+
     public function index()
     {
-        $categories = Product::all()->groupBy('product_category');
-        // dd($categories);
-        return view('user.category.index', compact('categories'));
+       //
     }
+    
 
     /**
      * Show the form for creating a new resource.
@@ -58,14 +55,13 @@ class CategoryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($categoryName)
+
+    // menampilkan detail produk
+    public function show($id)
     {
-        $products = Product::where('product_category', $categoryName)->get();
-        // dd($products);
-        $namaCategory = Category::where('category_name', $categoryName)->first();
-        // dd($namaCategory);
-        return view('user.category.show', compact('products', 'namaCategory'));
-        // return view('user.category.show');
+        $product = Product::where('product_id', $id)->first();
+        // dd($product);
+        return view('user.produkDetailFikri', compact('product'));
     }
 
     /**

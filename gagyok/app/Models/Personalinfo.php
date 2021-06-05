@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Personalinfo extends Model
 {
     use HasFactory;
+    public function user() 
+    {
+        return $this->belongTo('App\Models\User','id', 'user_id');
+    }
+    
 }

@@ -6,8 +6,8 @@ use App\Models\Product;
 use App\Models\Order;
 use App\Models\OrderDetail; 
 use Auth;
+use JavaScript;
 use Carbon\Carbon;
-use Alert;
 
 
 
@@ -30,106 +30,6 @@ class OrderController extends Controller
     {
         return view('user.fikri.profilFikri');
     }
-
-    public function detailProduk($id)
-    {
-        $product = Product::where('product_id', $id)->first();
-        // dd($product);
-        return view('user.fikri.produkDetailFikri', compact('product'));
-    }
-
-// Fungsi MASUKKAN KERANJANG untuk Mengambil data dari user saat user menekan tambahkan ke keranjang
-    public function keranjang(Request $request, $idBarang)
-    {
-
-        $product = Product::where('product_id', $idBarang)->first();
-        $date = now()->setTimezone('Asia/Jakarta');
-
-        //cek apakah pesanan melebihi jumlah stock
-        if ($request->order_qty > $product-> product_stock) {
-            return redirect('produk/'.$idBarang);
-        }
-
-        //cek validasi pesanan
-        $cek_order = Order::where('user_id', Auth::user()->id)->where('status',0)->first(); 
-        if (empty($cek_order)) 
-        {
-        // menyimpan ke database order
-        $order = new Order;
-        $order -> user_id = Auth::user()->id;
-        $order -> order_date = $date;
-        $order -> status = 0;
-        $order -> subtotal = 0;
-        $order -> save();
-        // dd($order); ////ini untuk mengecek apakah querry order sudah betul apa tidak
-        }
-
-
-        // menyimpan ke database order detail
-        $new_order = Order::where('user_id', Auth::user()->id)->where('status',0)->first(); 
-
-
-        // cek pesanan detail jika sudah ada maka yang ada ditambah dengan inputan pesanan yang baru yang statusnya sama sama 0
-        $cek_orderDetail = OrderDetail::where('product_id',$product->product_id)->where('order_id',$new_order->id)->first();
-        if (empty($cek_orderDetail)) 
-        {
-            $order_detail = new OrderDetail;
-            $order_detail->product_id = $product->product_id;
-            $order_detail->order_id = $new_order->id;
-            $order_detail->qty = $request->order_qty;
-            $order_detail->price = $product->product_price*$request->order_qty;
-            $order_detail-> save();
-        }
-        else 
-        {
-            $order_detail = OrderDetail::where('product_id', $product->product_id)->where('order_id', $new_order->id)->first();
-            $order_detail->qty = $order_detail->qty + $request->order_qty;
-            
-
-            // Harga sekarang 
-            $jumlah_hargaBaru = $product->product_price*$request->order_qty;
-            $order_detail->price = $order_detail->price + $jumlah_hargaBaru;
-            $order_detail->update();
-        }
-        
-        // Total harga
-        $order = Order::where('user_id', Auth::user()->id)->where('status',0)->first(); 
-        $order -> subtotal = $order -> subtotal + ($product->product_price*$request->order_qty);
-        $order -> update();
-        // dd($order_detail); ////ini untuk mengecek apakah querry order sudah betul atau tidak
-        
-        Alert::success('SUKSES', 'Telah Ditambahkan Ke Keranjang'); //mau pake sweet alert tapi udah dicoba ribuan kali tetep ngak mau muncul alertnya
-        // sweet alertnya dari link https://realrashid.github.io/sweet-alert/
-
-        
-        return redirect('cart');
-    }
-
-
-    // FUNGSI CHECKOUT BARANG
-    public function checkout()
-    {
-        $orders = Order::where('user_id', Auth::user()->id)->where('status',0)->first(); 
-        $order_details = OrderDetail::where('order_id', $orders->id)->get();
-        // dd($order_details, $order);
-        return view('user.fikri.checkoutFikri', compact('orders', 'order_details'));
-    }
-
-    // FUNGSI DELETE ISI KERANJANG
-    public function delete($id)
-    {
-        $order_detail = OrderDetail::where('id', $id)->first();
-
-        $order = Order::where('id', $order_detail->order_id)->first();
-        $order->subtotal =$order->subtotal - $order_detail->price;
-        $order -> update();
-
-        $order_detail->delete();
-
-        Alert::error ('SUKSES', 'Telah Dihapus dari Keranjang'); 
-        return redirect('checkout');
-    }
-
 
 
 

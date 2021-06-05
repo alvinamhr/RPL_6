@@ -385,11 +385,14 @@ footer{
 
 .footer-distributed{
 	background-color: #BFB8DA;
+    bottom: 0;
 	box-sizing: border-box;
 	width: 100%;
 	font: bold 16px sans-serif;
 	padding: 10px;
 	margin-top: 80px;
+
+    
 }
 
 .footer-distributed .footer-left,
@@ -462,7 +465,7 @@ footer{
 
 .section {
     padding: 180px 0;
-    position: relative;
+    position: auto;
 }
 
 .section-two {
@@ -864,7 +867,7 @@ footer{
 .ringkasan-belanja-cart {
     position: absolute;
     width: 1250px;
-    height: 14%;
+    height: 40%;
     margin-top: 36%;
     background: rgba(191, 184, 218, 0.3);
 }

@@ -20,9 +20,9 @@ Route::get('/category', [App\Http\Controllers\User\CategoryController::class, 'i
 
 Route::get('category/{product_category}', [App\Http\Controllers\User\CategoryController::class, 'show']); //ini untuk menampilkan isi produk apa saja dalam satu kategori
 
-Route::get('produk/{product_id}', [App\Http\Controllers\OrderController::class, 'detailProduk']); //ini untuk detail produk sebelum dipesan
+Route::get('produk/{product_id}', [App\Http\Controllers\ProductController::class, 'show']); //ini untuk detail produk sebelum dipesan
 
-Route::post('order/{product_id}', [App\Http\Controllers\OrderController::class, 'keranjang']); //ini untuk memasukkan keranjang
+Route::post('InsertCart/{product_id}', [App\Http\Controllers\User\CartController::class, 'store']); //ini untuk memasukkan keranjang
 
 Route::get('cart', [App\Http\Controllers\User\CartController::class, 'index'])->name('cart'); //ini untuk masuk ke halaman keranjang
 

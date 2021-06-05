@@ -6,9 +6,9 @@ use App\Http\Controllers\Controller;
 use App\Models\Product;
 use App\Models\Order;
 use App\Models\OrderDetail; 
-use Auth;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Auth;
 
 class CartController extends Controller
 {
@@ -53,9 +53,69 @@ class CartController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+
+     // Fungsi MASUKKAN KERANJANG untuk Mengambil data dari user saat user menekan tambahkan ke keranjang
+    public function store(Request $request, $idBarang)
     {
-        //
+
+        $product = Product::where('product_id', $idBarang)->first();
+        $date = now()->setTimezone('Asia/Jakarta');
+
+        //cek apakah pesanan melebihi jumlah stock
+        if ($request->order_qty > $product-> product_stock) {
+                
+            return redirect('produk/'.$idBarang);
+        }
+
+        //cek validasi pesanan
+        $cek_order = Order::where('user_id', Auth::user()->id)->where('status',0)->first(); 
+        if (empty($cek_order)) 
+        {
+        // menyimpan ke database order
+        $order = new Order;
+        $order -> user_id = Auth::user()->id;
+        $order -> order_date = $date;
+        $order -> status = 0;
+        $order -> subtotal = 0;
+        $order -> save();
+        // dd($order); ////ini untuk mengecek apakah querry order sudah betul apa tidak
+        }
+
+
+        // menyimpan ke database order detail
+        $new_order = Order::where('user_id', Auth::user()->id)->where('status',0)->first(); 
+
+
+        // cek pesanan detail jika sudah ada maka yang ada ditambah dengan inputan pesanan yang baru yang statusnya sama sama 0
+        $cek_orderDetail = OrderDetail::where('product_id',$product->product_id)->where('order_id',$new_order->id)->first();
+        if (empty($cek_orderDetail)) 
+        {
+            $order_detail = new OrderDetail;
+            $order_detail->product_id = $product->product_id;
+            $order_detail->order_id = $new_order->id;
+            $order_detail->qty = $request->order_qty;
+            $order_detail->price = $product->product_price*$request->order_qty;
+            $order_detail-> save();
+        }
+        else 
+        {
+            $order_detail = OrderDetail::where('product_id', $product->product_id)->where('order_id', $new_order->id)->first();
+            $order_detail->qty = $order_detail->qty + $request->order_qty;
+            
+
+            // Harga sekarang 
+            $jumlah_hargaBaru = $product->product_price*$request->order_qty;
+            $order_detail->price = $order_detail->price + $jumlah_hargaBaru;
+            $order_detail->update();
+        }
+        
+        // Total harga
+        $order = Order::where('user_id', Auth::user()->id)->where('status',0)->first(); 
+        $order -> subtotal = $order -> subtotal + ($product->product_price*$request->order_qty);
+        $order -> update();
+        // dd($order_detail); ////ini untuk mengecek apakah querry order sudah betul atau tidak
+        
+        return redirect('cart');
     }
 
     /**

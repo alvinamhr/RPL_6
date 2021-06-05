@@ -17,22 +17,24 @@
                             PILIH FOTO
                             <input class="form-control d-none" type="file" name="file_gambar" accept="image/*" id="formFile" value="PILIH FOTO">
                     </button>
-                    <div class="taro-foto">
-                        <span>FOTO</span>
+                    <div>
+                        <span> 
+                            <img class="taro-foto" src="{{ url('assets/image/profile') }}/{{ $profile->user_picture }}" alt="FOTO">
+                        </span>
                     </div>
                 </div>
                 <table class="tabel-biodata">
                     <tr class="nama">
                         <td>NAMA</td>
-                        <td>tempat nama</td>
+                        <td>{{Auth::user()->name}}</td>
                     </tr>
                     <tr class="email">
                         <td>EMAIL</td>
-                        <td>tempat email</td>
+                        <td>{{Auth::user()->email}}</td>
                     </tr>
                     <tr class="notel">
                         <td>NOMOR TELEPON</td>
-                        <td>tempat notel</td>
+                        <td>{{$profile->phone_number}}</td>
                     </tr>
                     <tr>
                         <td><a class="ubah-bio" href="/profile/{profile}/edit">Ubah Biodata</a></td>
@@ -44,14 +46,16 @@
             <h2>DAFTAR ALAMAT</h2>
             <div class="container-alamat">
                 <div class="isi-alamat">
-                    <h6>Nama Tujuan</h6>
-                    <p class="alamat">Nama
+                    <h6>Alamat Tujuan</h6>
+                    <p class="alamat">Nama : {{Auth::user()->name}}
                         <br>
-                        notel
+                        Nomor Telepon  : {{$profile->phone_number}}
                         <br>
-                        Alamat
+                        Alamat :{{$profile->user_address}}
                         <br>
-                        kota
+                        Kota {{$profile->user_city}}, Kabupaten {{$profile->user_disctrict}},Provinsi {{$profile->user_province}}
+                        <br>
+                        Kode Pos : {{$profile->user_posCode}}
                     </p>
                 </div>
             </div>
