@@ -19,7 +19,7 @@
                     </button>
                     <div>
                         <span> 
-                            <img class="taro-foto" src="{{ url('assets/image/profile') }}/{{ $profile->user_picture }}" alt="FOTO">
+                            <img class="taro-foto" src="{{ url('assets/image/profile/fikri.png') }}/{{ $profile->user_picture }}" alt="FOTO">
                         </span>
                     </div>
                 </div>

@@ -66,6 +66,14 @@
 								<li><a href="/logout"><i class="lnr lnr-exit"></i> <span>Logout</span></a></li>
 							</ul>
 						</li>
+                        <li class="nav-item">
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                                @csrf
+                                <button class="nav-link" type="submit">
+                                    {{ __('Logout') }}
+                                </button>
+                            </form>
+                        </li>
                 </ul>
                 <div class="nav-btn">
                     <div class="search">
@@ -74,18 +82,29 @@
                             <input type="button" name="search_button" id="search_button" class="search">
                         </form>
                     </div>
+                    
 
-                    <div class="chart">
+                    <div class="cart">
                         {{-- dibawah ini untuk menampilkan jumlah orderan pada navbar yang ada didalam keranjang belanja--}}
                         @php
                             $main_order = \App\Models\Order::where('user_id',Auth::user()->id)->where('status', 0)->first();
-                            $notif = \App\Models\OrderDetail::where('order_id', $main_order->id)->count();
+                            if (isset($main_order->id)) {
+                                $notif = \App\Models\OrderDetail::where('order_id', $main_order->id)->count();
+                            }
+                            else {
+                                $notif = 0;
+                            }
+                            
                         @endphp
                         <a class="nav-link" href="{{ url('/cart') }}">
-                            <img src="{{ asset('assets/icons/keranjang.svg') }}">
+                            {{-- <img src="{{ asset('assets/icons/apa.svg') }}"> --}}
                             <span class="badge badge-danger">{{$notif}}</span>
                         </a>
                         {{-- sampai disini notifnya --}}
+                        {{-- <img src="{{ asset('assets/icons/keranjang.svg')}}"> --}}
+                        {{-- <a class="nav-link" href="{{ url('/cart')}}">
+                            <img src="{{asset('assets/icons/keranjang.svg')}}">
+                        </a> --}}
                     </div>
                     
                     <div class="notif">

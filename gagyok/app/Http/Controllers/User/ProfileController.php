@@ -33,7 +33,7 @@ class ProfileController extends Controller
         $profile = Personalinfo::where('user_id', Auth::user()->id)->first();
         // dd($user);
         // dd($profile);
-        return view('user.profile.index', compact('user', 'profile'));
+        return view('user.profile.index', compact('user','profile'));
     }
 
     /**

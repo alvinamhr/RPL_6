@@ -16,15 +16,15 @@ class CreatePersonalinfosTable extends Migration
         Schema::create('personalinfos', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('user_id')->references('id')->on('users');
-            $table->string('phone_number');->nullable();
+            $table->string('phone_number')->nullable();
             $table->string('user_email')->references('email')->on('users');
-            $table->string('user_address');->nullable();
+            $table->string('user_address')->nullable();
             $table->string('user_picture')->nullable();
-            $table->string('user_city');->nullable();
-            $table->string('user_disctrict');->nullable();
-            $table->string('user_province');->nullable();
-            $table->string('user_posCode');->nullable();
-            $table->string('user_country');->nullable();
+            $table->string('user_city')->nullable();
+            $table->string('user_disctrict')->nullable();
+            $table->string('user_province')->nullable();
+            $table->string('user_posCode')->nullable();
+            $table->string('user_country')->nullable();
             $table->timestamps();
         });
     }
