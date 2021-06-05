@@ -58,7 +58,7 @@
                     <li><a href="/category" class="nav-links">KATEGORI</a></li>
                     <li><a href="/entertainment" class="nav-links">HIBURAN</a></li>
                     <li class="dropdown">
-							<a href="/profile" class="dropdown-toggle" data-toggle="dropdown"><img src="{{asset('assets/image/user.jpg')}}" class="img-circle" alt="Avatar"  width="20px" height="20px"> <span>{{auth()->user()->name}}</span></a>
+							<a href="/profile" class="dropdown-toggle" data-toggle="dropdown"><img src="{{asset('assets/image/profile/default.png')}}" class="img-circle" alt="Avatar"  width="20px" height="20px"> <span>{{auth()->user()->name}}</span></a>
 							<ul class="dropdown-menu">
 								<li><a href="#"><i class="lnr lnr-user"></i> <span>My Profile</span></a></li>
 								<li><a href="#"><i class="lnr lnr-envelope"></i> <span>Message</span></a></li>
