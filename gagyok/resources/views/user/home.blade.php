@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.navver2')
 
 @section('content')
 <!-- Slider -->
@@ -46,7 +46,6 @@
                         <div class="col-md-4" style="width: 25rem; height: 25rem;" >
                             <div class="align-items-center bg-home" style="margin-left:5%">
                                 <a href="{{url('category')}}/{{$category->category_name}}"> <img src="{{ url('assets/image/Kategori') }}/{{$category->category_image}}" width="300px" height="300px"  alt="..."> </a>
-                                {{-- <a href="{{url('category')}}/{{$category->category_name}}" type="button" class="caption-home">{{$category->category_name}}</a> --}}
                                 <button onclick="window.location='{{url('category')}}/{{$category->category_name}}'" type="button" class="caption-home">{{$category->category_name}}</button>
                             </div>
                         </div>

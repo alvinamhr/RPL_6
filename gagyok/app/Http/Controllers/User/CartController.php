@@ -30,9 +30,15 @@ class CartController extends Controller
     public function index()
     {
         $orders = Order::where('user_id', Auth::user()->id)->where('status',0)->first(); 
-        $order_details = OrderDetail::where('order_id', $orders->id)->get();
+        
         // dd($order_details, $order);
-        return view('user.cart', compact('orders', 'order_details'));
+        if (isset($orders)) {
+            $order_details = OrderDetail::where('order_id', $orders->id)->get();
+            return view('user.cart', compact('orders', 'order_details'));
+        }
+        else{
+            return view('user.emptyCart');
+        }
         // return view('user.cart');
     }
 
