@@ -78,7 +78,7 @@ Fenomena Korean Wave ini yang membuat industri Korea memasuki pasar di Indonesia
     Bootstrap
     
  ## Arsitektur Aplikasi
-  1. Di mana dan bagaimana menyimpan data
+  *1. Di mana dan bagaimana menyimpan data*
   - Ringkasan - Untuk melakukan penyimpanan dan manajemen data, kami memutuskan untuk menggunakan MySQL, karena bersifat open source, gratis, dapat digunakan di platform apapun, multi-user,  dan cukup mudah digunakan.
   - Masalah - Sifat aplikasi yang open source menyebabkan kurangnya technical support untuk penggunaan MySQL. Sehingga jika kami mengalami masalah atau kendala dalam penggunaannya, kami akan kesulitan dalam menyelesaikan masalah tersebut. Hal tersebut menjadi masalah karena kemampuan kami yang masih terbatas dan waktu yang digunakan untuk pengembangan cukup singkat, sehingga akan menghambat dalam penyelesaian masalah yang kami hadapi. Hal tersebut penting untuk diselesaikan karena MySQL berperan dalam manajemen basis data yang akan kami kelola dalam website nanti.
   - Batasan - Solusi yang dibuat hanya dapat diterapkan dalam pengembangan website aplikasi, dimana pengguna hanya dapat mengaksesnya melalui browser. Padahal, untuk menjangkau pasar yang lebih luas dan mudah digunakan, perlu diimplementasikan sebagai mobile apps yang bisa didapatkan pengguna di playstore. Adanya kendala tersebut disebabkan karena keterbatasan kemampuan pengembang.
@@ -90,9 +90,35 @@ Fenomena Korean Wave ini yang membuat industri Korea memasuki pasar di Indonesia
  - Rasional - Kami memilih opsi ke-2, karena pemanfaatan stack overflow dinilai lebih efektif dibandingkan melihat tutorial youtube. Sumber belajar dari youtube sebagian besar menampilkan tutorial yang tidak memiliki masalah yang dihadapi dalam implementasinya, sehingga kurang berfokus pada konsep atau pemahaman dari materi yang disampaikan. Di sisi lain, pada stack overflow terdapat banyak programmer andal yang berbagi pengetahuan dan pengalamannya dalam menyelesaikan masalah programming, termasuk permasalahan dalam penggunaan MySQL. Sehingga, dengan penjelasan yang tepat akan dapat membantu pemahaman kami dalam menyelesaikan permasalahan yang akan dihadapi selama tahap pengembangan.
 
 
-  3. Bahasa pemrograman apa yang akan digunakan
-  4. Framework atau library apa yang akan digunakan
-  5. Database mana yang akan gunakan?
+  *2. Bahasa pemrograman apa yang akan digunakan*
+   - Ringkasan - Bahasa Pemrograman yang akan kami gunakan disini adalah PHP, karena php merupakan bahasa pemrograman web yang banyak digunakan oleh para web developer, selain itu kami menggunakan PHP karena kami memakai framework LARAVEL yang dimana laravel sendiri merupakan framework PHP.
+   - Masalah - Masalah yang kami hadapi saat ini adalah kami masih baru mempelajari bahasa PHP ini dan juga bahasa PHP tidak diajarkan di perkuliahan sejauh ini sehingga membuat kami mungkin agak lambat dalam Web DEVELOPMENT ini karena baru mempelajari bahasanya dari awal, masalah kedua adalah kami tidak bisa optimal dalam mempelajari bahasa PHP karena waktu yang sangat terbatas akibat tugas kuliah pada matakuliah yang lain yang harus dikerjakan juga tiap harinya. 
+   - Batasan - Batasan yang kami sekarang hadapi adalah aplikasi kami untuk sekarang ini hanya dapat dijalankan melalui website, untuk saat ini kami masih belum dapat mengimplementasikannya dalam aplikasi berbasis android maupun IOS. Batasan yang kedua adalah karena kami masih mempelajari bahasa PHP maka kami masih belum bisa mengembangkan Aplikasi kami dengan optimal dan efisien
+   - Opsi –  1. Mengoptimalkan waktu pembelajaran Bahasa PHP, 
+             2. Lebih intens mempelajari video video pembelajaran PHP di youtube
+             3. Mencari materi bacaan di website website tentang PHP
+   - Rasional - Opsi kedua karena akan lebih mudah mempelajari materi dari video daripada hanya membacanya.
+
+  *3. Framework atau library apa yang akan digunakan*
+   - Ringkasan - Framework yang kami gunakan adalah Laravel karena laravel banyak digunakan oleh kebanyakan web developer dan juga laravel memiliki banyak tutorial di internet yang dapat kita pelajari secara otodidak.
+   - Masalah - Untuk masalah yang kami hadapi saat ini adalah sebenarnya lebih kepada bagaimana kami mempelajari fitur-fitur apa saja yang ada di dalam laravel, kami masih belum 100% mempelajari/menguasai framework ini.
+   - Batasan - Untuk saat ini yang menjadi batasan adalah karena framework ini berbasis object-oriented maka pertama tama kami harus mendalami lebih dulu object-oriented programing sebelum masuk ke framework laravel.
+   - Opsi – 1. Mempelajari object-oriented programing pada website-website programming seperti www.petanikode.com atau www.skillacademy.com
+            2. Mempelajari object-oriented programming pada online course seperti Udemy atau Coursera
+            3. Mempelajari Object-Oriented programming pada channel youtube seperti Web Programming Unpas 
+   - Rasional - Opsi yang paling rasional menurut kami adalah pada opsi ketiga, karena channel web programming unpas memiliki video yang tersusun rapi dan juga berbahasa indonesia yang pastinya gratis, dibandingkan dengan online course yang belum tentu gratis dan berbahasa indonesia.
+  
+  *4. Database mana yang akan gunakan?*
+  - Ringkasan - Untuk manajemen basis data relasional, kami memutuskan untuk menggunakan MySQL, karena bersifat open source dan cukup mudah digunakan untuk pemula. Selain itu, MySQL dinilai memiliki performa yang lebih cepat dibandingkan RDBMS lainnya.
+  - Masalah - Sifat aplikasi yang open source menyebabkan kurangnya technical support untuk penggunaan MySQL. Sehingga jika kami mengalami masalah atau kendala dalam penggunaannya, kami akan kesulitan dalam menyelesaikan masalah tersebut. Hal tersebut menjadi masalah karena kemampuan kami yang masih terbatas dan waktu yang digunakan untuk pengembangan cukup singkat, sehingga akan menghambat dalam penyelesaian masalah yang kami hadapi. Hal tersebut penting untuk diselesaikan karena MySQL berperan dalam manajemen basis data yang akan kami kelola dalam website nanti.
+  - Batasan - Solusi yang dibuat hanya dapat diterapkan dalam pengembangan website aplikasi, dimana pengguna hanya dapat mengaksesnya melalui browser. Padahal, untuk menjangkau pasar yang lebih luas dan mudah digunakan, perlu diimplementasikan sebagai mobile apps yang bisa didapatkan pengguna di playstore. Adanya kendala tersebut disebabkan karena keterbatasan kemampuan pengembang.
+  - Opsi – 1. Memaksimalkan waktu yang diberikan untuk memahami konsep penggunaan MySQL dengan cara belajar dari berbagai sumber, seperti youtube. 
+→ kontra
+           2. Mengumpulkan informasi mengenai berbagai permasalahan yang sering ditemukan dalam penggunaan MySQL (dapat memanfaatkan stack overflow)  dan mencatat solusi yang memungkinkan. 
+→ pro, 
+  - Rasional - Kami memilih opsi ke-2, karena pemanfaatan stack overflow dinilai lebih efektif dibandingkan melihat tutorial youtube. Sumber belajar dari youtube sebagian besar menampilkan tutorial yang tidak memiliki masalah yang dihadapi dalam implementasinya, sehingga kurang berfokus pada konsep atau pemahaman dari materi yang disampaikan. Di sisi lain, pada stack overflow terdapat banyak programmer andal yang berbagi pengetahuan dan pengalamannya dalam menyelesaikan masalah programming, termasuk permasalahan dalam penggunaan MySQL. Sehingga, dengan penjelasan yang tepat akan dapat membantu pemahaman kami dalam menyelesaikan permasalahan yang akan dihadapi selama tahap pengembangan.
+
+
  
   
  ## Arsitektur Diagram
