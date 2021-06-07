@@ -46,6 +46,13 @@
     color: rgba(195, 82, 88, 1);
     margin-bottom: 12px;
     box-shadow: 0pt 4pt 4pt rgba(0, 0, 0, 0.25);
+    outline: none;
+}
+
+.input-nama-alamat:focus{
+    border-color: #6670AD ;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
+    0 0 10px #6670AD;
 }
 
 .input-nama{
@@ -58,6 +65,13 @@
     color: rgba(195, 82, 88, 1);
     margin-bottom: 12px;
     box-shadow: 0pt 4pt 4pt rgba(0, 0, 0, 0.25);
+    outline: none;
+}
+
+.input-nama:focus{
+    border-color: #6670AD ;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
+    0 0 10px #6670AD;
 }
 
 .input-nomor{
@@ -70,6 +84,13 @@
     color: rgba(195, 82, 88, 1);
     margin-bottom: 12px;
     box-shadow: 0pt 4pt 4pt rgba(0, 0, 0, 0.25);
+    outline: none;
+}
+
+.input-nomor:focus{
+    border-color: #6670AD ;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
+    0 0 10px #6670AD;
 }
 
 .input-kota-kec{
@@ -82,6 +103,13 @@
     color: rgba(195, 82, 88, 1);
     margin-bottom: 12px;
     box-shadow: 0pt 4pt 4pt rgba(0, 0, 0, 0.25);
+    outline: none;
+}
+
+.input-kota-kec:focus{
+    border-color: #6670AD ;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
+    0 0 10px #6670AD;
 }
 
 .input-kodepos{
@@ -94,6 +122,13 @@
     color: rgba(195, 82, 88, 1);
     margin-bottom: 12px;
     box-shadow: 0pt 4pt 4pt rgba(0, 0, 0, 0.25);
+    outline: none;
+}
+
+.input-kodepos:focus{
+    border-color: #6670AD ;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
+    0 0 10px #6670AD;
 }
 
 .input-alamat{
@@ -106,6 +141,13 @@
     color: rgba(195, 82, 88, 1);
     margin-bottom: 10px;
     box-shadow: 0pt 4pt 4pt rgba(0, 0, 0, 0.25);
+    outline: none;
+}
+
+.input-alamat:focus{
+    border-color: #6670AD ;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
+    0 0 10px #6670AD;
 }
 
 .submits{
@@ -154,3 +196,5 @@
 .bagian-nomor{
     margin-left: 9.5px;
 }
+
+
