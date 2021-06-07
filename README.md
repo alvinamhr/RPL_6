@@ -79,12 +79,20 @@ Fenomena Korean Wave ini yang membuat industri Korea memasuki pasar di Indonesia
     
  ## Arsitektur Aplikasi
   1. Di mana dan bagaimana menyimpan data
-    - Ringkasan :Untuk melakukan penyimpanan dan manajemen data, kami memutuskan untuk menggunakan MySQL, karena bersifat open source, gratis, dapat digunakan di platform apapun, multi-user,  dan cukup mudah digunakan. 
-    - Masalah : Sifat aplikasi yang open source menyebabkan kurangnya technical support untuk penggunaan MySQL. Sehingga jika kami mengalami masalah atau kendala dalam penggunaannya, kami akan kesulitan dalam menyelesaikan masalah tersebut. Hal tersebut menjadi masalah karena kemampuan kami yang masih terbatas dan waktu yang digunakan untuk pengembangan cukup singkat, sehingga akan menghambat dalam penyelesaian masalah yang kami hadapi. Hal tersebut penting untuk diselesaikan karena MySQL berperan dalam manajemen basis data yang akan kami kelola dalam website nanti.
-    - Batasan : Solusi yang dibuat hanya dapat diterapkan dalam pengembangan website aplikasi, dimana pengguna hanya dapat mengaksesnya melalui browser. Padahal, untuk menjangkau pasar yang lebih luas dan mudah digunakan, perlu diimplementasikan sebagai mobile apps yang bisa didapatkan pengguna di playstore. Adanya kendala tersebut disebabkan karena keterbatasan kemampuan pengembang.
-    - Opsi : Memaksimalkan waktu yang diberikan untuk memahami konsep penggunaan MySQL dengan cara belajar dari berbagai sumber, seperti youtube. → kontra
-             Mengumpulkan informasi mengenai berbagai permasalahan yang sering ditemukan dalam penggunaan MySQL (dapat memanfaatkan stack overflow)  dan mencatat solusi yang memungkinkan. → pro
-   - Rasional - Kami memilih opsi ke-2, karena pemanfaatan stack overflow dinilai lebih efektif dibandingkan melihat tutorial youtube. Sumber belajar dari youtube sebagian besar menampilkan tutorial yang tidak memiliki masalah yang dihadapi dalam implementasinya, sehingga kurang berfokus pada konsep atau pemahaman dari materi yang disampaikan. Di sisi lain, pada stack overflow terdapat banyak programmer andal yang berbagi pengetahuan dan pengalamannya dalam menyelesaikan masalah programming, termasuk permasalahan dalam penggunaan MySQL. Sehingga, dengan penjelasan yang tepat akan dapat membantu pemahaman kami dalam menyelesaikan permasalahan yang akan dihadapi selama tahap pengembangan.
+  - Ringkasan - Untuk melakukan penyimpanan dan manajemen data, kami memutuskan untuk menggunakan MySQL, karena bersifat open source, gratis, dapat digunakan di platform apapun, multi-user,  dan cukup mudah digunakan.
+  - Masalah - Sifat aplikasi yang open source menyebabkan kurangnya technical support untuk penggunaan MySQL. Sehingga jika kami mengalami masalah atau kendala dalam penggunaannya, kami akan kesulitan dalam menyelesaikan masalah tersebut. Hal tersebut menjadi masalah karena kemampuan kami yang masih terbatas dan waktu yang digunakan untuk pengembangan cukup singkat, sehingga akan menghambat dalam penyelesaian masalah yang kami hadapi. Hal tersebut penting untuk diselesaikan karena MySQL berperan dalam manajemen basis data yang akan kami kelola dalam website nanti.
+  - Batasan - Solusi yang dibuat hanya dapat diterapkan dalam pengembangan website aplikasi, dimana pengguna hanya dapat mengaksesnya melalui browser. Padahal, untuk menjangkau pasar yang lebih luas dan mudah digunakan, perlu diimplementasikan sebagai mobile apps yang bisa didapatkan pengguna di playstore. Adanya kendala tersebut disebabkan karena keterbatasan kemampuan pengembang.
+  - Opsi – 
+1. Memaksimalkan waktu yang diberikan untuk memahami konsep penggunaan MySQL dengan cara belajar dari berbagai sumber, seperti youtube. 
+→ kontra
+2. Mengumpulkan informasi mengenai berbagai permasalahan yang sering ditemukan dalam penggunaan MySQL (dapat memanfaatkan stack overflow)  dan mencatat solusi yang memungkinkan. 
+→ pro
+ - Rasional - Kami memilih opsi ke-2, karena pemanfaatan stack overflow dinilai lebih efektif dibandingkan melihat tutorial youtube. Sumber belajar dari youtube sebagian besar menampilkan tutorial yang tidak memiliki masalah yang dihadapi dalam implementasinya, sehingga kurang berfokus pada konsep atau pemahaman dari materi yang disampaikan. Di sisi lain, pada stack overflow terdapat banyak programmer andal yang berbagi pengetahuan dan pengalamannya dalam menyelesaikan masalah programming, termasuk permasalahan dalam penggunaan MySQL. Sehingga, dengan penjelasan yang tepat akan dapat membantu pemahaman kami dalam menyelesaikan permasalahan yang akan dihadapi selama tahap pengembangan.
+
+
+  3. Bahasa pemrograman apa yang akan digunakan
+  4. Framework atau library apa yang akan digunakan
+  5. Database mana yang akan gunakan?
  
   
  ## Arsitektur Diagram
