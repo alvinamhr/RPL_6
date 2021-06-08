@@ -72,12 +72,36 @@
 .input-kota-kec{
     border: 1px solid #6670AD;
     border-radius: 8px;
-    width: 21.7em;
+    width: 33em;
     height: 2em;
     font-family: 'Playfair Display', serif;
     font-weight: 600;
     color: rgba(195, 82, 88, 1);
     margin-bottom: 12px;
+    box-shadow: 1px 1px grey;
+}
+
+.input-provinsi{
+    border: 1px solid #6670AD;
+    border-radius: 8px;
+    width: 17em;
+    height: 2em;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    color: rgba(195, 82, 88, 1);
+    margin-bottom: 12px;
+    box-shadow: 1px 1px grey;
+}
+.input-kabupaten{
+    border: 1px solid #6670AD;
+    border-radius: 8px;
+    width: 15em;
+    height: 2em;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    color: rgba(195, 82, 88, 1);
+    margin-bottom: 12px;
+    margin-left: 12px;
     box-shadow: 1px 1px grey;
 }
 
@@ -92,6 +116,8 @@
     margin-bottom: 12px;
     box-shadow: 1px 1px grey;
 }
+
+
 
 .input-alamat{
     border: 1px solid #6670AD;

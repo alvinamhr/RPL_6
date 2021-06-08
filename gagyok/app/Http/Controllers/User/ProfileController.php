@@ -54,7 +54,8 @@ class ProfileController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
+        // dd($request);
     }
 
     /**
@@ -63,9 +64,15 @@ class ProfileController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
-        //
+        // dd($request);
+        $user = User::where('id', Auth::user()->id)->first();
+        $profile = Personalinfo::where('user_id', Auth::user()->id)->first();
+        // dd($user);
+        // dd($profile);
+        return view('user.profile.edit', compact('user','profile'));
+        // return view('user.profile.edit');
     }
 
     /**
@@ -74,9 +81,24 @@ class ProfileController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Request $request)
     {
-        return view('user.profile.edit');
+        // dd($request);
+        $user = User::where('id', Auth::user()->id)->first();
+        $profile = Personalinfo::where('user_id', Auth::user()->id)->first();
+
+        $user->name = $request->fname;
+        $user->user_address = $request->fname;
+        $user->email = $request->email;
+        $profile->phone_number = $request -> notelp;
+        $user->update();
+        $profile->update();
+
+        // dd($user);
+        // dd($profile);
+
+        return redirect()->route('profile');
+        // return view('user.profile.edit');
     }
 
     /**

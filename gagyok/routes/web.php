@@ -34,12 +34,16 @@ Route::get('/entertainment/{entertainment}', [App\Http\Controllers\User\Entertai
 
 //PROFIL
 Route::get('/profile', [App\Http\Controllers\User\ProfileController::class, 'index'])->name('profile');
-Route::get('/profile/{profile}/edit', [App\Http\Controllers\User\ProfileController::class, 'edit']);
+Route::get('/profile/edit', [App\Http\Controllers\User\ProfileController::class, 'show']);
+Route::post('/profile/edit', [App\Http\Controllers\User\ProfileController::class, 'edit']);
 
 // Address
 Route::get('/noaddress', [App\Http\Controllers\User\AddressController::class, 'index'])->name('noadd');
-Route::get('/address/{address}/edit', [App\Http\Controllers\User\AddressController::class, 'edit']);
+Route::get('/address/edit', [App\Http\Controllers\User\AddressController::class, 'show']);
+Route::post('/address/edit', [App\Http\Controllers\User\AddressController::class, 'update']);
 Route::get('/address/create', [App\Http\Controllers\User\AddressController::class, 'create']);
+Route::get('getCity',[App\Http\Controllers\User\AddressController::class, 'City']);
+Route::get('getDistrict', [App\Http\Controllers\User\AddressController::class, 'District']);
 
 // Checkout
 Route::get('/checkout', [App\Http\Controllers\User\CheckoutController::class, 'index'])->name('checkout');

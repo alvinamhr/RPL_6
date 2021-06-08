@@ -26,18 +26,18 @@
                 <table class="tabel-biodata">
                     <tr class="nama">
                         <td>NAMA</td>
-                        <td>{{Auth::user()->name}}</td>
+                        <td> : {{Auth::user()->name}}</td>
                     </tr>
                     <tr class="email">
                         <td>EMAIL</td>
-                        <td>{{Auth::user()->email}}</td>
+                        <td> : {{Auth::user()->email}}</td>
                     </tr>
                     <tr class="notel">
                         <td>NOMOR TELEPON</td>
-                        <td>{{$profile->phone_number}}</td>
+                        <td> : {{$profile->phone_number}}</td>
                     </tr>
                     <tr>
-                        <td><a class="ubah-bio" href="/profile/{profile}/edit">Ubah Biodata</a></td>
+                        <td><a class="ubah-bio" href="/profile/edit">Ubah Biodata</a></td>
                     </tr>
                 </table>
             </div>
@@ -53,7 +53,7 @@
                         <br>
                         Alamat :{{$profile->user_address}}
                         <br>
-                        Kota {{$profile->user_city}}, Kabupaten {{$profile->user_disctrict}},Provinsi {{$profile->user_province}}
+                        Kota {{$profile->user_disctrict}}, Kabupaten {{$profile->user_city}},Provinsi {{$profile->user_province}}
                         <br>
                         Kode Pos : {{$profile->user_posCode}}
                     </p>
@@ -62,10 +62,10 @@
             <br>
             <div>
                 <button class="address-button">
-                    <a href="/address/create">Tambah Alamat</a> 
+                    <a href="/address/edit">Tambah Alamat</a> 
                 </button>
                 <button class="change-address">
-                    <a href="/address/{address}/edit">Ubah Alamat</a> 
+                    <a href="/address/edit">Ubah Alamat</a> 
                 </button> 
             </div>
         </div>
