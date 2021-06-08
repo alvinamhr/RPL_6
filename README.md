@@ -2,7 +2,16 @@
 ![agyok (5)](https://user-images.githubusercontent.com/65324407/114561585-e3c0f300-9c97-11eb-9a60-630cede5b925.png)
 
   Gagyok merupakan aplikasi website yang dibuat sebagai marketplace yang nantinya akan menjadi pasar untuk melakukan transaksi jual beli online produk Korea Selatan. Aplikasi ini akan di design sebagaimana marketplace pada umumnya. Aplikasi ini dirancang kepada pengguna yang ingin membeli produk Korea. Gagyok akan memiliki fitur yang bisa melihat informasi mengenai perkembangan Korea Selatan dan juga fitur tambahan yang mana pengguna dapat mendengarkan playlist lagu dari band yang ada di Korea.
-  
+ 
+ - *Paralel   : 1*
+ - *Kelompok  : 6*
+ - *Asisten Praktikum*
+    | **Nama** | **NIM** | 
+   | --- | --- |
+   | Levina Siatono	 | G64180019 |
+   | Ali Naufal Ammarullah | G64180080 | 
+   | Muhammad Fauzan Ramadhan ||G64180117 |
+ 
  # Team
    | **Nama** | **NIM** | **Role** |
    | --- | --- | --- |
