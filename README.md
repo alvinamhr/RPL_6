@@ -149,9 +149,20 @@ Gagyok merupakan aplikasi website yang dibuat sebagai e-commerce yang nantinya a
 
  ## Arsitektur Diagram
  ![image](https://user-images.githubusercontent.com/65324407/120956896-d0ee0a80-c77e-11eb-86a1-50b267ed029f.png)
+ 
+# Fungsi CRUD
+ ## CREATE
+- Membuat akun pada aplikasi web Gagyok
+
+## READ
+
+## UPDATE
+
+## DELETE
 
 
-# Hasil Implementasi
+# IMPLEMENTASI
+
 
 # Saran
 
