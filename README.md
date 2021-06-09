@@ -12,7 +12,7 @@
    | --- | --- |
    | Levina Siatono	 | G64180019 |
    | Ali Naufal Ammarullah | G64180080 | 
-   | Muhammad Fauzan Ramadhan ||G64180117 |
+   | Muhammad Fauzan Ramadhan | G64180117 |
  
  # Team
  ![image](https://user-images.githubusercontent.com/65324407/121304675-da19db80-c926-11eb-84d7-8f709cf82457.png)
