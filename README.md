@@ -155,15 +155,24 @@ Gagyok merupakan aplikasi website yang dibuat sebagai e-commerce yang nantinya a
 - Membuat akun pada aplikasi web Gagyok
 
 ## READ
+- Membaca input pengguna pada akun pengguna saat login web Gagyok
+- Menampilakn barang beserta lokasi yang ada di Inventory
 
 ## UPDATE
+- Mengubah kata sandi
+- Mengubah daftar produk yang ada pada keranjang
 
 ## DELETE
+- Menghapus barang yang ada pada keranjang
+- Menghapus akun pengguna
+- 
 
 
 # IMPLEMENTASI
 
 
-# Saran
+
+# Saran dan Evaluasi
+
 
 # Penutup
