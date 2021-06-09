@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Gagyok</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Gagyok" />
+        <meta name="keywords" content="korean, online shop, korea, k-pop" />
+
+        <!-- favicon -->
+        <link rel="shortcut icon" href="assets/image/favicon.png">
+
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <!-- BEGIN: Vendor CSS-->
+        <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/vendors.min.css">
+        <!-- END: Vendor CSS-->
+
+        <!-- Main Css -->
+        <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/slider.css" rel="stylesheet" type="text/css" />
+        <link href="css/colors/default.css" rel="stylesheet">
+        <link rel="stylesheet" href="detail-pesanan.css">
+
+    </head>
+
+    <body>
+        <!-- Loader -->
+        <div id="preloader">
+            <div id="status">
+                <div class="spinner">
+                    <div class="double-bounce1"></div>
+                    <div class="double-bounce2"></div>
+                </div>
+            </div>
+        </div>
+        <!-- Loader -->
+        
+        <!-- Navbar STart -->
+        <div class="nav-container">
+            <nav class="navbar navbar-expand-lg fixed-top bg-white shadow">
+                <img src="assets/image/logo.png" alt="Gagyok" id="navbar-logo">
+                <div class="menu-toggler" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul class="nav-menu topnav">
+                    <li><a href="/home" class="nav-links">BERANDA</a></li>
+                    <li><a href="/category" class="nav-links">CATEGORY</a></li>
+                    <li><a href="/entertainment" class="nav-links">HIBURAN</a></li>
+                    <li class="dropdown">
+							<a href="/profile" class="dropdown-toggle" data-toggle="dropdown"><img src="assets/image/user.jpg" class="img-circle" alt="Avatar"  width="20px" height="20px"> <span>{{auth()->user()->name}}</span></a>
+							<ul class="dropdown-menu">
+								<li><a href="#"><i class="lnr lnr-user"></i> <span>My Profile</span></a></li>
+								<li><a href="#"><i class="lnr lnr-envelope"></i> <span>Message</span></a></li>
+								<li><a href="#"><i class="lnr lnr-cog"></i> <span>Settings</span></a></li>
+								<li><a href="/logout"><i class="lnr lnr-exit"></i> <span>Logout</span></a></li>
+							</ul>
+						</li>
+                </ul>
+                <div class="nav-btn">
+                    <div class="search">
+                        <form action="" method="get">
+                            <input type="text" name="search_text" id="search_text" placeholder="Cari...."/>
+                            <input type="button" name="search_button" id="search_button" class="search">
+                        </form>
+                    </div>
+                    <div class="chart">
+                        <a class="navbar-brand" href="{{ url('/home">
+                            <img src="/assets/icons/keranjang.svg">
+                        </a>
+                    </div>
+                    <div class="notif">
+                        <a class="navbar-brand" href="{{ url('/home">
+                            <img src="/assets/icons/notifikasi.svg">
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        
+        <div class="container">
+            <h4 class="id">ID PESANAN: IDXXXXX</h4>
+            <h4 class=""alamat-pengiriman>ALAMAT PENGIRIMAN</h4>
+                <div class="container-alamat">
+                    <div class="isi-alamat">
+                        <h6>Nama Tujuan</h6>
+                        <p class="alamat">
+                            Nama
+                            <br>
+                            notel
+                            <br>
+                            Alamat
+                            <br>
+                            kota
+                        </p>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div class="pembatas"></div>
+                <br>
+                <br>
+                <div class="container-list">
+                    <ul class="list">
+                        <li class="produk">PRODUK</li>
+                        <li class="hargasat">HARGA SATUAN</li>
+                        <li class="kuantitas">KUANTITAS</li>
+                        <li class="hargatot">HARGA TOTAL</li>
+                    </ul>
+                </div>
+                <br>
+                <div class="container-isi">
+                    <div class="container-foto">
+                        <img src="24370-large_default.jpg" alt="foto" class="foto-produk">
+                        <ul class="list2">
+                            <li class="brand">HOLIKA HOLIKA</li>
+                            <li class="nama-produk">Nama Produk</li>
+                        </ul>
+                    </div>
+                    <h5 class="idr">IDR XXXX</h5>
+                    <div class="kotak-kuantitas">
+                        <h5 class="jumlah">x</h5>
+                    </div>
+                    <h5 class="idr2">IDR XXXX</h5>
+                </div>
+                <br>
+
+                <div class="container-ringkasan">
+                    <table class="table1">
+                        <tr class="baris1">
+                            <td>Ringkasan Belanja</td>
+                        </tr>
+                        <tr class="baris2">
+                            <td>Total Harga (x produk)</td>
+                            <td>IDR xxxx</td>
+                        </tr>
+                        <tr class="baris3">
+                            <td>Biaya Pengiriman</td>
+                            <td>IDR xxxx</td>
+                        </tr>
+                    </table>
+                </div>
+                <br>
+                <div class="pembatas"></div>
+                <br>
+                <table class="table2">
+                    <tr class="baris4">
+                        <td>Total Belanja</td>
+                        <td>IDR xxxx</td>
+                </table>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="end-gagyok">
+            <div class="tentang">
+                <p class="atas">GAGYOK</p> 
+                <a href="#" class="bawah">tentang gagyok</a> 
+            </div>
+        </div>
+    
+    </body>
+    </html>
