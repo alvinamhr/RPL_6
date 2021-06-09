@@ -13,15 +13,40 @@
             <h1>BIODATA</h1>
             <div class="foto-bio">
                 <div class="container-foto">
-                    <button onclick="myFunction()" class="input-image">
-                            PILIH FOTO
-                            <input class="form-control d-none" type="file" name="file_gambar" accept="image/*" id="formFile" value="PILIH FOTO">
-                    </button>
-                    <div>
-                        <span> 
-                            <img class="taro-foto" src="{{ url('assets/image/profile/fikri.png') }}/{{ $profile->user_picture }}" alt="FOTO">
-                        </span>
-                    </div>
+                    {{-- <form class="form-ubah-bio" method="POST" action="{{url('address/edit')}}" enctype="multipart/form-data">
+                        @csrf
+                                PILIH FOTO
+                                <input type="file" name="file_gambar" value="PILIH FOTO">
+                        <div>
+                            <span> 
+                                <img class="taro-foto" src="{{ url('assets/image/profile')}}/{{ $profile->user_picture}}" alt="FOTO">
+                            </span>
+                        </div>
+                        <button type="submit">Submit</button>
+                    </form> --}}
+                    <form method="POST" enctype="multipart/form-data" id="upload-image" action="{{ url('address/edit') }}" >
+                        @csrf
+                        <div class="row">
+               
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <input type="file" name="image" placeholder="Choose image" id="image">
+                                      @error('image')
+                                      <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                                      @enderror
+                                </div>
+                            </div>
+               
+                            <div class="col-md-12 mb-2">
+                                <img id="preview-image-before-upload" src="https://www.riobeauty.co.uk/images/product_image_not_found.gif"
+                                    alt="preview image" style="max-height: 250px;">
+                            </div>
+                               
+                            <div class="col-md-12">
+                                <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+                            </div>
+                        </div>     
+                    </form>
                 </div>
                 <table class="tabel-biodata">
                     <tr class="nama">
@@ -77,4 +102,48 @@
     function myFunction() {
       document.getElementById("formFile").click();
     }
+
+    $(document).ready(function (e) {
+ 
+   
+ $('#image').change(function(){
+          
+  let reader = new FileReader();
+
+  reader.onload = (e) => { 
+
+    $('#preview-image-before-upload').attr('src', e.target.result); 
+  }
+
+  reader.readAsDataURL(this.files[0]); 
+ 
+ });
+ 
+});
 </script>
+
+@error('image')
+<div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+@enderror
+
+<script type="text/javascript">
+      
+    $(document).ready(function (e) {
+     
+       
+       $('#image').change(function(){
+                
+        let reader = new FileReader();
+     
+        reader.onload = (e) => { 
+     
+          $('#preview-image-before-upload').attr('src', e.target.result); 
+        }
+     
+        reader.readAsDataURL(this.files[0]); 
+       
+       });
+       
+    });
+     
+    </script>

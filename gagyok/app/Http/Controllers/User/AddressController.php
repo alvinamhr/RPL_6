@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Response;
 use Illuminate\Http\Request;
 use Auth;
 use App\Models\User;
@@ -11,6 +13,7 @@ use App\Models\Province;
 use App\Models\City;
 use App\Models\District;
 use DB;
+use Image;
 
 class AddressController extends Controller
 {
@@ -116,9 +119,14 @@ class AddressController extends Controller
         $provinsi = Province::where('id', $request->province)->first();
         $kabupaten = City::where('id', $request->city)->first();
         $kota = District::where('id', $request->district)->first();
- 
-        $profile->user_address = $request->alamat;
-        $profile->phone_number = $request -> notelp;
+        
+        if (isset($request->alamat)) {
+            $profile->user_address = $request->alamat;
+        }
+        if (isset($request->notelp)) {
+            $profile->phone_number = $request -> notelp;
+        }
+        
     
         if (isset($provinsi)) {
             $profile->user_province = $provinsi->name;
@@ -131,12 +139,29 @@ class AddressController extends Controller
             $profile->user_disctrict = $kota -> name;
         }
 
+        if ($request->hasFile('image')) 
+        {
+
+            $validatedData = $request->validate([
+                'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048'
+        
+               ]);
+        
+               $name = $request->file('image')->hashname();
+               $request->file('image')->store('public/assets/image/profile');
+            //    $request->file('image')->store('public/assets/image/profile');
+            //    dd($name);
+        
+               $profile->user_picture = $name;
+
+         }
+
         $profile->update();
 
         // dd($user);
         // dd($profile);
 
-        return redirect()->route('profile');
+        return redirect()->route('profile')->with('status', 'Image Has been uploaded successfully');
     }
 
     /**

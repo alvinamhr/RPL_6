@@ -88,8 +88,8 @@ class ProfileController extends Controller
         $profile = Personalinfo::where('user_id', Auth::user()->id)->first();
 
         $user->name = $request->fname;
-        $user->user_address = $request->fname;
         $user->email = $request->email;
+        $profile->user_email = $request->email;
         $profile->phone_number = $request -> notelp;
         $user->update();
         $profile->update();

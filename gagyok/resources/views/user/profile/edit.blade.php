@@ -15,7 +15,7 @@
             <div class="container-isi-form" >
                 
                 <h3 class="judul">Ubah Biodata</h3>
-                <form class="form-ubah-bio" method="POST" action="{{ url('profile/edit') }}">
+                <form class="form-ubah-bio" method="POST" action="{{url('profile/edit')}}">
                     @csrf
                     <label for="fname">Nama</label><br>
                         <input type="text" id="fname" name="fname" class="input-nama @error('fname') is-invalid @enderror" value="{{ $user->name }}" required autocomplete="fname" autofocus><br>
