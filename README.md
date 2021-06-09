@@ -174,5 +174,15 @@ Gagyok merupakan aplikasi website yang dibuat sebagai e-commerce yang nantinya a
 
 # Saran dan Evaluasi
 
+ 1. Fitur review pengguna masih belum tersedia sehingga pengguna masih belum dapat untuk melakukan ulasan produk
+ 2. Kedepannya, aplikasi ini akan dilengkapi fitur barcode untuk memudahkan pengguna untuk mengecek orisinilitas produk
+ 3. *E-money* masih belum tersedia, sehingga pengguna masih belum menimpang uang di aplikasi Gagyok
+
 
 # Penutup
+  
+  Puji Syukur kepada Allah SWT atas egala rahmat yang diberikan sehingga kelompok kami dapat menyelesaikan tugas project dari Mata Kuliah Rekayasa Perangkat Lunak Departemen Ilmu Komputer IPB University. Terimakasih atas kesempatan dan ilmu yang telah diberikan oleh Bapak/ Ibu dosen pengampu mata kuliah beserta Kakak Asisten Praktikum yang telah membimbing dan memberikan pengalaman serta ilmunya kepada kami. Selama pengembangan aplikasi Gagyok ini, kami banyak belajar tentang hal- hal baru dan itu membuat kami semakin berkembang khususnya di bidang software engineering sehingga kami dapat menyelesaikan aplikasi web ini dan juga beserta laporannya.
+  
+  ## _**“Kalau mimpimu belum tercapai, jangan ubah mimpinya, tapi ubah strateginya”**_
+  
+Salam kami, Victory Team (RPL Kelompok 6)
