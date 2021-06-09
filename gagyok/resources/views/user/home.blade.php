@@ -1,4 +1,4 @@
-@extends('layouts.navver2')
+@extends('layouts.app')
 
 @section('content')
 <!-- Slider -->

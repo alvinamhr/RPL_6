@@ -126,8 +126,6 @@ class AddressController extends Controller
         if (isset($request->notelp)) {
             $profile->phone_number = $request -> notelp;
         }
-        
-    
         if (isset($provinsi)) {
             $profile->user_province = $provinsi->name;
         }
@@ -146,13 +144,20 @@ class AddressController extends Controller
                 'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048'
         
                ]);
-        
+               $image = $request->file('image');
+               $oldName= $profile->user_picture;
+               $oldfile_path ="public/assets/image/profile/".$oldName;
+            //    dd($oldName);
+               Storage::delete($oldfile_path);
                $name = $request->file('image')->hashname();
-               $request->file('image')->store('public/assets/image/profile');
+               $request->file('image')->storeAs('public/assets/image/profile', $name);
             //    $request->file('image')->store('public/assets/image/profile');
-            //    dd($name);
+            //    $request->file('image')->store('public/assets/image/profile');
+            $profile->user_picture = $name;
+            // $profile->update();
+            //    dd($request->file('image')->storeAs('/image/profile', $name));
         
-               $profile->user_picture = $name;
+               
 
          }
 

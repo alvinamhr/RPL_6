@@ -6,6 +6,12 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Category;
 use App\Models\Product;
+use App\Models\Order;
+use App\Models\OrderDetail; 
+use Auth;
+use App\Models\Personalinfo;
+use App\Models\User;
+
 
 
 class CheckoutController extends Controller
@@ -30,8 +36,10 @@ class CheckoutController extends Controller
     public function index()
     {
 
-        return view('user.checkout');
-
+        // $user = User::where('id', Auth::user()->id)->first();
+        $profile = Personalinfo::where('user_id', Auth::user()->id)->first();
+        $orders = Order::where('user_id', Auth::user()->id)->where('status',0)->first(); 
+        return view('user.checkout', compact('orders','profile'));
     }
 
 
@@ -60,9 +68,14 @@ class CheckoutController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function pesan(Request $request)
     {
-        //
+        // dd($request->id);
+        $orders = Order::where('user_id', Auth::user()->id)->where('status',0)->where('id',$request->id)->first();
+        $orders->status = 1;
+        //  dd($orders);
+        $orders -> update();
+        return redirect()->route('notification');
     }
 
     /**

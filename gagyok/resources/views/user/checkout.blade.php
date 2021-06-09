@@ -1,4 +1,4 @@
-@extends('layouts.navver2')
+@extends('layouts.app')
 
 @section('content')
 <section class="section">
@@ -10,20 +10,22 @@
             <span class="text-tempat-co">Rumah</span>
         </div>
         <div class="text-alamat-co"> 
-            <p>Feliany</p>
-            <p>081283940039</p>
-            <p>Jalan Dharma Puri 6 Blok F6 no. 43A</p>
-            <p>KOTA JAKARTA BARAT, KALIDERES, DKI JAKARTA, ID, 11850</p>
+            <p>{{Auth::user()->name}}</p>
+            <p>{{$profile->phone_number}}</p>
+            <p>{{$profile->user_address}}</p>
+            <p>Kota {{$profile->user_disctrict}}, Kabupaten {{$profile->user_city}},Provinsi {{$profile->user_province}}</p>
         </div>
-        <button class="btn-pilih-co">
+        <a href="address/edit"  >
+            <button class="btn-pilih-co">
             PILIH ALAMAT LAIN
-        </button>
+            </button>
+        </a>
         <div class="line-co"></div>
     </div>
 </section>
 <section class="section">
-    <div class="container-cart2 position-relative" style="margin-top:-21%">
-        <div class="header-cart">
+    <div class="container-cart2 position-absolute" style="margin-top:-47%">
+        {{-- <div class="header-cart">
             <div class="row gx-3 gy-2 align-items-center">
                 <div class="col-sm-4">
                     <div class="header-text-cart" style="text-align:left">
@@ -78,7 +80,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
 
 
         <div class="pilih-pengiriman">
@@ -96,7 +98,7 @@
                 </div>
                 <div class="col">
                     <div class="total-harga-cart" style="font-weight: bold">
-                        <span>IDR 10,000</span>
+                        <span>IDR 100.000</span>
                     </div>
                 </div>
             </div>
@@ -133,7 +135,7 @@
                 </div>
                 <div class="col">
                     <div class="total-harga-cart" style="font-weight: bold; margin-top: 5%">
-                        <span>IDR Harga</span>
+                        <span>IDR  {{number_format($orders->subtotal)}}</span>
                     </div>
                     <div class="biaya-pengiriman-co" style="font-weight: bold" >
                         <span>IDR Biaya Pengiriman</span>
@@ -149,13 +151,22 @@
                 </div>
                 <div class="col">
                     <div class="ringkasan-text-cart">
-                        <span>IDR 742,000</span>
+                        <span>IDR  {{number_format($orders->subtotal)}}</span>
                     </div>
-                    <button type="button" href="#" class="btn-pilih-pembayaran ringkasan-text-cart" style="color:#fffff">
-                        Pilih Pembayaran
-                    </button>
+                   
+                    <form method="post" action="{{ url('/pesan') }}">
+                        @csrf
+                        <input type="hidden" name="id"  value="{{$orders->id}}">
+                            <button type="submit" class="btn-pilih-pembayaran ringkasan-text-cart">Pesan</button>                         
+                        </form>
+                    
                 </div>
             </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            
         </div>
     </div>
 </section>

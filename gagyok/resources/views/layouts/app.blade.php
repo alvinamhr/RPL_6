@@ -58,7 +58,7 @@
                     <li><a href="/category" class="nav-links">KATEGORI</a></li>
                     <li><a href="/entertainment" class="nav-links">HIBURAN</a></li>
                     <li class="dropdown">
-							<a href="/profile" class="dropdown-toggle" data-toggle="dropdown"><img src="{{asset('assets/image/profile/default.png')}}" class="img-circle" alt="Avatar"  width="20px" height="20px"> <span>{{auth()->user()->name}}</span></a>
+							<a href="/profile" class="dropdown-toggle" data-toggle="dropdown"><img src="{{asset('storage/assets/image/profile/dummy.jpg')}}" class="img-circle" alt="Avatar"  width="20px" height="20px"> <span>{{auth()->user()->name}}</span></a>
 							<ul class="dropdown-menu">
 								<li><a href="#"><i class="lnr lnr-user"></i> <span>My Profile</span></a></li>
 								<li><a href="#"><i class="lnr lnr-envelope"></i> <span>Message</span></a></li>
@@ -98,7 +98,9 @@
                         @endphp
                         <a class="nav-link" href="{{ url('/cart') }}">
                             {{-- <img src="{{ asset('assets/icons/apa.svg') }}"> --}}
-                            <span class="badge badge-danger">{{$notif}}</span>
+                            @if ($notif>=1)
+                                <span class="badge badge-danger">{{$notif}}</span>
+                            @endif
                         </a>
                         {{-- sampai disini notifnya --}}
                         {{-- <img src="{{ asset('assets/icons/keranjang.svg')}}"> --}}
@@ -107,11 +109,12 @@
                         </a> --}}
                     </div>
                     
-                    <div class="notif">
-                        <a class="navbar-brand" href="{{ url('/home') }}">
-                            <img src="{{ asset('assets/icons/notifikasi.svg') }}">
+
+                        <a class="notif" href="{{ url('/notification')}}">
+                            
                         </a>
-                    </div>
+
+                
                 </div>
             </nav>
         </div>

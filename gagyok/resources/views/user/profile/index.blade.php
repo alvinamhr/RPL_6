@@ -13,21 +13,12 @@
             <h1>BIODATA</h1>
             <div class="foto-bio">
                 <div class="container-foto">
-                    {{-- <form class="form-ubah-bio" method="POST" action="{{url('address/edit')}}" enctype="multipart/form-data">
-                        @csrf
-                                PILIH FOTO
-                                <input type="file" name="file_gambar" value="PILIH FOTO">
-                        <div>
-                            <span> 
-                                <img class="taro-foto" src="{{ url('assets/image/profile')}}/{{ $profile->user_picture}}" alt="FOTO">
-                            </span>
-                        </div>
-                        <button type="submit">Submit</button>
-                    </form> --}}
-                    <form method="POST" enctype="multipart/form-data" id="upload-image" action="{{ url('address/edit') }}" >
+                    <div>
+                        <img class = container-foto id="preview-image-before-upload" src="{{url('storage/assets/image/profile')}}/{{$profile->user_picture}}" alt="preview image">
+                    </div>
+                    <form method="POST" enctype="multipart/form-data" id="upload-image" action="{{url('address/edit')}}" >
                         @csrf
                         <div class="row">
-               
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <input type="file" name="image" placeholder="Choose image" id="image">
@@ -36,12 +27,6 @@
                                       @enderror
                                 </div>
                             </div>
-               
-                            <div class="col-md-12 mb-2">
-                                <img id="preview-image-before-upload" src="https://www.riobeauty.co.uk/images/product_image_not_found.gif"
-                                    alt="preview image" style="max-height: 250px;">
-                            </div>
-                               
                             <div class="col-md-12">
                                 <button type="submit" class="btn btn-primary" id="submit">Submit</button>
                             </div>
@@ -66,6 +51,8 @@
                     </tr>
                 </table>
             </div>
+            <br>
+            <br>
             <br>
             <br>
             <h2>DAFTAR ALAMAT</h2>
@@ -96,7 +83,6 @@
         </div>
     </div>
 </section>
-@endsection
 
 <script>
     function myFunction() {
@@ -147,3 +133,6 @@
     });
      
     </script>
+
+@endsection
+

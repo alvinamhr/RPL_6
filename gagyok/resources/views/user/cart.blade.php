@@ -1,7 +1,7 @@
-@extends('layouts.navver2')
+@extends('layouts.app')
 
 @section('content')
-<section class="section">
+<section class="section-cart">
     <div class="container-cart">
         <div class="header-cart">
             <div class="row gx-3 gy-2 align-items-center">
@@ -100,8 +100,6 @@
         </div>
     </div>
 </section>
-@endsection
-
 <script>
     $('#select-all').click(function(event) {   
     if(this.checked) {
@@ -116,3 +114,7 @@
     }
 });
 </script>
+
+
+@endsection
+
