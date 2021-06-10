@@ -51,4 +51,4 @@ Route::post('/pesan', [App\Http\Controllers\User\CheckoutController::class, 'pes
 
 // Notification
 Route::get('/notification', [App\Http\Controllers\User\NotifikasiController::class, 'index'])->name('notification');
-
+Route::post('/notification', [App\Http\Controllers\User\NotifikasiController::class, 'edit']);

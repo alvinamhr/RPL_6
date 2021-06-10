@@ -73,6 +73,8 @@ class CheckoutController extends Controller
         // dd($request->id);
         $orders = Order::where('user_id', Auth::user()->id)->where('status',0)->where('id',$request->id)->first();
         $orders->status = 1;
+        $date = now()->setTimezone('Asia/Jakarta');
+        $orders -> order_date = $date;
         //  dd($orders);
         $orders -> update();
         return redirect()->route('notification');

@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        {{-- <script src="jq/jquery-2.1.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script> --}}
+
+        
+
         <meta charset="utf-8" />
         <title>Gagyok</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +18,8 @@
         <!-- Bootstrap -->
         <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+        
         
         
 
@@ -58,9 +65,12 @@
                     <li><a href="/category" class="nav-links">KATEGORI</a></li>
                     <li><a href="/entertainment" class="nav-links">HIBURAN</a></li>
                     <li class="dropdown">
-							<a href="/profile" class="dropdown-toggle" data-toggle="dropdown"><img src="{{asset('storage/assets/image/profile/dummy.jpg')}}" class="img-circle" alt="Avatar"  width="20px" height="20px"> <span>{{auth()->user()->name}}</span></a>
+                        @php
+                            $profile = \App\Models\Personalinfo::where('user_id',Auth::user()->id)->first();
+                        @endphp
+							<a href="/profile" class="dropdown-toggle" data-toggle="dropdown"><img src="{{asset('storage/assets/image/profile')}}/{{$profile->user_picture}}" class="rounded" alt="Avatar"  width="20px" height="20px"> <span>{{auth()->user()->name}}</span></a>
 							<ul class="dropdown-menu">
-								<li><a href="#"><i class="lnr lnr-user"></i> <span>My Profile</span></a></li>
+								<li><a href="/profile"><i class="lnr lnr-user"></i> <span>My Profile</span></a></li>
 								<li><a href="#"><i class="lnr lnr-envelope"></i> <span>Message</span></a></li>
 								<li><a href="#"><i class="lnr lnr-cog"></i> <span>Settings</span></a></li>
 								<li><a href="/logout"><i class="lnr lnr-exit"></i> <span>Logout</span></a></li>
@@ -82,39 +92,37 @@
                             <input type="button" name="search_button" id="search_button" class="search">
                         </form>
                     </div>
-                    
-
                     <div class="cart">
                         {{-- dibawah ini untuk menampilkan jumlah orderan pada navbar yang ada didalam keranjang belanja--}}
                         @php
                             $main_order = \App\Models\Order::where('user_id',Auth::user()->id)->where('status', 0)->first();
                             if (isset($main_order->id)) {
-                                $notif = \App\Models\OrderDetail::where('order_id', $main_order->id)->count();
+                                $cart = \App\Models\OrderDetail::where('order_id', $main_order->id)->count();
                             }
                             else {
-                                $notif = 0;
+                                $cart = 0;
                             }
-                            
                         @endphp
                         <a class="nav-link" href="{{ url('/cart') }}">
-                            {{-- <img src="{{ asset('assets/icons/apa.svg') }}"> --}}
-                            @if ($notif>=1)
-                                <span class="badge badge-danger">{{$notif}}</span>
+                            @if ($cart>=1)
+                                <span class="badge badge-danger">{{$cart}}</span>
                             @endif
                         </a>
                         {{-- sampai disini notifnya --}}
-                        {{-- <img src="{{ asset('assets/icons/keranjang.svg')}}"> --}}
-                        {{-- <a class="nav-link" href="{{ url('/cart')}}">
-                            <img src="{{asset('assets/icons/keranjang.svg')}}">
-                        </a> --}}
+
                     </div>
-                    
-
-                        <a class="notif" href="{{ url('/notification')}}">
+                        {{-- dibawah ini untuk menampilkan jumlah orderan pada navbar yang ada didalam notivikasi belanja--}}
+                            @php
+                                $main_order = 0;
+                                $main_order = \App\Models\Order::where('user_id',Auth::user()->id)->where('status','>', 0)->where('status','<', 5)->count();
+                            @endphp
                             
+                        <a class="notif" href="{{ url('/notification')}}"> 
+                            @if ($main_order>=1)
+                                <span class="badge badge-primary ">{{$main_order}}</span>
+                            @endif                        
                         </a>
-
-                
+                        {{-- sampai disini notifnya --}}
                 </div>
             </nav>
         </div>
@@ -134,21 +142,30 @@
 			</div>
 		</footer>
 
+        @yield('script')
+        <!-- Main Js -->
+        <script type="text/javascript" src="Scripts/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="Scripts/bootstrap.min.js"></script>
+        
+        {{-- <script src="{{ asset('js/app.js') }}"></script>
+        <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
+        <script src="{{ asset('js/jquery.js')}}"></script>
+        <script src="{{ asset('js/plugins.js')}}"></script>
+
+
+
         <!-- javascript -->
         <script src="{{ asset('app-assets/vendors/js/vendors.min.js') }}"></script>
         <script src="{{ asset('js/jquery.min.js') }}"></script>
-        <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
+        
         <script src="{{ asset('js/jquery.easing.min.js') }}"></script>
         <script src="{{ asset('js/scrollspy.min.js') }}"></script>
         <!-- Animation Js -->
-        <script src="{{ asset('js/aos.js') }}"></script>
+        <script src="{{ asset('js/aos.js') }}"></script> --}}
 
-        @yield('script')
 
-        <!-- Main Js -->
-        <script src="{{ asset('js/app.js') }}"></script>
-        <script src="{{ asset('js/jquery.js')}}"></script>
-        <script src="{{ asset('js/plugins.js')}}"></script>
+
+        
         
         
         

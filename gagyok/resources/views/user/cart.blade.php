@@ -50,7 +50,6 @@
                         </label>
                             <form action="{{ url('cart')}}/{{$order_detail->id}}" method="post">
                                 @csrf
-                                {{method_field('DELETE')}}
                                 <button type="submit" class="btn-hapus-cart" onclick="return confirm('Anda yakin akan menghapus data ?');">HAPUS</button>
                             </form>
                     </div>
@@ -114,7 +113,5 @@
     }
 });
 </script>
-
-
 @endsection
 
