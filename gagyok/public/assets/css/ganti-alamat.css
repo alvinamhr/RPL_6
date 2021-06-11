@@ -191,6 +191,7 @@
     border-radius: 5px;
     height: 2.3em;
     width: 7em;
+    cursor: pointer;
 }
 
 .submit-batal{
@@ -206,6 +207,7 @@
     height: 2.3em;
     width: 7em;
     margin-right: 5px;
+    cursor: pointer;
 }
 
 .kota-pos{

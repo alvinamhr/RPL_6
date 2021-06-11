@@ -93,6 +93,7 @@
     }
 
     $(document).ready(function (e) {
+ 
    
  $('#image').change(function(){
           
@@ -112,6 +113,7 @@
 @enderror
 
 <script type="text/javascript">
+      
     $(document).ready(function (e) {
      
        
@@ -129,4 +131,5 @@
        });
        
     });
+     
 </script>

@@ -49,7 +49,7 @@
                         <input type="password" id="password-confirm" name="password_confirmation" class="input-notelp @error('password') is-invalid @enderror"><br> --}}
 
                     <div class="submits">
-                        <a href="/profile"><input type= "button"value="Batal" class="submit-batal"></a>
+                        <a href="/profile"><input type= "button" value="Batal" class="submit-batal"></a>
                         <input type="submit" value="Ubah" class="submit-ubah">
                     </div>
                 </form>   

@@ -157,7 +157,7 @@
 .submit-tambah{
     border: 1px solid rgba(65, 204, 102, 1);
     background-color: rgba(65, 204, 102, 1);
-    box-shadow:  0pt 4pt 4pt rgba(0, 0, 0, 0.25)
+    box-shadow:  0pt 4pt 4pt rgba(0, 0, 0, 0.25);
     font-family: 'Playfair Display', serif;
     font-weight: 600;
     font-size: 1em;
@@ -165,6 +165,7 @@
     border-radius: 5px;
     height: 2.3em;
     width: 7em;
+    cursor: pointer;
 }
 
 .submit-batal{
@@ -180,6 +181,7 @@
     height: 2.3em;
     width: 7em;
     margin-right: 5px;
+    cursor: pointer;
 }
 
 .kota-pos{

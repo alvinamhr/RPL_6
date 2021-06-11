@@ -46,7 +46,10 @@
                             <a href="/entertainment">HIBURAN</a>
                         </div>
                         <div class="col-auto">
-                            <a href="/profile"><img src="{{asset('storage/assets/image/profile')}}" class="rounded" alt="Avatar"  width="20px" height="20px"> <span>{{auth()->user()->name}}</span></a>
+                            @php
+                                $profile = \App\Models\Personalinfo::where('user_id',Auth::user()->id)->first();
+                            @endphp						
+                            <a href="/profile"><img src="{{asset('storage/assets/image/profile')}}/{{$profile->user_picture}}" class="rounded" alt="Avatar"  width="20px" height="20px"> <span>{{auth()->user()->name}}</span></a>
                         </div>
                     </div>
                     <div class="row"> 
@@ -56,9 +59,34 @@
                             </form>
                         </div>
                         <div class="col-auto">
-                            <a class="col cart" href="{{ url('/cart') }}"></a>
+                            {{-- dibawah ini untuk menampilkan jumlah orderan pada navbar yang ada didalam keranjang belanja--}}
+                            @php
+                                $main_order = \App\Models\Order::where('user_id',Auth::user()->id)->where('status', 0)->first();
+                                if (isset($main_order->id)) {
+                                    $cart = \App\Models\OrderDetail::where('order_id', $main_order->id)->count();
+                                }
+                                else {
+                                    $cart = 0;
+                                }
+                            @endphp
+                            <a class="col cart" href="{{ url('/cart') }}">
+                                @if ($cart>=1)
+                                    <span class="badge badge-danger">{{$cart}}</span>
+                                @endif
+                            </a>
+                            {{-- sampai disini notifnya --}}
                             <a class="col line-nav"></a>
-                            <a class="col notif" href="{{ url('/notification')}}"></a>
+                            {{-- dibawah ini untuk menampilkan jumlah orderan pada navbar yang ada didalam notivikasi belanja--}}
+                            @php
+                                $main_order = 0;
+                                $main_order = \App\Models\Order::where('user_id',Auth::user()->id)->where('status','>', 0)->where('status','<', 5)->count();
+                            @endphp  
+                            <a class="col notif" href="{{ url('/notification')}}"> 
+                                @if ($main_order>=1)
+                                    <span class="badge badge-primary ">{{$main_order}}</span>
+                                @endif                        
+                            </a>
+                            {{-- sampai disini notifnya --}}
                         </div>
                     </div>
                 </div>
