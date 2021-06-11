@@ -21,6 +21,7 @@ h2{
     font-style: normal;
     font-weight: 800;
     font-family: 'Cormorant SC', serif;
+    margin-top: 50px;
 }
 
 .tabel-biodata{
@@ -238,4 +239,40 @@ h6{
 
 .input-image:hover {
     color: #C35258;
+}
+
+.save-ava {
+    width: 240px;
+    height: 30px;
+    position: absolute;
+
+    font-family: 'Playfair Display', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 25px;
+    text-align: center;
+
+    color: #C35258;
+    text-shadow: 0px 10px 15px rgba(0, 0, 0, 0.25);
+    border: solid 1px #6670AD;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.save-ava:link {
+    color: #C35258;
+    text-decoration: none;
+}
+
+.save-ava:visited {
+    color: #C35258;
+}
+
+.save-ava:hover {
+    color: #6670AD;
+}
+
+.save-ava:active {
+    color: #6670AD;
 }

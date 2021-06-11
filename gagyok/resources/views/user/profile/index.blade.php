@@ -13,26 +13,42 @@
             <h1>BIODATA</h1>
             <div class="foto-bio">
                 <div class="container-foto">
-                    <button onclick="myFunction()" class="input-image">
-                        PILIH FOTO
-                        <input class="form-control d-none" type="file" name="file_gambar" accept="image/*" id="formFile" value="PILIH FOTO">
-                    </button>
-                    <div class="taro-foto">
-                        <span>FOTO</span>
-                    </div>
+                    <form method="POST" enctype="multipart/form-data" id="upload-image" action="{{ url('address/edit') }}" >
+                        @csrf
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <button onclick="myFunction()" class="input-image">
+                                        PILIH FOTO
+                                        <input class="form-control d-none" type="file" name="file_gambar" accept="image/*" id="formFile" value="PILIH FOTO">
+                                    </button>
+                                      @error('image')
+                                      <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                                      @enderror
+                                </div>
+                            </div>
+                            <div class="col-md-12 mb-2">
+                                <img id="preview-image-before-upload" src="https://www.riobeauty.co.uk/images/product_image_not_found.gif"
+                                    alt="preview image" width="235px" height="240px">
+                            </div>
+                            <div class="col-md-12">
+                                <button type="submit" class="save-ava" id="submit">Save Avatar</button>
+                            </div>
+                        </div>     
+                    </form>
                 </div>
                 <table class="tabel-biodata">
                     <tr class="nama">
                         <td>NAMA</td>
-                        <td>tempat nama</td>
+                        <td>{{Auth::user()->name}}</td>
                     </tr>
                     <tr class="email">
                         <td>EMAIL</td>
-                        <td>tempat email</td>
+                        <td>{{Auth::user()->email}}</td>
                     </tr>
                     <tr class="notel">
                         <td>NOMOR TELEPON</td>
-                        <td>tempat notel</td>
+                        <td>{{$profile->phone_number}}</td>
                     </tr>
                     <tr>
                         <td><a class="ubah-bio" href="/profile/edit">Ubah Biodata</a></td>
@@ -45,13 +61,15 @@
             <div class="container-alamat">
                 <div class="isi-alamat">
                     <h6>Nama Tujuan</h6>
-                    <p class="alamat">Nama
+                    <p class="alamat">Nama : {{Auth::user()->name}}
                         <br>
-                        notel
+                        Nomor Telepon  : {{$profile->phone_number}}
                         <br>
-                        Alamat
+                        Alamat :{{$profile->user_address}}
                         <br>
-                        kota
+                        Kota {{$profile->user_disctrict}}, Kabupaten {{$profile->user_city}},Provinsi {{$profile->user_province}}
+                        <br>
+                        Kode Pos : {{$profile->user_posCode}}
                     </p>
                 </div>
             </div>
@@ -73,4 +91,42 @@
     function myFunction() {
       document.getElementById("formFile").click();
     }
+
+    $(document).ready(function (e) {
+   
+ $('#image').change(function(){
+          
+  let reader = new FileReader();
+  reader.onload = (e) => { 
+    $('#preview-image-before-upload').attr('src', e.target.result); 
+  }
+  reader.readAsDataURL(this.files[0]); 
+ 
+ });
+ 
+});
+</script>
+
+@error('image')
+<div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+@enderror
+
+<script type="text/javascript">
+    $(document).ready(function (e) {
+     
+       
+       $('#image').change(function(){
+                
+        let reader = new FileReader();
+     
+        reader.onload = (e) => { 
+     
+          $('#preview-image-before-upload').attr('src', e.target.result); 
+        }
+     
+        reader.readAsDataURL(this.files[0]); 
+       
+       });
+       
+    });
 </script>
