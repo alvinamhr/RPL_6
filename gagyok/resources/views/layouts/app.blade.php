@@ -143,11 +143,9 @@
 		</footer>
 
         @yield('script')
-        <!-- Main Js -->
-        <script type="text/javascript" src="Scripts/jquery-2.1.1.min.js"></script>
-        <script type="text/javascript" src="Scripts/bootstrap.min.js"></script>
+
         
-        {{-- <script src="{{ asset('js/app.js') }}"></script>
+        <script src="{{ asset('js/app.js') }}"></script>
         <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
         <script src="{{ asset('js/jquery.js')}}"></script>
         <script src="{{ asset('js/plugins.js')}}"></script>
@@ -161,8 +159,11 @@
         <script src="{{ asset('js/jquery.easing.min.js') }}"></script>
         <script src="{{ asset('js/scrollspy.min.js') }}"></script>
         <!-- Animation Js -->
-        <script src="{{ asset('js/aos.js') }}"></script> --}}
+        <script src="{{ asset('js/aos.js') }}"></script>
 
+        <!-- Main Js -->
+         <script type="text/javascript" src="Scripts/jquery-2.1.1.min.js"></script>
+         <script type="text/javascript" src="Scripts/bootstrap.min.js"></script>
 
 
         

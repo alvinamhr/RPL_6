@@ -37,7 +37,7 @@ class CartController extends Controller
             return view('user.cart', compact('orders', 'order_details'));
         }
         else{
-            return view('user.emptyCart');
+            return redirect('cart/empty');
         }
         // return view('user.cart');
     }
@@ -48,9 +48,9 @@ class CartController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function empty()
     {
-        //
+        return view('user.emptyCart');
     }
 
     /**

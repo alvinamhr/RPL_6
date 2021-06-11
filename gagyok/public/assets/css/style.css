@@ -350,7 +350,13 @@ a:active {
     cursor: pointer;
 }
 
+.empty-cart-title{
+    color: #6670AD;
+}
 
+.empty-cart{
+    color: #e74c3c;
+}
 .notif {
     /* display: flex; */
     position: absolute;

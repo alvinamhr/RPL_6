@@ -25,6 +25,7 @@ Route::get('produk/{product_id}', [App\Http\Controllers\ProductController::class
 Route::post('InsertCart/{product_id}', [App\Http\Controllers\User\CartController::class, 'store']); //ini untuk memasukkan keranjang
 
 Route::get('cart', [App\Http\Controllers\User\CartController::class, 'index'])->name('cart'); //ini untuk masuk ke halaman keranjang
+Route::get('cart/empty', [App\Http\Controllers\User\CartController::class, 'empty'])->name('cart'); //ini untuk masuk ke halaman keranjang
 
 Route::delete('cart/{id}', [App\Http\Controllers\User\CartController::class, 'delete']); // ini untuk melakukan delete isi keranjang
 

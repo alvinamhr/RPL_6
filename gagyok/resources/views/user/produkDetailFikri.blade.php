@@ -62,8 +62,6 @@
                                                 @csrf
                                                 <input type="text" name="order_qty" class="form-control" required="">
                                                 <button type="submit" class="btn btn-primary mt-2"><i class="fa fa-shopping-cart"></i> Masukkan Keranjang</button>
-                                                
-                                                
                                             </form>
                                         </td>
                                     </tr>

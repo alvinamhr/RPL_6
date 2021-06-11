@@ -25,15 +25,16 @@
                 </div>
                 <div class="col-auto">
                     <div class="header-text-cart">
-                        <span>TIDAK ADA PRODUK DI KERANJANG ANDA</span>
                         <br>
                         <br>
                         <br>
-                        <span>Lanjutkan Belanja?</span>
+                        <span class="empty-cart-title">KERANJANG KOSONG</span>
+                        <br>
+                        <a href="/home"><span class="empty-cart">Mulai Berbelanja...</span></a>
                         <br>
                         <br>
                         <br>
-                        <a href="/home"> <button type="submit" class="btn btn-primary mt-2"><i class="fa fa-shopping-cart"></i> Kembali Ke Beranda</button></a>
+                        {{-- <a href="/home"> <button type="submit" class="btn btn-primary mt-2"><i class="fa fa-shopping-cart"></i> Kembali Ke Beranda</button></a> --}}
                     </div>
                 </div>
             </div>
