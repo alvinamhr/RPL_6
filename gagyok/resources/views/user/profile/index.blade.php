@@ -18,17 +18,18 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <button onclick="myFunction()" class="input-image">
-                                        PILIH FOTO
-                                        <input class="form-control d-none" type="file" name="file_gambar" accept="image/*" id="formFile" value="PILIH FOTO">
-                                    </button>
+                                    {{-- <button onclick="myFunction()" class="input-image"> --}}
+                                        {{-- PILIH FOTO --}}
+                                    {{-- <input class="form-control d-none" type="file" id="image" name="file_gambar" value="PILIH FOTO"> --}}
+                                    <input class="input-image " type="file" name="image" placeholder="Choose image" id="image" accept="image/*" value="pilih foto">
+                                    {{-- </button> --}}
                                       @error('image')
                                       <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                                       @enderror
                                 </div>
                             </div>
                             <div class="col-md-12 mb-2">
-                                <img id="preview-image-before-upload" src="https://www.riobeauty.co.uk/images/product_image_not_found.gif"
+                                <img id="preview-image-before-upload" src="{{url('storage/assets/image/profile')}}/{{$profile->user_picture}}" alt="preview image""
                                     alt="preview image" width="235px" height="240px">
                             </div>
                             <div class="col-md-12">
@@ -39,7 +40,7 @@
                 </div>
                 <table class="tabel-biodata">
                     <tr class="nama">
-                        <td>NAMA</td>
+                        <td width="600px">NAMA</td>
                         <td>{{Auth::user()->name}}</td>
                     </tr>
                     <tr class="email">
