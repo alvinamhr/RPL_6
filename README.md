@@ -142,7 +142,8 @@ Gagyok merupakan aplikasi website yang dibuat sebagai e-commerce yang nantinya a
 
 # Hasil dan Pembahasan
 ## ERD
-![ERD (1)](https://user-images.githubusercontent.com/65324407/120956019-e82bf880-c77c-11eb-8e13-20e67e8ab8e3.png)
+![ERD-Page-2](https://user-images.githubusercontent.com/65324407/121536943-b2616b00-ca2d-11eb-9c11-d5f26a6d8b54.png)
+
 
 ## Use Case Diagram
 ![UML_Use_Case_Diagram_-_Gagyok](https://user-images.githubusercontent.com/65324407/120956978-00047c00-c77f-11eb-8f8b-241c9cca3829.png)
