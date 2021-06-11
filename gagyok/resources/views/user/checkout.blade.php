@@ -135,7 +135,7 @@
                 </div>
                 <div class="col">
                     <div class="total-harga-cart" style="font-weight: bold; margin-top: 5%">
-                        <span>IDR  {{number_format($orders->subtotal)}}</span>
+                        <span>IDR </span>
                     </div>
                     <div class="biaya-pengiriman-co" style="font-weight: bold" >
                         <span>IDR Biaya Pengiriman</span>
@@ -151,7 +151,7 @@
                 </div>
                 <div class="col">
                     <div class="ringkasan-text-cart">
-                        <span>IDR  {{number_format($orders->subtotal)}}</span>
+                        <span>IDR  </span>
                     </div>
                    
                     <form method="post" action="{{ url('/pesan') }}">

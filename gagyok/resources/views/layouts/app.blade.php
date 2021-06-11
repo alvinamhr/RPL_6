@@ -1,11 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        {{-- <script src="jq/jquery-2.1.1.min.js"></script>
-        <script src="js/bootstrap.min.js"></script> --}}
-
-        
-
         <meta charset="utf-8" />
         <title>Gagyok</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,12 +12,6 @@
 
         <!-- Bootstrap -->
         <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-        
-        
-        
-
         <!-- BEGIN: Vendor CSS-->
         <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/vendors/css/vendors.min.css') }}">
         <!-- END: Vendor CSS-->
@@ -33,6 +22,7 @@
         <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet" type="text/css" />
         <link href="{{ asset('assets/css/slider.css') }}" rel="stylesheet" type="text/css" />
         <link href="{{ asset('css/colors/default.css') }}" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
 
     <body>
@@ -90,25 +80,21 @@
 			</div>
 		</footer>
 
-        @yield('script')
-
-        <script src="{{ asset('js/app.js') }}"></script>
-        <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
-        <script src="{{ asset('js/jquery.js')}}"></script>
-        <script src="{{ asset('js/plugins.js')}}"></script>
-
-
-
         <!-- javascript -->
         <script src="{{ asset('app-assets/vendors/js/vendors.min.js') }}"></script>
         <script src="{{ asset('js/jquery.min.js') }}"></script>
-        
+        <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
         <script src="{{ asset('js/jquery.easing.min.js') }}"></script>
         <script src="{{ asset('js/scrollspy.min.js') }}"></script>
         <!-- Animation Js -->
         <script src="{{ asset('js/aos.js') }}"></script>
 
+        @yield('script')
+
         <!-- Main Js -->
+        <script src="{{ asset('js/app.js') }}"></script>
+        <script src="{{ asset('js/jquery.js') }}"></script>
+        <script src="{{ asset('js/plugins.js') }}"></script>
             <script>
                 function myFunction() {
                   var x = document.getElementById("myTopnav");
@@ -119,7 +105,5 @@
                   }
                 }
                 </script>
-         <script type="text/javascript" src="Scripts/jquery-2.1.1.min.js"></script>
-         <script type="text/javascript" src="Scripts/bootstrap.min.js"></script>
     </body>
 </html>

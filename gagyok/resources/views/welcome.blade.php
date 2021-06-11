@@ -27,21 +27,30 @@
 
     <body>        
         <!-- Navbar STart -->
-        <div class="nav-container">
-            <nav class="navbar navbar-expand-lg fixed-top bg-white shadow">
-                <img src="{{ asset('assets/image/logo.png') }}" alt="Gagyok" id="navbar-logo" >
-                <div class="menu-toggler" id="mobile-menu">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
+        <div class="topnav fixed-top bg-white shadow" id="myTopnav">
+            <div class="row">
+                <div class="col">
+                    <a href="{{ url('/') }}">
+                        <img src="{{ asset('assets/image/logo.png') }}" width="300" height="176" alt="Gagyok">
+                    </a>
                 </div>
-                <div class="nav-menu topnav">
-                    <li><a href="/" class="nav-links">BERANDA</a></li>
-                    <li><a href="/" class="nav-links">KATEGORI</a></li>
-                    <li><a href="/" class="nav-links">HIBURAN</a></li>
-                    <li><a href="/login" class="nav-links">AKUN</a></li>
+                <div class="col">
+                    <div class="row"> 
+                        <div class="col">
+                            <a href="/" class="active nav-links">BERANDA</a>
+                        </div>
+                        <div class="col">
+                            <a href="/">KATEGORI</a>
+                        </div>
+                        <div class="col">
+                            <a href="/">HIBURAN</a>
+                        </div>
+                        <div class="col-auto">
+                            <a href="/login"><span>AKUN</span></a>
+                        </div>
+                    </div>
                 </div>
-            </nav>
+            </div>
         </div>
     
         <!-- Slider -->
