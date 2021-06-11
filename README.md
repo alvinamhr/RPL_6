@@ -178,7 +178,7 @@ Gagyok merupakan aplikasi website yang dibuat sebagai e-commerce yang nantinya a
 ![image](https://user-images.githubusercontent.com/65324407/121705787-32a3d100-caff-11eb-95d5-7838cba9f15c.png)
 ![image](https://user-images.githubusercontent.com/65324407/121705824-3f282980-caff-11eb-84e5-35d67851c874.png)
 ![image](https://user-images.githubusercontent.com/65324407/121705873-4a7b5500-caff-11eb-9280-f76ca8d42ada.png)
-![image](https://user-images.githubusercontent.com/65324407/121705912-549d5380-caff-11eb-9d8b-3762da2ec284.png)
+![image](https://user-images.githubusercontent.com/65324407/121706623-ffae0d00-caff-11eb-8a64-c33fd505dd07.png)
 ![image](https://user-images.githubusercontent.com/65324407/121705958-5ebf5200-caff-11eb-8475-ba44010c7989.png)
 ![image](https://user-images.githubusercontent.com/65324407/121706005-68e15080-caff-11eb-9d81-024b77a93a46.png)
 ![image](https://user-images.githubusercontent.com/65324407/121706065-78f93000-caff-11eb-880f-0f5a257cdafa.png)
