@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<section class="section">
+<section class="section-cart">
     <div class="container-cart">
         <div class="header-cart">
             <div class="row gx-3 gy-2 align-items-center">
@@ -30,40 +30,53 @@
                 </div>
             </div>
         </div>
+
+        @php
+                $count=0;
+        @endphp
+        @foreach($order_details as $order_detail)
         <div class="row-cart">
+            @php
+                $count++;
+            @endphp
             <div class="row gx-3 gy-2 align-items-center">
                 <div class="col-sm-4">
                     <div class="form-check header-text-cart" style="text-align:left">
                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                         <label class="form-check-label box-product-cart" for="flexCheckDefault">
-                            <img src="{{ asset('assets/image/Beranda/Hiburan/1.k-pop.png') }}" width="210px" height="170px" alt="make up">
-                            <span class="merk-kategori merk-cart">CLIO</span>
-                            <span class="nama-produk produk-cart">Prism Air Shadow Sparkling</span>
+                            <img src="{{ url('assets/image/product') }}/{{ $order_detail->product->product_image }}" width="210px" height="170px" alt="make up">
+                            <span class="merk-kategori merk-cart">{{ $order_detail->product->product_name }}</span>
+                            <span class="nama-produk produk-cart">{{ $order_detail->product->product_short_desc }}</span>
                         </label>
-                        <button type="button" class="btn-hapus-cart">HAPUS</button>
+                            <form action="{{ url('cart')}}/{{$order_detail->id}}" method="post">
+                                @csrf
+                                <button type="submit" class="btn-hapus-cart" onclick="return confirm('Anda yakin akan menghapus data ?');">HAPUS</button>
+                            </form>
                     </div>
                 </div>
                 <div class="col-sm-3">
                     <div class="text-harga-cart">
-                        <span>IDR HARGA SATUAN</span>
+                        <span>IDR {{ number_format($order_detail->product->product_price) }}</span>
                     </div>
                 </div>
                 <div class="col-sm-3">
                     <div class="header-text-cart">
                         <div class="number-input">
                             <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button>
-                            <input class="quantity" min="0" name="quantity" value="1" type="number">
+                            <input class="quantity" min="0" name="quantity" value="{{ $order_detail->qty }}" type="number">
                             <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
                         </div>
                     </div>
                 </div>
                 <div class="col-auto">
                     <div class="text-harga-cart">
-                        <span>IDR TOTAL HARGA</span>
+                        <span>IDR {{ number_format($order_detail->price) }}</span>
                     </div>
                 </div>
-            </div>
+            </div>  
+            @endforeach  
         </div>
+        
         <div class="ringkasan-belanja-cart">
             <div class="row">
                 <div class="col">
@@ -71,23 +84,21 @@
                         <span>Ringkasan Belanja</span>
                     </div>
                     <div class="total-harga-cart">
-                        <span>Total Harga (4 produk)</span>
+                        <span>Total Harga ({{$count}} produk)</span>
                     </div>
                 </div>
                 <div class="col-md-auto">
                     <div class="total-harga-cart" style="font-weight: bold; margin-top: 30%">
-                        <span>IDR Harga</span>
+                        <span>Total Harga : Rp. {{ number_format($orders->subtotal) }}</span>
                     </div>
                 </div>
                 <div class="col col-lg-2">
-                    <button class="btn-checkout" href="#">Checkout</button>
+                    <a href="{{url('checkout')}}"> <button class="btn-checkout" >Checkout</button></a> 
                 </div>
               </div>
         </div>
     </div>
 </section>
-@endsection
-
 <script>
     $('#select-all').click(function(event) {   
     if(this.checked) {
@@ -102,3 +113,5 @@
     }
 });
 </script>
+@endsection
+

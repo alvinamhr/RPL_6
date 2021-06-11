@@ -29,7 +29,7 @@
         <!-- Navbar STart -->
         <div class="nav-container">
             <nav class="navbar navbar-expand-lg fixed-top bg-white shadow">
-                <img src="{{ asset('assets/image/logo.png') }}" alt="Gagyok" id="navbar-logo">
+                <img src="{{ asset('assets/image/logo.png') }}" alt="Gagyok" id="navbar-logo" >
                 <div class="menu-toggler" id="mobile-menu">
                     <span class="bar"></span>
                     <span class="bar"></span>

@@ -10,14 +10,18 @@
                 <h1 class="title-slider">TERBARU</h1>
                 <img src="{{ asset('assets/image/Beranda/sliderkecil.png') }}" class="img2-slider" alt="...">
                 <h2 class="capt-slider">3CE SOFT MATTE LIPSTICK #CHILL MOVE</h2>
-                <button type="button" class="btn-slider">KLIK DI SINI</button>
+                <a href="produk/8">
+                    <button type="button" class="btn-slider">KLIK DI SINI</button>
+                </a>
             </div>
             <div class="carousel-item">
             <img src="{{ asset('assets/image/Beranda/Kategori/1.makeup.png') }}" class="img-slider" alt="...">
                 <h1 class="title-slider">TERBARU</h1>
-                <img src="{{ asset('assets/image/Beranda/sliderkecil.png') }}" class="img2-slider" alt="...">
+                <img src="{{ asset('assets/image/product/clio.png') }}" class="img2-slider" alt="...">
                 <h2 class="capt-slider">Prism Air Shadow Sparkling</h2>
-                <button type="button" class="btn-slider">KLIK DI SINI</button>
+                <a href="produk/1">
+                    <button type="button" class="btn-slider">KLIK DI SINI</button>
+                </a> 
             </div>
         </div>
         <button class="carousel-control-prev" role="button" href="#carouselControls" data-bs-slide="prev">
@@ -31,56 +35,29 @@
     </div>
 </section>
 <section class="section">
-    <div class="container-catalog position-relative">
+    <div class="container-catalog position-auto">
         <div class="home-kategori">
             <span class="text-section">KATEGORI</span>
             <div class="row row-cols-3">
-                    <div class="container-catalog">
-                        <div class="col">
-                            <div class="align-items-center bg-home">
-                                <img src="{{ asset('assets/image/Beranda/Kategori/1.makeup.png') }}" width="300px" height="300px" alt="...">
-                                <a class="caption-home" href="#">make up</a>
+                <div class="container-catalog"> 
+                    {{-- kategori --}}
+                    @foreach ($categories as $category)
+
+                        <div class="col-md-4" style="width: 25rem; height: 25rem;" >
+                            <div class="align-items-center bg-home" style="margin-left:5%">
+                                <a href="{{url('category')}}/{{$category->category_name}}"> <img src="{{ url('assets/image/Kategori') }}/{{$category->category_image}}" width="300px" height="300px"  alt="..."> </a>
+                                <button onclick="window.location='{{url('category')}}/{{$category->category_name}}'" type="button" class="caption-home">{{$category->category_name}}</button>
                             </div>
                         </div>
-                        <div class="col">
-                            <div class="align-items-center bg-home" style="margin-left:3.5%">
-                                <img src="{{ asset('assets/image/Beranda/Kategori/2.skincare.png') }}" width="300px" height="300px" alt="...">
-                                <a class="caption-home" href="#">skincare</a>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="align-items-center bg-home" style="margin-left:7%">
-                                <img src="{{ asset('assets/image/Beranda/Kategori/3.mode.png') }}" width="300px" height="300px" alt="...">
-                                <a class="caption-home" href="#">mode</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="container-catalog">
-                        <div class="col">
-                            <div class="align-items-center bg-home">
-                                <img src="{{ asset('assets/image/Beranda/Kategori/4.elektronik.png') }}" width="300px" height="300px" alt="...">
-                                <a class="caption-home" href="#">elektronik</a>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="align-items-center bg-home" style="margin-left:3.5%">
-                                <img src="{{ asset('assets/image/Beranda/Kategori/5.makanan.png') }}" width="300px" height="300px" alt="...">
-                                <a class="caption-home" href="#">makanan</a>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="align-items-center bg-home" style="margin-left:7%">
-                                <img src="{{ asset('assets/image/Beranda/Kategori/6.koleksipenggemar.png') }}" width="300px" height="300px" alt="...">
-                                <a class="caption-home" href="#">koleksi penggemar</a>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
+                </div> 
             </div>
+
         </div>
     </div>
 </section>
 <section class="section">
-    <div class="container-catalog position-relative">
+    <div class="container-catalog position-auto">
         <div class="home-hiburan">
             <span class="text-section">HIBURAN</span>
             <div class="row row-cols-3">

@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;500;600;700&display=swap');
+
 .container-form-alamat .overlay {
     position: fixed;
     top: 0px;
@@ -23,8 +26,8 @@
     text-align: left;
     padding: 1em;
     box-sizing: border-box;
-    box-shadow:  1px 1px #6670AD;
-    text-shadow:  0.5px 0.5px grey;
+    box-shadow:  0pt 4pt 4pt rgba(0, 0, 0, 0.25);
+    text-shadow:  0pt 4pt 4pt rgba(0, 0, 0, 0.25);
     border-radius: 10px;
     border: 1px solid #6670AD;
 }
@@ -42,7 +45,14 @@
     font-weight: 600;
     color: rgba(195, 82, 88, 1);
     margin-bottom: 12px;
-    box-shadow: 1px 1px grey;
+    box-shadow: 0pt 4pt 4pt rgba(0, 0, 0, 0.25);
+    outline: none;
+}
+
+.input-nama-alamat:focus{
+    border-color: #6670AD ;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
+    0 0 10px #6670AD;
 }
 
 .input-nama{
@@ -54,7 +64,14 @@
     font-weight: 600;
     color: rgba(195, 82, 88, 1);
     margin-bottom: 12px;
-    box-shadow: 1px 1px grey;
+    box-shadow: 0pt 4pt 4pt rgba(0, 0, 0, 0.25);
+    outline: none;
+}
+
+.input-nama:focus{
+    border-color: #6670AD ;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
+    0 0 10px #6670AD;
 }
 
 .input-nomor{
@@ -66,18 +83,56 @@
     font-weight: 600;
     color: rgba(195, 82, 88, 1);
     margin-bottom: 12px;
-    box-shadow: 1px 1px grey;
+    box-shadow: 0pt 4pt 4pt rgba(0, 0, 0, 0.25);
+    outline: none;
+}
+
+.input-nomor:focus{
+    border-color: #6670AD ;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
+    0 0 10px #6670AD;
 }
 
 .input-kota-kec{
     border: 1px solid #6670AD;
     border-radius: 8px;
-    width: 21.7em;
+    width: 33em;
     height: 2em;
     font-family: 'Playfair Display', serif;
     font-weight: 600;
     color: rgba(195, 82, 88, 1);
     margin-bottom: 12px;
+    box-shadow: 0pt 4pt 4pt rgba(0, 0, 0, 0.25);
+    outline: none;
+}
+
+.input-kota-kec:focus{
+    border-color: #6670AD ;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
+    0 0 10px #6670AD;
+}
+
+.input-provinsi{
+    border: 1px solid #6670AD;
+    border-radius: 8px;
+    width: 17em;
+    height: 2em;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    color: rgba(195, 82, 88, 1);
+    margin-bottom: 12px;
+    box-shadow: 1px 1px grey;
+}
+.input-kabupaten{
+    border: 1px solid #6670AD;
+    border-radius: 8px;
+    width: 15em;
+    height: 2em;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    color: rgba(195, 82, 88, 1);
+    margin-bottom: 12px;
+    margin-left: 12px;
     box-shadow: 1px 1px grey;
 }
 
@@ -90,8 +145,17 @@
     font-weight: 600;
     color: rgba(195, 82, 88, 1);
     margin-bottom: 12px;
-    box-shadow: 1px 1px grey;
+    box-shadow: 0pt 4pt 4pt rgba(0, 0, 0, 0.25);
+    outline: none;
 }
+
+.input-kodepos:focus{
+    border-color: #6670AD ;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
+    0 0 10px #6670AD;
+}
+
+
 
 .input-alamat{
     border: 1px solid #6670AD;
@@ -102,7 +166,14 @@
     font-weight: 600;
     color: rgba(195, 82, 88, 1);
     margin-bottom: 10px;
-    box-shadow: 1px 1px grey;
+    box-shadow: 0pt 4pt 4pt rgba(0, 0, 0, 0.25);
+    outline: none;
+}
+
+.input-alamat:focus{
+    border-color: #6670AD ;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
+    0 0 10px #6670AD;
 }
 
 .submits{
@@ -112,7 +183,7 @@
 .submit-ubah{
     border: 1px solid rgba(65, 204, 102, 1);
     background-color: rgba(65, 204, 102, 1);
-    box-shadow: 0.7px 0.7px grey;
+    box-shadow: 0pt 4pt 4pt rgba(0, 0, 0, 0.25);
     font-family: 'Playfair Display', serif;
     font-weight: 600;
     font-size: 1em;
@@ -125,11 +196,11 @@
 .submit-batal{
     border: 1px solid rgba(255, 0, 0, 1);
     background-color: rgba(255, 0, 0, 1);
-    box-shadow: 1px 1px grey;
+    box-shadow: 0pt 4pt 4pt rgba(0, 0, 0, 0.25);
     font-family: 'Playfair Display', serif;
     font-weight: 600;
     font-size: 1em;
-    text-shadow: 1px 1px grey;
+    text-shadow: 0pt 4pt 4pt rgba(0, 0, 0, 0.25);
     color: #fff;
     border-radius: 5px;
     height: 2.3em;
@@ -151,3 +222,5 @@
 .bagian-nomor{
     margin-left: 9.5px;
 }
+
+

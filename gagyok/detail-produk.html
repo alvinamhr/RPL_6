@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Gagyok</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Gagyok" />
+        <meta name="keywords" content="korean, online shop, korea, k-pop" />
+
+        <!-- favicon -->
+        <link rel="shortcut icon" href="assets/image/favicon.png">
+
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <!-- BEGIN: Vendor CSS-->
+        <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/vendors.min.css">
+        <!-- END: Vendor CSS-->
+
+        <!-- Main Css -->
+        <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/slider.css" rel="stylesheet" type="text/css" />
+        <link href="css/colors/default.css" rel="stylesheet">
+        <link rel="stylesheet" href="detail-produk.css">
+
+    </head>
+
+    <body>
+        <!-- Loader -->
+        <div id="preloader">
+            <div id="status">
+                <div class="spinner">
+                    <div class="double-bounce1"></div>
+                    <div class="double-bounce2"></div>
+                </div>
+            </div>
+        </div>
+        <!-- Loader -->
+        
+        <!-- Navbar STart -->
+        <div class="nav-container">
+            <nav class="navbar navbar-expand-lg fixed-top bg-white shadow">
+                <img src="assets/image/logo.png" alt="Gagyok" id="navbar-logo">
+                <div class="menu-toggler" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul class="nav-menu topnav">
+                    <li><a href="/home" class="nav-links">BERANDA</a></li>
+                    <li><a href="/category" class="nav-links">CATEGORY</a></li>
+                    <li><a href="/entertainment" class="nav-links">HIBURAN</a></li>
+                    <li class="dropdown">
+							<a href="/profile" class="dropdown-toggle" data-toggle="dropdown"><img src="assets/image/user.jpg" class="img-circle" alt="Avatar"  width="20px" height="20px"> <span>{{auth()->user()->name}}</span></a>
+							<ul class="dropdown-menu">
+								<li><a href="#"><i class="lnr lnr-user"></i> <span>My Profile</span></a></li>
+								<li><a href="#"><i class="lnr lnr-envelope"></i> <span>Message</span></a></li>
+								<li><a href="#"><i class="lnr lnr-cog"></i> <span>Settings</span></a></li>
+								<li><a href="/logout"><i class="lnr lnr-exit"></i> <span>Logout</span></a></li>
+							</ul>
+						</li>
+                </ul>
+                <div class="nav-btn">
+                    <div class="search">
+                        <form action="" method="get">
+                            <input type="text" name="search_text" id="search_text" placeholder="Cari...."/>
+                            <input type="button" name="search_button" id="search_button" class="search">
+                        </form>
+                    </div>
+                    <div class="chart">
+                        <a class="navbar-brand" href="{{ url('/home">
+                            <img src="/assets/icons/keranjang.svg">
+                        </a>
+                    </div>
+                    <div class="notif">
+                        <a class="navbar-brand" href="{{ url('/home">
+                            <img src="/assets/icons/notifikasi.svg">
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    
+    <h4>kategori > make up > nama produk</h4>
+    <div class="isi">
+        <div class="container-detail">
+            <div class="container-foto">
+                foto produk
+            </div>
+            <div class="list">
+                <ul class="detail">
+                    <li class="nama-brand">NAMA BRAND</li>
+                    <li class="nama-produk">Nama Produk</li>
+                    <li class="harga">IDR xxxx</li>
+                    <li class="shade">SHADES</li>
+                    <div class="kumpulan-shades">
+                        <li class="list2"><a href="#" class="link"><button class="button-shades"></button></a></li>
+                        <li class="list2"><a href="#" class="link"><button class="button-shades"></button></a></li>
+                        <li class="list2"><a href="#" class="link"><button class="button-shades"></button></a></li>
+                        <li class="list2"><a href="#" class="link"><button class="button-shades"></button></a></li>
+                    </div>
+                    <div class="jumlah-belanjaan">
+                       <li class="jumlah">Quantity</li>
+                       <div class="button-add-less">
+                           <button class="add">+</button>
+                           <input type="text" class="input">
+                           <button class="less">-</button>
+                       </div>
+                    </div>
+                    <div class="tambah">
+                        <a href="#"><button class="button-tambah">Tambah ke Keranjang</button></a>
+                    </div>
+                </ul>
+            </div>  
+        </div>
+        <br>
+        <br>
+        
+        <div class="deskripsi">
+            <h5>DESKRIPSI PRODUK</h5>
+            <div class="container-desc">
+                <p class="isi-desc">desc produknya</p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+
+    <div class="bagian-bawah">
+        <h5 class="serupa">SERUPA</h5>
+        <div class="pembatas">
+        </div>
+
+        <div class="kumpulan-serupa">
+            <button class="serupa1">
+                <div class="konten">
+                    <img src="24370-large_default.jpg" alt="foto" class="foto-produk-serupa">
+                    <ul class="list-serupa">
+                        <li class="serupa-nama-brand">HOLIKA HOLIKA</li>
+                        <li class="serupa-nama-produk">Holi Pop Jelly Tint</li>
+                        <li class="serupa-harga">IDR 88.000</li>
+                    </ul>
+                </div>
+            </button>
+            <button class="serupa2">
+                <div class="konten">
+                    <img src="24370-large_default.jpg" alt="foto" class="foto-produk-serupa">
+                    <ul class="list-serupa">
+                        <li class="serupa-nama-brand">HOLIKA HOLIKA</li>
+                        <li class="serupa-nama-produk">Holi Pop Jelly Tint</li>
+                        <li class="serupa-harga">IDR 88.000</li>
+                    </ul>
+                </div>
+            </button>
+            <button class="serupa3">
+                <div class="konten">
+                    <img src="24370-large_default.jpg" alt="foto" class="foto-produk-serupa">
+                    <ul class="list-serupa">
+                        <li class="serupa-nama-brand">HOLIKA HOLIKA</li>
+                        <li class="serupa-nama-produk">Holi Pop Jelly Tint</li>
+                        <li class="serupa-harga">IDR 88.000</li>
+                    </ul>
+                </div>
+            </button>
+            <button class="serupa4">
+                <div class="konten">
+                    <img src="24370-large_default.jpg" alt="foto" class="foto-produk-serupa">
+                    <ul class="list-serupa">
+                        <li class="serupa-nama-brand">HOLIKA HOLIKA</li>
+                        <li class="serupa-nama-produk">Holi Pop Jelly Tint</li>
+                        <li class="serupa-harga">IDR 88.000</li>
+                    </ul>
+                </div>
+            </button>
+            <button class="serupa5">
+                <div class="konten">
+                    <img src="24370-large_default.jpg" alt="foto" class="foto-produk-serupa">
+                    <ul class="list-serupa">
+                        <li class="serupa-nama-brand">HOLIKA HOLIKA</li>
+                        <li class="serupa-nama-produk">Holi Pop Jelly Tint</li>
+                        <li class="serupa-harga">IDR 88.000</li>
+                    </ul>
+                </div>
+            </button>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="end-gagyok">
+        <div class="tentang">
+            <p class="atas">GAGYOK</p> 
+            <a href="#" class="bawah">tentang gagyok</a> 
+        </div>
+    </div>
+</body>
+</html>

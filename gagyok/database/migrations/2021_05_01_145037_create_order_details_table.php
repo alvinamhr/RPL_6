@@ -20,7 +20,7 @@ class CreateOrderDetailsTable extends Migration
             $table->unsignedBigInteger('product_id');
             $table->integer('price');
             $table->integer('qty');
-            $table->integer('weight');
+            $table->integer('weight')->nullable();
             $table->timestamps();
         });
     }

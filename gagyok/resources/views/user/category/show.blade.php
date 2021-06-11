@@ -7,38 +7,31 @@
             <div class="row">
                 <div class="col-md-3">
                     <div class="bg-kategori">
-                        <img src="{{ asset('assets/image/Beranda/Kategori/1.makeup.png') }}" width="170px" height="170px" alt="make up">
-                        <span class="section-title-kategori">make up</span>
+                        <img src="{{ asset('assets/image/Kategori')}}/{{$namaCategory->category_name}}.png" width="170px" height="170px" alt="...">
+                        <span class="section-title-kategori">{{$namaCategory->category_name}}</span>
                     </div>
                 </div>
                 <div class="col-6 col-md-8">
                     <span class="best-seller">BEST SELLER</span>
                     <div class="container-best-seller">
                         <div class="row-cols-3">
-                                <div class="col">
-                                    <div class="best-seller-box">
-                                        <span class="merk-kategori">CLIO</span>
-                                        <span class="nama-produk">Prism Air Shadow Sparkling</span>
-                                        <span class="price">IDR 159,200</span>
-                                        <img class="pic-product" src="{{ asset('assets/image/Beranda/Kategori/1.makeup/1.jpg') }}">
-                                    <div>
+
+                            @foreach ($products as $product)
+                                    <div class="col-md-4" style="width: 25rem; height: 25rem;">
+                                        <div class="best-seller-box">
+                                            
+                                            <span class="merk-kategori">{{$product->product_name}}</span>
+                                            <a href="{{url('produk')}}/{{$product->product_id}}">
+                                                <span class="nama-produk">{{$product->product_short_desc}}</span>
+                                            </a>
+                                            <span class="price">IDR {{number_format($product->product_price)}}</span>
+                                            <a href="{{url('produk')}}/{{$product->product_id}}"><img class="pic-product" src="{{url('assets/image/product')}}/{{$product->product_image}}"></a>
+                                            
+                                        <div>
+                                    </div>
+                            @endforeach 
                                 </div>
-                                <div class="col">
-                                    <div class="best-seller-box" style="margin-left:55%">
-                                        <span class="merk-kategori">CLIO</span>
-                                        <span class="nama-produk">Prism Air Shadow Sparkling</span>
-                                        <span class="price">IDR 159,200</span>
-                                        <img class="pic-product" src="{{ asset('assets/image/Beranda/Kategori/1.makeup/1.jpg') }}">
-                                    <div>
-                                </div>
-                                <div class="col">
-                                    <div class="best-seller-box" style="margin-left: 55%">
-                                        <span class="merk-kategori">CLIO</span>
-                                        <span class="nama-produk">Prism Air Shadow Sparkling</span>
-                                        <span class="price">IDR 159,200</span>
-                                        <img class="pic-product" src="{{ asset('assets/image/Beranda/Kategori/1.makeup/1.jpg') }}">
-                                    <div>
-                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

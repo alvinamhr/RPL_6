@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
+use App\Models\Category;
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class CategoryController extends Controller
@@ -24,7 +26,9 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        return view('user.category.index');
+        $categories = Product::all()->groupBy('product_category');
+        // dd($categories);
+        return view('user.category.index', compact('categories'));
     }
 
     /**
@@ -54,9 +58,14 @@ class CategoryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($categoryName)
     {
-        return view('user.category.show');
+        $products = Product::where('product_category', $categoryName)->get();
+        // dd($products);
+        $namaCategory = Category::where('category_name', $categoryName)->first();
+        // dd($namaCategory);
+        return view('user.category.show', compact('products', 'namaCategory'));
+        // return view('user.category.show');
     }
 
     /**

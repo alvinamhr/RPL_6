@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Gagyok</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Gagyok" />
+        <meta name="keywords" content="korean, online shop, korea, k-pop" />
+
+        <!-- favicon -->
+        <link rel="shortcut icon" href="assets/image/favicon.png">
+
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <!-- BEGIN: Vendor CSS-->
+        <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/vendors.min.css">
+        <!-- END: Vendor CSS-->
+
+        <!-- Main Css -->
+        <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/slider.css" rel="stylesheet" type="text/css" />
+        <link href="css/colors/default.css" rel="stylesheet">
+        <link rel="stylesheet" href="menunggu-pembayaran.css">
+    </head>
+
+<body>
+    <!-- Loader -->
+    <div id="preloader">
+        <div id="status">
+            <div class="spinner">
+                <div class="double-bounce1"></div>
+                <div class="double-bounce2"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Loader -->
+    
+    <!-- Navbar STart -->
+    <div class="nav-container">
+        <nav class="navbar navbar-expand-lg fixed-top bg-white shadow">
+            <img src="assets/image/logo.png" alt="Gagyok" id="navbar-logo">
+            <div class="menu-toggler" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-menu topnav">
+                <li><a href="/home" class="nav-links">BERANDA</a></li>
+                <li><a href="/category" class="nav-links">CATEGORY</a></li>
+                <li><a href="/entertainment" class="nav-links">HIBURAN</a></li>
+                <li class="dropdown">
+                        <a href="/profile" class="dropdown-toggle" data-toggle="dropdown"><img src="assets/image/user.jpg" class="img-circle" alt="Avatar"  width="20px" height="20px"> <span>{{auth()->user()->name}}</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#"><i class="lnr lnr-user"></i> <span>My Profile</span></a></li>
+                            <li><a href="#"><i class="lnr lnr-envelope"></i> <span>Message</span></a></li>
+                            <li><a href="#"><i class="lnr lnr-cog"></i> <span>Settings</span></a></li>
+                            <li><a href="/logout"><i class="lnr lnr-exit"></i> <span>Logout</span></a></li>
+                        </ul>
+                    </li>
+            </ul>
+            <div class="nav-btn">
+                <div class="search">
+                    <form action="" method="get">
+                        <input type="text" name="search_text" id="search_text" placeholder="Cari...."/>
+                        <input type="button" name="search_button" id="search_button" class="search">
+                    </form>
+                </div>
+                <div class="chart">
+                    <a class="navbar-brand" href="{{ url('/home">
+                        <img src="/assets/icons/keranjang.svg">
+                    </a>
+                </div>
+                <div class="notif">
+                    <a class="navbar-brand" href="{{ url('/home">
+                        <img src="/assets/icons/notifikasi.svg">
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <h3>STATUS PEMBAYARAN: MENUNGGU PEMBAYARAN</h3>
+    <div class="container">
+        <div class="isi-pembayaran">
+            <p class="ID">ID PESANAN: IDXXXXX</p>
+            <ul>
+                <li>Total: Rp XXX.XXX,00</li>
+                <li>Metode Pembayaran: Virtual Account NAMA BANK</li>
+            </ul>
+            <button class="lihat-detail">
+                <a class="detail-pesanan" href="#">Lihat Detail Pesanan</a> 
+             </button> 
+        </div>
+    </div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+    <div class="end-gagyok">
+        <div class="tentang">
+            <p class="atas">GAGYOK</p> 
+            <a href="#" class="bawah">tentang gagyok</a> 
+        </div>
+    </div>
+</body>
+</html>

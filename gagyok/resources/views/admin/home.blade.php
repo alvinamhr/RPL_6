@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+@extends('layouts.app')
 
 @section('title')
     <title>Dashboard</title>
@@ -38,7 +38,7 @@
                                     <div class="callout callout-primary">
                                         <small class="text-muted">Perlu Dikirim</small>
                                         <br>
-                                        <strong class="h4">0</strong>
+                                        <strong class="h4">APA 0</strong>
                                     </div>
                                 </div>
                                 <div class="col-md-3">

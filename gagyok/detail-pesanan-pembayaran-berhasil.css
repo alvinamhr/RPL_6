@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;500;600;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin-top: 12em;
+}
+
+.container{
+    display: grid;
+}
+
+h4{
+    font-family: 'Cormorant SC', serif;
+    color: black;
+    font-weight: bold;
+}
+
+.id{
+    margin-bottom: 1em;
+}
+
+.container-alamat{
+    border: 1px solid #6670AD;
+    border-radius: 5px;
+    background-color: #fff;
+    height: 190px;
+    width: 1140px;
+}
+
+.pembatas{
+    border: .5px solid #9A9A9A;
+}
+
+.container-list{
+    background-color: rgba(191, 184, 218, 0.3);
+    height: 56px;
+    width: 1140px;
+    font-family: 'Cormorant SC', serif;
+    color: #000;
+    font-size: 16px;
+}
+
+li{
+    list-style: none;
+}
+
+.list{
+    display: flex;
+    margin-left: 5px;
+    font-weight: bolder;
+}
+
+.list2{
+    text-align: center;
+    margin-right: 35px;
+}
+
+.produk{
+    padding-right: 220px;
+    margin-top: 20px;
+}
+
+.hargasat{
+    padding-right: 230px;
+    margin-top: 20px;
+}
+
+.hargatot{
+    margin-top: 20px;
+}
+
+.kuantitas{
+    padding-right: 215px;
+    margin-top: 20px;
+}
+
+.jumlah{
+    text-align: center;
+    font-family: 'Cormorant SC', serif;
+    color: #000;
+    font-size: 17px;
+    margin-top: 10px;
+}
+
+.foto-produk{
+    height: 115px;
+    width: 115px;
+    margin-top: 20px;
+    margin-left: 53px;
+}
+
+.brand{
+    font-family: 'Cormorant SC', serif;
+    color: #514E4F;
+    font-weight: bold;
+}
+
+.nama-produk{
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    color: rgba(195, 82, 88, 1);
+}
+
+.container-isi{
+    background-color: rgba(191, 184, 218, 0.3);
+    height: 265px;
+    width: 1140px;
+    display: flex;
+}
+
+.idr{
+    margin-left: 4em;
+    padding-top: 5.5em;
+    font-family: 'Cormorant SC', serif;
+    color: #000;
+    font-weight: bold;
+}
+
+.kotak-kuantitas{
+    border: 1px solid #000;
+    background-color: #fff;
+    width: 100px;
+    height: 40px;
+    margin-top: 6em;
+    margin-left: 14.8em;
+}
+
+.idr2{
+    margin-left: 10.5em;
+    padding-top: 5.5em;
+    font-family: 'Cormorant SC', serif;
+    color: #000;
+    font-weight: bold;
+}
+
+.container-foto{
+    border: 1.5px solid #6670AD;
+    border-radius: 5px;
+    height: 220px;
+    width: 220px;
+    box-shadow: 0pt 4pt 4pt rgba(0, 0, 0, 0.25);
+    background-color: #fff;
+    margin: 20px;
+}
+
+
+.container-ringkasan{
+    background-color: rgba(191, 184, 218, 0.3);
+    height: 200px;
+    width: 1140px;
+}
+
+.table1{
+    margin-left: 40px;
+    color: rgba(195, 82, 88, 1);
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    width: 100%;
+    text-shadow:  0pt 4pt 4pt rgba(0, 0, 0, 0.25);
+}
+
+.table2{
+    margin-left: 40px;
+    color: rgba(195, 82, 88, 1);
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    width: 121%;
+    text-shadow:  0pt 4pt 4pt rgba(0, 0, 0, 0.25);
+}
+
+.baris1{
+    line-height: 3.5em;
+    font-weight: bold;
+}
+
+.baris2 {
+    line-height: 3em;
+}
+
+.baris3{
+    line-height: 1em;
+}
+
+.baris4{
+    font-weight: bold;
+}
+
+.isi-alamat{
+    color: #000;
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+    margin: 1em;
+}
+
+h6{
+    color: #000;
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.end-gagyok{
+    height: 15em;
+    width: 100em;
+    background-color: rgba(191, 184, 218, 0.3);
+}
+
+.tentang{
+    font-family: 'Cormorant SC', serif;
+    margin: 2em;
+    margin-top: 2em;
+}
+
+.atas{
+    color: #6670AD;
+    padding-top: 2em;
+    text-shadow:  0pt 4pt 4pt rgba(0, 0, 0, 0.25);
+    font-weight: bolder;
+    font-size: 25px;
+}
+
+.tentang a{
+    color: rgba(195, 82, 88, 1);
+    text-shadow:  0pt 4pt 4pt rgba(0, 0, 0, 0.25);
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 23px;
+}
+
+.container-status{
+    background-color:  #41CC66 ;
+    border-radius: 10px;
+    width: 550px;
+    height: 50px;
+    color: #fff;
+    font-family: 'Cormorant SC', serif;
+    font-weight: bold;
+}
+
+.status{
+    margin: 15px;
+}

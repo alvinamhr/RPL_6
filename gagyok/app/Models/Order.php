@@ -8,4 +8,18 @@ use Illuminate\Database\Eloquent\Model;
 class Order extends Model
 {
     use HasFactory;
+
+    // setiap pesanan direlasikan kepada satu user
+    public function user()
+    {
+        return $this->belongsTo('App\Models\User','user_id', 'id');
+    }
+
+
+    // satu pesanan memiliki banyak pesanan detail
+    public function order_detail() 
+    {
+        return $this->hasMany('App\Models\OrderDetail','order_id', 'id');
+    }
 }
+

@@ -12,17 +12,44 @@
 <body>
     <div class="container-form">
         <div class="overlay">
-            <div class="container-isi-form">
+            <div class="container-isi-form" >
+                
                 <h3 class="judul">Ubah Biodata</h3>
-                <form class="form-ubah-bio">
+                <form class="form-ubah-bio" method="POST" action="{{url('profile/edit')}}">
+                    @csrf
                     <label for="fname">Nama</label><br>
-                    <input type="text" id="fname" name="fname" value="ganti nama" class="input-nama"><br>
+                        <input type="text" id="fname" name="fname" class="input-nama @error('fname') is-invalid @enderror" value="{{ $user->name }}" required autocomplete="fname" autofocus><br>
+                        @error('fname')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                        @enderror
                     <label for="email">Email</label><br>
-                    <input type="text" id="email" name="email" value="ganti email" class="input-email"><br>
-                    <label for="email">Nomor Telepon</label><br>
-                    <input type="tel" id="notelp" name="notelp" value="ganti notelp" class="input-notelp"><br>
+                        <input type="text" id="email" name="email" class="input-email @error('email') is-invalid @enderror" value="{{ $user->email }}" required autocomplete="email" autofocus><br>
+                        @error('email')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                        @enderror
+                    <label for="notelp">Nomor Telepon</label><br>
+                        <input type="tel" id="notelp" name="notelp" class="input-notelp @error('notelp') is-invalid @enderror" value="{{ $profile->phone_number }}" required autocomplete="notelp" autofocus><br>
+                        @error('notelp')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                        @enderror
+                    {{-- <label for="password">Password</label> <br>
+                        <input type="password" id="password" name="password" class="input-notelp @error('password') is-invalid @enderror"><br>
+                        @error('fname')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                        @enderror
+                    <label for="password-confirm">Konfirmasi Password</label><br>
+                        <input type="password" id="password-confirm" name="password_confirmation" class="input-notelp @error('password') is-invalid @enderror"><br> --}}
+
                     <div class="submits">
-                        <input type="submit" value="Batal" class="submit-batal">
+                        <a href="/profile"><input type= "button"value="Batal" class="submit-batal"></a>
                         <input type="submit" value="Ubah" class="submit-ubah">
                     </div>
                 </form>   

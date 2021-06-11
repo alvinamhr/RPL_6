@@ -4,6 +4,13 @@ namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Category;
+use App\Models\Product;
+use App\Models\Order;
+use App\Models\OrderDetail; 
+use Auth;
+use App\Models\Personalinfo;
+use App\Models\User;
 
 class NotifikasiController extends Controller
 {
@@ -24,7 +31,9 @@ class NotifikasiController extends Controller
      */
     public function index()
     {
-        return view('user.notification');
+        $orders = Order::where('user_id', Auth::user()->id)->where('status','!=',0)->get(); 
+        // dd($orders);    
+        return view('user.notification', compact('orders'));
     }
 
     /**
@@ -65,9 +74,12 @@ class NotifikasiController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Request $request)
     {
-        //
+        $orders = Order::where('id', $request->id)->first();
+        $orders->status = 5;
+        $orders->update();
+        return redirect('notification');
     }
 
     /**

@@ -56,7 +56,7 @@
     position: absolute;
     width: 20%;
     margin-left: 70%;
-    margin-top: 3%;
+    margin-top: -3%;
 }
 
 /* 3CE SOFT MATTE LIPSTICK #CHILL MOVE */
@@ -64,7 +64,7 @@
     position: absolute;
     width: 25%;
     margin-left: 67.5%;
-    margin-top: 23%;
+    margin-top: 18%;
 
     font-family: 'Playfair Display SC', serif;
     font-style: normal;
@@ -81,8 +81,8 @@
 /* terbaru */
 .title-slider {
     position: absolute;
-    margin-left: 67.5%;
-    margin-top: 1.5%;
+    margin-left: 69.5%;
+    margin-top: -20%;
 
     font-family: 'Playfair Display SC', serif;
     font-style: normal;
@@ -100,8 +100,8 @@
     position: absolute;
     width: 186px;
     height: 34px;
-    margin-left: 73%;
-    margin-top: 30.5%;
+    margin-left: 74%;
+    margin-top: 12%;  
 
     font-family: 'Playfair Display SC', serif;
     font-style: normal;

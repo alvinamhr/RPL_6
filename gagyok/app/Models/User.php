@@ -40,4 +40,15 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    // satu user bisa banyak pesanan
+    public function order() 
+    {
+        return $this->hasMany('App\Models\Order','user_id', 'id');
+    }
+
+    public function personalinfo() 
+    {
+        return $this->hasOne('App\Models\Personalinfo','user_id', 'id');
+    }
 }
