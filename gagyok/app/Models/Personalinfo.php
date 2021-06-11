@@ -12,5 +12,4 @@ class Personalinfo extends Model
     {
         return $this->belongTo('App\Models\User','id', 'user_id');
     }
-    
 }
