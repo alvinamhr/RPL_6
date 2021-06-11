@@ -39,19 +39,19 @@
                         <div class="col">
                             <div class="align-items-center bg-home">
                                 <img src="{{ asset('assets/image/Beranda/Kategori/1.makeup.png') }}" width="300px" height="300px" alt="...">
-                                <button type="button" class="caption-home">make up</button>
+                                <a class="caption-home" href="#">make up</a>
                             </div>
                         </div>
                         <div class="col">
                             <div class="align-items-center bg-home" style="margin-left:3.5%">
                                 <img src="{{ asset('assets/image/Beranda/Kategori/2.skincare.png') }}" width="300px" height="300px" alt="...">
-                                <button type="button" class="caption-home">skincare</button>
+                                <a class="caption-home" href="#">skincare</a>
                             </div>
                         </div>
                         <div class="col">
                             <div class="align-items-center bg-home" style="margin-left:7%">
                                 <img src="{{ asset('assets/image/Beranda/Kategori/3.mode.png') }}" width="300px" height="300px" alt="...">
-                                <button type="button" class="caption-home">mode</button>
+                                <a class="caption-home" href="#">mode</a>
                             </div>
                         </div>
                     </div>
@@ -59,19 +59,19 @@
                         <div class="col">
                             <div class="align-items-center bg-home">
                                 <img src="{{ asset('assets/image/Beranda/Kategori/4.elektronik.png') }}" width="300px" height="300px" alt="...">
-                                <button type="button" class="caption-home">elektronik</button>
+                                <a class="caption-home" href="#">elektronik</a>
                             </div>
                         </div>
                         <div class="col">
                             <div class="align-items-center bg-home" style="margin-left:3.5%">
                                 <img src="{{ asset('assets/image/Beranda/Kategori/5.makanan.png') }}" width="300px" height="300px" alt="...">
-                                <button type="button" class="caption-home">makanan</button>
+                                <a class="caption-home" href="#">makanan</a>
                             </div>
                         </div>
                         <div class="col">
                             <div class="align-items-center bg-home" style="margin-left:7%">
                                 <img src="{{ asset('assets/image/Beranda/Kategori/6.koleksipenggemar.png') }}" width="300px" height="300px" alt="...">
-                                <button type="button" class="caption-home">koleksi penggemar</button>
+                                <a class="caption-home" href="#">koleksi penggemar</a>
                             </div>
                         </div>
                     </div>
@@ -88,19 +88,19 @@
                     <div class="col">
                         <div class="align-items-center bg-home">
                             <img src="{{ asset('assets/image/Beranda/Hiburan/1.k-pop.png') }}" width="300px" height="300px" alt="...">
-                            <button type="button" class="caption-home">k-pop</button>
+                            <a class="caption-home" href="#">k-pop</a>
                         </div>
                     </div>
                     <div class="col">
                         <div class="align-items-center bg-home" style="margin-left:3.5%">
                             <img src="{{ asset('assets/image/Beranda/Hiburan/2.k-drama.png') }}" width="300px" height="300px" alt="...">
-                            <button type="button" class="caption-home">k-drama</button>
+                            <a class="caption-home" href="#">k-drama</a>
                         </div>
                     </div>
                     <div class="col">
                         <div class="align-items-center bg-home" style="margin-left:7%">
                             <img src="{{ asset('assets/image/Beranda/Hiburan/3.k-food.png') }}" width="300px" height="300px" alt="...">
-                            <button type="button" class="caption-home">k-food</button>
+                            <a class="caption-home" href="#">k-food</a>
                         </div>
                     </div>
                 </div>

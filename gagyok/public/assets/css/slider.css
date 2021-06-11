@@ -16,7 +16,7 @@
     width: 95%;
     height: 450px;
     margin-left: 2.5%;
-    margin-top: 12.5%;
+    margin-top: 16%;
 
     background: #BFB8DA;
     border-radius: 5px;
@@ -128,8 +128,15 @@
 
 .carousel-control-next,
 .carousel-control-prev {
+    margin-top: 48%;
     width: 5%;
+    margin-left: 50%;
 }
+
+.carousel-control-next{
+    left:55px;
+}
+
 
 .home-slider .carousel-item,
 .home-slider .carousel {

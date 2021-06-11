@@ -22,53 +22,47 @@
         <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet" type="text/css" />
         <link href="{{ asset('assets/css/slider.css') }}" rel="stylesheet" type="text/css" />
         <link href="{{ asset('css/colors/default.css') }}" rel="stylesheet">
-
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
 
     <body>
-     
         <!-- Navbar STart -->
-        <div class="nav-container">
-            <nav class="navbar navbar-expand-lg fixed-top bg-white shadow">
-                <img src="{{ asset('assets/image/logo.png') }}" alt="Gagyok" id="navbar-logo">
-                <div class="menu-toggler" id="mobile-menu">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
+        <div class="topnav fixed-top bg-white shadow" id="myTopnav">
+            <div class="row">
+                <div class="col">
+                    <a href="{{ url('/') }}">
+                        <img src="{{ asset('assets/image/logo.png') }}" width="300" height="176" alt="Gagyok">
+                    </a>
                 </div>
-                <ul class="nav-menu topnav">
-                    <li><a href="/home" class="nav-links">BERANDA</a></li>
-                    <li><a href="/category" class="nav-links">KATEGORI</a></li>
-                    <li><a href="/entertainment" class="nav-links">HIBURAN</a></li>
-                    <li class="dropdown">
-							<a href="/profile" class="dropdown-toggle" data-toggle="dropdown"><img src="{{asset('assets/image/user.jpg')}}" class="img-circle" alt="Avatar"  width="20px" height="20px"> <span>{{auth()->user()->name}}</span></a>
-							<ul class="dropdown-menu">
-								<li><a href="#"><i class="lnr lnr-user"></i> <span>My Profile</span></a></li>
-								<li><a href="#"><i class="lnr lnr-envelope"></i> <span>Message</span></a></li>
-								<li><a href="#"><i class="lnr lnr-cog"></i> <span>Settings</span></a></li>
-								<li><a href="/logout"><i class="lnr lnr-exit"></i> <span>Logout</span></a></li>
-							</ul>
-						</li>
-                </ul>
-                <div class="nav-btn">
-                    <div class="search">
-                        <form action="" method="get">
-                            <input type="text" name="search_text" id="search_text" placeholder="Cari...."/>
-                            <input type="button" name="search_button" id="search_button" class="search">
-                        </form>
+                <div class="col">
+                    <div class="row"> 
+                        <div class="col">
+                            <a href="/home" class="active nav-links">BERANDA</a>
+                        </div>
+                        <div class="col">
+                            <a href="/category">KATEGORI</a>
+                        </div>
+                        <div class="col">
+                            <a href="/entertainment">HIBURAN</a>
+                        </div>
+                        <div class="col-auto">
+                            <a href="/profile"><img src="{{asset('storage/assets/image/profile')}}" class="rounded" alt="Avatar"  width="20px" height="20px"> <span>{{auth()->user()->name}}</span></a>
+                        </div>
                     </div>
-                    <div class="cart">
-                        <a class="navbar-brand" href="/cart">
-                            <img src="{{ asset('assets/icons/keranjang.svg') }}">
-                        </a>
-                    </div>
-                    <div class="notif">
-                        <a class="navbar-brand" href="{{ url('/home') }}">
-                            <img src="{{ asset('assets/icons/notifikasi.svg') }}">
-                        </a>
+                    <div class="row"> 
+                        <div class="col-sm-9">  
+                            <form action="" method="get"  id="search">
+                                <input type="text" name="search_text" id="search_text" placeholder="Cari...."/>
+                            </form>
+                        </div>
+                        <div class="col-auto">
+                            <a class="col cart" href="{{ url('/cart') }}"></a>
+                            <a class="col line-nav"></a>
+                            <a class="col notif" href="{{ url('/notification')}}"></a>
+                        </div>
                     </div>
                 </div>
-            </nav>
+            </div>
         </div>
     
         @yield('content')        
@@ -100,6 +94,16 @@
         <!-- Main Js -->
         <script src="{{ asset('js/app.js') }}"></script>
         <script src="{{ asset('js/jquery.js') }}"></script>
-            <script src="{{ asset('js/plugins.js') }}"></script>
+        <script src="{{ asset('js/plugins.js') }}"></script>
+            <script>
+                function myFunction() {
+                  var x = document.getElementById("myTopnav");
+                  if (x.className === "topnav") {
+                    x.className += " responsive";
+                  } else {
+                    x.className = "topnav";
+                  }
+                }
+                </script>
     </body>
 </html>

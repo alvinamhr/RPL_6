@@ -44,6 +44,23 @@ h2{
     text-shadow: 0px 10px 15px rgba(0, 0, 0, 0.25);
 }
 
+.ubah-bio:link {
+    color: #C35258;
+    text-decoration: none;
+}
+
+.ubah-bio:visited {
+    color: #C35258;
+}
+
+.ubah-bio:hover {
+    color: #6670AD;
+}
+
+.ubah-bio:active {
+    color: #6670AD;
+}
+
 .address-button{
     background-color: #41CC66;
     border: 3px solid #41CC66;
