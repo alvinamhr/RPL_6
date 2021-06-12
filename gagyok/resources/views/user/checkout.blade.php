@@ -147,7 +147,7 @@
                 </div>
                 <div class="col">
                     <div class="ringkasan-text-cart">
-                        <span>IDR  </span>
+                        <span>Rp.   {{  number_format($orders->subtotal)}} </span>
                     </div>
                     <form method="post" action="{{ url('/pesan') }}">
                         @csrf

@@ -162,14 +162,28 @@ Gagyok merupakan aplikasi website yang dibuat sebagai e-commerce yang nantinya a
 ## UPDATE
 - Mengubah kata sandi
 - Mengubah daftar produk yang ada pada keranjang
-
+- Mengubah profil
+- 
 ## DELETE
 - Menghapus barang yang ada pada keranjang
 - Menghapus akun pengguna
-- 
+- Menghapus foto profil
 
 
 # IMPLEMENTASI
+
+ ![image](https://user-images.githubusercontent.com/65324407/121705631-07b97d00-caff-11eb-933a-4d355a9767d9.png)
+![image](https://user-images.githubusercontent.com/65324407/121705678-16079900-caff-11eb-9aeb-81d3892f3736.png)
+![image](https://user-images.githubusercontent.com/65324407/121705721-23248800-caff-11eb-9ae5-11ec5c6f0d0b.png)
+![image](https://user-images.githubusercontent.com/65324407/121705787-32a3d100-caff-11eb-95d5-7838cba9f15c.png)
+![image](https://user-images.githubusercontent.com/65324407/121705824-3f282980-caff-11eb-84e5-35d67851c874.png)
+![image](https://user-images.githubusercontent.com/65324407/121705873-4a7b5500-caff-11eb-9280-f76ca8d42ada.png)
+![image](https://user-images.githubusercontent.com/65324407/121706623-ffae0d00-caff-11eb-8a64-c33fd505dd07.png)
+![image](https://user-images.githubusercontent.com/65324407/121705958-5ebf5200-caff-11eb-8475-ba44010c7989.png)
+![image](https://user-images.githubusercontent.com/65324407/121706005-68e15080-caff-11eb-9d81-024b77a93a46.png)
+![image](https://user-images.githubusercontent.com/65324407/121706065-78f93000-caff-11eb-880f-0f5a257cdafa.png)
+![image](https://user-images.githubusercontent.com/65324407/121706139-8adad300-caff-11eb-837b-d9ad76605704.png)
+![image](https://user-images.githubusercontent.com/65324407/121706207-98905880-caff-11eb-86e6-6f5e78d3f682.png)
 
 
 

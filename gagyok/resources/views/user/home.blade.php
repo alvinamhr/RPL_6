@@ -38,40 +38,40 @@
                     <div class="container-catalog">
                         <div class="col">
                             <div class="align-items-center bg-home">
-                                <img src="{{ asset('assets/image/Beranda/Kategori/1.makeup.png') }}" width="300px" height="300px" alt="...">
-                                <a class="caption-home" href="#">make up</a>
+                                <a href="category/Make-Up"><img src="{{ asset('assets/image/Beranda/Kategori/1.makeup.png') }}" width="300px" height="300px" alt="..."></a>
+                                <a class="caption-home" href="category/Make-Up">Make-Up</a>
                             </div>
                         </div>
                         <div class="col">
                             <div class="align-items-center bg-home" style="margin-left:3.5%">
-                                <img src="{{ asset('assets/image/Beranda/Kategori/2.skincare.png') }}" width="300px" height="300px" alt="...">
-                                <a class="caption-home" href="#">skincare</a>
+                                <a href="category/Skincare"><img src="{{ asset('assets/image/Beranda/Kategori/2.skincare.png') }}" width="300px" height="300px" alt="..."></a>
+                                <a class="caption-home" href="category/Skincare">Skincare</a>
                             </div>
                         </div>
                         <div class="col">
                             <div class="align-items-center bg-home" style="margin-left:7%">
-                                <img src="{{ asset('assets/image/Beranda/Kategori/3.mode.png') }}" width="300px" height="300px" alt="...">
-                                <a class="caption-home" href="#">mode</a>
+                                <a href="category/Mode"><img src="{{ asset('assets/image/Beranda/Kategori/3.mode.png') }}" width="300px" height="300px" alt="..."></a>
+                                <a class="caption-home" href="category/Mode">Mode</a>
                             </div>
                         </div>
                     </div>
                     <div class="container-catalog">
                         <div class="col">
                             <div class="align-items-center bg-home">
-                                <img src="{{ asset('assets/image/Beranda/Kategori/4.elektronik.png') }}" width="300px" height="300px" alt="...">
-                                <a class="caption-home" href="#">elektronik</a>
+                                <a href="category/Elektronik"><img src="{{ asset('assets/image/Beranda/Kategori/4.elektronik.png') }}" width="300px" height="300px" alt="..."></a>
+                                <a class="caption-home" href="category/Elektronik">elektronik</a>
                             </div>
                         </div>
                         <div class="col">
                             <div class="align-items-center bg-home" style="margin-left:3.5%">
-                                <img src="{{ asset('assets/image/Beranda/Kategori/5.makanan.png') }}" width="300px" height="300px" alt="...">
-                                <a class="caption-home" href="#">makanan</a>
+                                <a href="category/Makanan"><img src="{{ asset('assets/image/Beranda/Kategori/5.makanan.png') }}" width="300px" height="300px" alt="..."></a>
+                                <a class="caption-home" href="category/Makanan">makanan</a>
                             </div>
                         </div>
                         <div class="col">
                             <div class="align-items-center bg-home" style="margin-left:7%">
-                                <img src="{{ asset('assets/image/Beranda/Kategori/6.koleksipenggemar.png') }}" width="300px" height="300px" alt="...">
-                                <a class="caption-home" href="#">koleksi penggemar</a>
+                                <a href="category/Koleksi-Penggemar"><img src="{{ asset('assets/image/Beranda/Kategori/6.koleksipenggemar.png') }}" width="300px" height="300px" alt="..."></a>
+                                <a class="caption-home" href="category/Koleksi-Penggemar">koleksi penggemar</a>
                             </div>
                         </div>
                     </div>
