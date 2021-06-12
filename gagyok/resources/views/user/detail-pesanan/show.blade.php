@@ -4,29 +4,27 @@
 <section class="section">
     <div class="container-alamat-co position-relative">
         <div class="alamat-pengiriman-co">
-            <span>ALAMAT PENGIRIMAN</span>
+            <p>ID PESANAN: ID12345678</p>
+            <p>ALAMAT PENGIRIMAN</p>
         </div>
-        <div class="box-alamat-co">
+        <div class="box-alamat-dp">
             <span class="text-tempat-co">Rumah</span>
+            <div class="text-alamat-dp"> 
+                <p>{{Auth::user()->name}}</p>
+                <p>$profile->phone_number</p>
+                <p>$profile->user_address</p>
+                <p>Kota $profile->user_disctrict, Kabupaten $profile->user_city,Provinsi $profile->user_province</p>
+            </div>
         </div>
-        <div class="text-alamat-co"> 
-            <p>{{Auth::user()->name}}</p>
-            <p>{{$profile->phone_number}}</p>
-            <p>{{$profile->user_address}}</p>
-            <p>Kota {{$profile->user_disctrict}}, Kabupaten {{$profile->user_city}},Provinsi {{$profile->user_province}}</p>
-        </div>
-        <a class="btn-pilih-co" href="address/edit">
-            PILIH ALAMAT LAIN
-        </a>
         <div class="line-co"></div>
     </div>
 </section>
 <section class="section">
-    <div class="container-cart2 position-absolute" style="margin-top:-47%">
-        {{-- <div class="header-cart">
+    <div class="container-dp position-relative" style="margin-top:-17%">
+        <div class="header-dp">
             <div class="row gx-3 gy-2 align-items-center">
                 <div class="col-sm-4">
-                    <div class="header-text-cart" style="text-align:left">
+                    <div class="header-text-cart">
                         <span>PRODUK</span>
                     </div>
                 </div>
@@ -47,10 +45,10 @@
                 </div>
             </div>
         </div>
-        <div class="row-cart2">
+        <div class="row-dp">
             <div class="row gx-3 gy-2 align-items-center">
                 <div class="col-sm-4">
-                    <div class="form-check header-text-cart" style="text-align:left">
+                    <div class="form-check header-text-cart justify-content-center">
                         <div class="box-product-cart">
                             <img src="{{ asset('assets/image/Beranda/Hiburan/1.k-pop.png') }}" width="210px" height="170px" alt="make up">
                             <span class="merk-kategori merk-cart">CLIO</span>
@@ -64,12 +62,8 @@
                     </div>
                 </div>
                 <div class="col-sm-3">
-                    <div class="header-text-cart">
-                        <div class="number-input">
-                            <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button>
-                            <input class="quantity" min="0" name="quantity" value="1" type="number">
-                            <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
-                        </div>
+                    <div class="text-harga-cart">
+                        <span>10</span>
                     </div>
                 </div>
                 <div class="col-auto">
@@ -78,45 +72,8 @@
                     </div>
                 </div>
             </div>
-        </div> --}}
-        <div class="pilih-pengiriman">
-            <span>PILIH PENGIRIMAN</span>
         </div>
-        <div class="pilih-pengiriman-co">
-            <div class="row">
-                <div class="col">
-                    <div class="form-check total-harga-cart" style="font-weight: bold">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                        <label class="form-check-label" for="flexCheckDefault">
-                            Reguler (3-5 hari)
-                        </label>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="total-harga-cart" style="font-weight: bold">
-                        <span>IDR 100.000</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="pilih-pengiriman-co" style="margin-top: 590px">
-            <div class="row">
-                <div class="col">
-                    <div class="form-check total-harga-cart" style="font-weight: bold">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                        <label class="form-check-label" for="flexCheckDefault">
-                            Reguler (3-5 hari)
-                        </label>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="total-harga-cart" style="font-weight: bold">
-                        <span>IDR 10,000</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="ringkasan-belanja-co">
+        <div class="ringkasan-belanja-dp">
             <div class="row">
                 <div class="col">
                     <div class="ringkasan-text-cart">
@@ -149,16 +106,9 @@
                     <div class="ringkasan-text-cart">
                         <span>IDR  </span>
                     </div>
-                    <form method="post" action="{{ url('/pesan') }}">
-                        @csrf
-                        <input type="hidden" name="id"  value="{{$orders->id}}">
-                        <button type="submit" class="btn-pilih-pembayaran ringkasan-text-cart">Pesan</button>                         
-                    </form>
                 </div>
             </div>
         </div>
     </div>
-</section>
-<section class="section-footer">
 </section>
 @endsection

@@ -31,8 +31,8 @@
                                     <div class="ket-status">
                                         <span>Paket dengan ID {{$order->id}} Menunggu pembayaran!</span>
                                     </div>
-                                    <button class="btn-lihat-pesanan">
-                                        Lihat Pesanan
+                                    <button class="btn-lihat-pesanan"> 
+                                        <a href="/detailpesanan">Lihat Pesanan</a>
                                     </button>
                                 </div>
                             </div>

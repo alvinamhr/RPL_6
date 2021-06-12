@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<section class="section-cart">
+<section class="section">
     <div class="container-cart">
         <div class="header-cart">
             <div class="row gx-3 gy-2 align-items-center">
@@ -88,7 +88,7 @@
                     </div>
                 </div>
                 <div class="col-md-auto">
-                    <div class="total-harga-cart" style="font-weight: bold; margin-top: 30%">
+                    <div class="total-harga-cart" style="font-weight: bold; margin-top: 10%">
                         <span>Total Harga : Rp. {{ number_format($orders->subtotal) }}</span>
                     </div>
                 </div>
@@ -99,6 +99,7 @@
         </div>
     </div>
 </section>
+@endsection
 <script>
     $('#select-all').click(function(event) {   
     if(this.checked) {
@@ -113,5 +114,4 @@
     }
 });
 </script>
-@endsection
 

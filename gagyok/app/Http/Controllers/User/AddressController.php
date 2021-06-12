@@ -36,7 +36,11 @@ class AddressController extends Controller
     {
         return view('user.profile.alamat.empty');
     }
-
+    
+    public function list()
+    {
+        return view('user.profile.alamat.daftaralamat');
+    }
     /**
      * Show the form for creating a new resource.
      *
