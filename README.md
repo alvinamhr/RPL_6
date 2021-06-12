@@ -193,7 +193,13 @@ Gagyok merupakan aplikasi website yang dibuat sebagai e-commerce yang nantinya a
  2. Kedepannya, aplikasi ini akan dilengkapi fitur barcode untuk memudahkan pengguna untuk mengecek orisinilitas produk
  3. *E-money* masih belum tersedia, sehingga pengguna masih belum menimpang uang di aplikasi Gagyok
 
-
+# Collaboration Platform
+ ## Trello 
+ ![image](https://user-images.githubusercontent.com/65324407/121777611-339b3800-cbbd-11eb-8f34-cd3164f44b7a.png)
+Atau bisa di cek di Vtrello 
+ ## Sites
+ ![image](https://user-images.githubusercontent.com/65324407/121777552-f6cf4100-cbbc-11eb-80c1-c1afb7e3395f.png)
+Atau bisa di cek di VSites
 # Penutup
   
   Puji Syukur kepada Allah SWT atas egala rahmat yang diberikan sehingga kelompok kami dapat menyelesaikan tugas project dari Mata Kuliah Rekayasa Perangkat Lunak Departemen Ilmu Komputer IPB University. Terimakasih atas kesempatan dan ilmu yang telah diberikan oleh Bapak/ Ibu dosen pengampu mata kuliah beserta Kakak Asisten Praktikum yang telah membimbing dan memberikan pengalaman serta ilmunya kepada kami. Selama pengembangan aplikasi Gagyok ini, kami banyak belajar tentang hal- hal baru dan itu membuat kami semakin berkembang khususnya di bidang software engineering sehingga kami dapat menyelesaikan aplikasi web ini dan juga beserta laporannya.
