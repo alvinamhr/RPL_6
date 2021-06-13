@@ -53,6 +53,7 @@ Route::get('getDistrict', [App\Http\Controllers\User\AddressController::class, '
 // Checkout
 Route::get('/checkout', [App\Http\Controllers\User\CheckoutController::class, 'index'])->name('checkout');
 Route::post('/pesan', [App\Http\Controllers\User\CheckoutController::class, 'pesan']);
+Route::post('/checkout', [App\Http\Controllers\User\CheckoutController::class, 'ongkir']);
 
 // Notification
 Route::get('/notification', [App\Http\Controllers\User\NotifikasiController::class, 'index'])->name('notification');

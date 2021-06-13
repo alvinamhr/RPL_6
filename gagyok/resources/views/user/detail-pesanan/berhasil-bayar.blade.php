@@ -61,7 +61,7 @@
                 </div>
                 <div class="col-sm-3">
                     <div class="text-harga-cart">
-                        <span>IDR HARGA SATUAN</span>
+                        <span>IDR HARGA SAtuan</span>
                     </div>
                 </div>
                 <div class="col-sm-3">
@@ -94,7 +94,7 @@
                         <span>IDR </span>
                     </div>
                     <div class="biaya-pengiriman-co" style="font-weight: bold" >
-                        <span>IDR Biaya Pengiriman</span>
+                        <span>IDR Biaya ne4Pengiriman</span>
                     </div>
                 </div>
             </div>

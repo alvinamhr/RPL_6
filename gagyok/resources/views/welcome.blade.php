@@ -40,13 +40,13 @@
                             <a href="/" class="active nav-links">BERANDA</a>
                         </div>
                         <div class="col">
-                            <a href="/">KATEGORI</a>
+                            <a href="category">KATEGORI</a>
                         </div>
                         <div class="col">
-                            <a href="/">HIBURAN</a>
+                            <a href="entertainment">HIBURAN</a>
                         </div>
                         <div class="col-auto">
-                            <a href="/login"><span>AKUN</span></a>
+                            <a href="/login"><span>Login or SignUp</span></a>
                         </div>
                     </div>
                 </div>
@@ -62,14 +62,14 @@
                         <h1 class="title-slider">TERBARU</h1>
                         <img src="{{ asset('assets/image/Beranda/sliderkecil.png') }}" class="img2-slider" alt="...">
                         <h2 class="capt-slider">3CE SOFT MATTE LIPSTICK #CHILL MOVE</h2>
-                        <button type="button" class="btn-slider">KLIK DI SINI</button>
+                        <a href="category"><button type="button" class="btn-slider">KLIK DI SINI</button></a>
                     </div>
                     <div class="carousel-item">
                     <img src="{{ asset('assets/image/Beranda/Kategori/1.makeup.png') }}" class="img-slider" alt="...">
                         <h1 class="title-slider">TERBARU</h1>
                         <img src="{{ asset('assets/image/Beranda/sliderkecil.png') }}" class="img2-slider" alt="...">
                         <h2 class="capt-slider">Prism Air Shadow Sparkling</h2>
-                        <button type="button" class="btn-slider">KLIK DI SINI</button>
+                        <a href="category"><button type="button" class="btn-slider">KLIK DI SINI</button></a>
                     </div>
                 </div>
                 <button class="carousel-control-prev" role="button" href="#carouselControls" data-bs-slide="prev">
@@ -90,39 +90,39 @@
                             <div class="container-catalog">
                                 <div class="col">
                                     <div class="align-items-center bg-home">
-                                        <img src="{{ asset('assets/image/Beranda/Kategori/1.makeup.png') }}" width="300px" height="300px" alt="...">
+                                        <a href="category"><img src="{{ asset('assets/image/Beranda/Kategori/1.makeup.png') }}" width="300px" height="300px" alt="..."></a>
                                         <button type="button" class="caption-home">make up</button>
                                     </div>
                                 </div>
                                 <div class="col">
                                     <div class="align-items-center bg-home" style="margin-left:3.5%">
-                                        <img src="{{ asset('assets/image/Beranda/Kategori/2.skincare.png') }}" width="300px" height="300px" alt="...">
+                                        <a href="category"><img src="{{ asset('assets/image/Beranda/Kategori/2.skincare.png') }}" width="300px" height="300px" alt="..."></a>
                                         <button type="button" class="caption-home">skincare</button>
                                     </div>
                                 </div>
                                 <div class="col">
                                     <div class="align-items-center bg-home" style="margin-left:7%">
-                                        <img src="{{ asset('assets/image/Beranda/Kategori/3.mode.png') }}" width="300px" height="300px" alt="...">
-                                        <button type="button" class="caption-home">mode</button>
+                                        <a href="category"><img src="{{ asset('assets/image/Beranda/Kategori/3.mode.png') }}" width="300px" height="300px" alt="..."></a>
+                                       <button type="button" class="caption-home">mode</button>
                                     </div>
                                 </div>
                             </div>
                             <div class="container-catalog">
                                 <div class="col">
                                     <div class="align-items-center bg-home">
-                                        <img src="{{ asset('assets/image/Beranda/Kategori/4.elektronik.png') }}" width="300px" height="300px" alt="...">
+                                        <a href="category"><img src="{{ asset('assets/image/Beranda/Kategori/4.elektronik.png') }}" width="300px" height="300px" alt="..."></a>
                                         <button type="button" class="caption-home">elektronik</button>
                                     </div>
                                 </div>
                                 <div class="col">
                                     <div class="align-items-center bg-home" style="margin-left:3.5%">
-                                        <img src="{{ asset('assets/image/Beranda/Kategori/5.makanan.png') }}" width="300px" height="300px" alt="...">
+                                        <a href="category"><img src="{{ asset('assets/image/Beranda/Kategori/5.makanan.png') }}" width="300px" height="300px" alt="..."></a>
                                         <button type="button" class="caption-home">makanan</button>
                                     </div>
                                 </div>
                                 <div class="col">
                                     <div class="align-items-center bg-home" style="margin-left:7%">
-                                        <img src="{{ asset('assets/image/Beranda/Kategori/6.koleksipenggemar.png') }}" width="300px" height="300px" alt="...">
+                                        <a href="category"><img src="{{ asset('assets/image/Beranda/Kategori/6.koleksipenggemar.png') }}" width="300px" height="300px" alt="..."></a>
                                         <button type="button" class="caption-home">koleksi penggemar</button>
                                     </div>
                                 </div>
@@ -139,19 +139,19 @@
                         <div class="container-catalog">
                             <div class="col">
                                 <div class="align-items-center bg-home">
-                                    <img src="{{ asset('assets/image/Beranda/Hiburan/1.k-pop.png') }}" width="300px" height="300px" alt="...">
+                                    <a href="category"><img src="{{ asset('assets/image/Beranda/Hiburan/1.k-pop.png') }}" width="300px" height="300px" alt="..."></a>
                                     <button type="button" class="caption-home">k-pop</button>
                                 </div>
                             </div>
                             <div class="col">
                                 <div class="align-items-center bg-home" style="margin-left:3.5%">
-                                    <img src="{{ asset('assets/image/Beranda/Hiburan/2.k-drama.png') }}" width="300px" height="300px" alt="...">
+                                    <a href="category"><img src="{{ asset('assets/image/Beranda/Hiburan/2.k-drama.png') }}" width="300px" height="300px" alt="..."></a>
                                     <button type="button" class="caption-home">k-drama</button>
                                 </div>
                             </div>
                             <div class="col">
                                 <div class="align-items-center bg-home" style="margin-left:7%">
-                                    <img src="{{ asset('assets/image/Beranda/Hiburan/3.k-food.png') }}" width="300px" height="300px" alt="...">
+                                    <a href="category"><img src="{{ asset('assets/image/Beranda/Hiburan/3.k-food.png') }}" width="300px" height="300px" alt="..."></a>
                                     <button type="button" class="caption-home">k-food</button>
                                 </div>
                             </div>

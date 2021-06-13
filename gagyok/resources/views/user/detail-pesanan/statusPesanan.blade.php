@@ -40,6 +40,14 @@
             </div>
         </div>
         <div class="line-co" style="margin-top: 380px;"></div>
+        @if ($order->status == 1)
+            <div class="box-alamat-dp" style="margin-top: 400px; height: 30%">
+                <span class="text-tempat-co">Silahkan Melakukan Pembayaran Pada No Rekening 095038129 (BNI) a.n Gagyok Company </span>
+                <div class="text-alamat-dp"> 
+                    <p>*pembayaran anda akan dicek otomatis oleh sistem kami</p>
+                </div>
+            </div>
+        @endif
     </div>
 </section>
 <section class="section">

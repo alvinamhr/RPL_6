@@ -7,7 +7,7 @@
             <div class="row gx-3 gy-2 align-items-center">
                 <div class="col-sm-4">
                     <div class="form-check header-text-cart" style="text-align:left">
-                        <input class="form-check-input" type="checkbox" value="" id="select-all">
+                        {{-- <input class="form-check-input" type="checkbox" value="" id="select-all"> --}}
                         <label class="form-check-label" for="flexCheckDefault">
                             PRODUK
                         </label>
@@ -40,10 +40,10 @@
             @php
                 $count++;
             @endphp
-            <div class="row gx-3 gy-2 align-items-center">
+            <div class="row gx-3  align-items-center row-bg">
                 <div class="col-sm-4">
                     <div class="form-check header-text-cart" style="text-align:left">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        {{-- <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"> --}}
                         <label class="form-check-label box-product-cart" for="flexCheckDefault">
                             <a href="/produk/{{$order_detail->product_id}}"><img src="{{ url('assets/image/product') }}/{{ $order_detail->product->product_image }}" width="210px" height="170px" alt="make up"> </a>
                             <span class="merk-kategori merk-cart">{{ $order_detail->product->product_name }}</span>
@@ -82,7 +82,8 @@
             </div>  
             @endforeach  
         </div>
-        
+    </section>
+    {{-- <section class="section"> --}}
         <div class="ringkasan-belanja-cart">
             <div class="row">
                 <div class="col">
@@ -103,8 +104,7 @@
                 </div>
               </div>
         </div>
-    </div>
-</section>
+    {{-- </section> --}}
 @endsection
 <script>
     $('#select-all').click(function(event) {   

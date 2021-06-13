@@ -6,7 +6,7 @@
         <br>
         <br>
 
-        <h4><a style="color: #6670AD"; href="{{ url('category')}}">Kategori</a></li> > <a style="color: #6670AD" href="{{ url('category') }}/{{$namaCategory->category_name}}">{{$namaCategory->category_name}}</a></h4>
+        <h4 class="best-seller"><a style="color: #6670AD"; href="{{ url('category')}}">Kategori</a></li> > <a style="color: #6670AD" href="{{ url('category') }}/{{$namaCategory->category_name}}">{{$namaCategory->category_name}}</a></h4>
         <div class="container-kategori">
             
             <div class="row">

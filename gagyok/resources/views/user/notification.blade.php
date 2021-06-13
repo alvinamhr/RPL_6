@@ -1,15 +1,16 @@
 @extends('layouts.app')
 
 @section('content')
-<section class="section">
+<section class="section-notiv">
     <div class="container-notifikasi position-relative">
         <div class="home-kategori">
             <span class="status-pesanan">
                 STATUS PESANAN
             </span>
             
-                <div class="bg-notif">
+                <div>
                     @foreach ($orders as $order)
+                    <div class="bg-notif">
 
                     {{-- Kondisi pesanan -> $status --}}
                     {{-- 1 = paket menunggu pembayaran --}}
@@ -106,9 +107,9 @@
                                 </div>
                             </div>
                         @endif
+                    </div>
                     @endforeach
                 </div>
-
         </div>
     </div>
 </section>

@@ -70,14 +70,27 @@ class CheckoutController extends Controller
      */
     public function pesan(Request $request)
     {
-        // dd($request->id);
+        // dd($request);
         $orders = Order::where('user_id', Auth::user()->id)->where('status',0)->where('id',$request->id)->first();
         $orders->status = 1;
+        $orders->subtotal= $request->totalBayar;
         $date = now()->setTimezone('Asia/Jakarta');
         $orders -> order_date = $date;
         //  dd($orders);
         $orders -> update();
         return redirect()->route('notification');
+    }
+
+    public function ongkir(Request $request)
+    {
+        // dd($request);
+        $profile = Personalinfo::where('user_id', Auth::user()->id)->first();
+        $orders = Order::where('user_id', Auth::user()->id)->where('status',0)->first(); 
+        $jumlah = $orders->subtotal+$request->ongkir;
+        // dd($orders,$profile, $jumlah, $request);
+        // dd($jumlah);
+        return view('user.checkout', compact('orders','profile', 'jumlah', 'request'));
+        // return redirect()->route('notification');
     }
 
     /**

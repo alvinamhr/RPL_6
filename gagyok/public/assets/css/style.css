@@ -340,7 +340,13 @@ footer{
 	width: 100%;
 	font: bold 16px sans-serif;
 	padding: 10px;
-	margin-top: 80px;
+	/* margin-top: 100%; */
+    position: static;
+    bottom: -500px;
+
+    
+
+
 }
 
 .footer-distributed .footer-left,
@@ -405,6 +411,11 @@ footer{
 }
 
 .section {
+    padding: 240px 0;
+    position: relative;
+}
+.section-notiv {
+    height: 200%;
     padding: 180px 0;
     position: relative;
 }
@@ -820,15 +831,20 @@ footer{
 .row-cart {
     position: absolute;
     width: 1390px;
-    height: 35%;
+    /* height: 100%; */
     margin-top: 7%;
+    /* background: rgba(191, 184, 218, 0.3); */
+}
+.row-bg{
+    /* width: 1390px; */
+    /* height: 30%; */
     background: rgba(191, 184, 218, 0.3);
 }
 
 .ringkasan-belanja-cart {
     position: absolute;
     width: 1390px;
-    height: 14%;
+    height: 20%;
     margin-top: 36%;
     background: rgba(191, 184, 218, 0.3);
 }
@@ -863,7 +879,7 @@ footer{
 .btn-hapus-cart {
     width: 20%;
     height: 5%;
-    margin-top: 70%;
+    margin-top: 5%;
     margin-left: 15%;
 
     background: rgba(255, 0, 0, 0.75);
@@ -1161,7 +1177,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 .container-cart2 {
     width: 1260px;
-    height: 1250px;
+    height: auto;
     border: 5px transparent;
     margin-left: 50px;
     padding: 5px;
@@ -1271,7 +1287,7 @@ input[type=number]::-webkit-outer-spin-button {
 
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
-
+    border-color: #92ff1600;
     font-family: 'Playfair Display', sans-serif;
     font-style: normal;
     font-weight: 900;
@@ -1444,3 +1460,25 @@ input[type=number]::-webkit-outer-spin-button {
     padding: 25px;
     background: rgba(191, 184, 218, 0.3);
 }
+
+.center-hiburan{
+    display: block;
+    /* margin-top: auto; */
+    margin-left: auto;
+    margin-right: auto;
+    position:relative;
+    overflow:hidden;
+    /* width: 100%; */
+  }
+
+.col-navbar{
+    margin-left: 30px;
+    /* margin-right: -5%; */
+    /* padding-right: -40px; */
+    width: 10%;
+    float: left;
+}
+.row-navbar{
+    margin-left: auto;
+}
+  

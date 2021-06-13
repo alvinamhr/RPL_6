@@ -36,19 +36,31 @@
                 </div>
                 <div class="col">
                     <div class="row"> 
-                        <div class="col">
-                            <a href="/home" class="active nav-links">BERANDA</a>
+                        <div class="col-navbar">
+                            <a href="/home" >BERANDA</a>
+                            {{-- class="active nav-links" --}}
                         </div>
-                        <div class="col">
+                        <div class="col-navbar">
                             <a href="/category">KATEGORI</a>
                         </div>
-                        <div class="col">
+                        <div class="col-navbar">
                             <a href="/entertainment">HIBURAN</a>
                         </div>
+                        <div class="col-navbar">
+                            <a href="{{ route('logout') }}"
+                            onclick="event.preventDefault();
+                                          document.getElementById('logout-form').submit();">
+                             {{ __('Logout') }}
+                            </a>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                @csrf
+                            </form>
+                        </div>
+                        
                         <div class="col-auto">
                             @php
                             $profile = \App\Models\Personalinfo::where('user_id',Auth::user()->id)->first();
-                        @endphp
+                            @endphp
 							<a href="/profile" class="rounded"><img src="{{asset('storage/assets/image/profile')}}/{{$profile->user_picture}}" class="rounded" alt="Avatar"  width="20px" height="20px"> <span>{{auth()->user()->name}}</span></a>
                         </div>
                     </div>
@@ -94,18 +106,17 @@
         @yield('content')        
 
         <!-- Footer Start -->
-        <footer class="footer-distributed">
-			<div class="footer-left">
+        {{-- <footer class="footer-distributed">
+            <div class="footer-left">
                 <p class="gagyok">GAGYOK</p>
                 <h3>TENTANG GAGYOK</h3>
-			</div>
-			<div class="footer-right">
+            </div>
+            <div class="footer-right">
                 <div>
                     <p class="footer-company-name">© Copyright Gagyok 2021. Developed by Victory.</p>
-				</div>
-			</div>
-		</footer>
-
+                </div>
+            </div>
+        </footer> --}}
         <!-- javascript -->
         <script src="{{ asset('app-assets/vendors/js/vendors.min.js') }}"></script>
         <script src="{{ asset('js/jquery.min.js') }}"></script>
@@ -132,4 +143,5 @@
                 }
                 </script>
     </body>
+    
 </html>
