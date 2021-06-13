@@ -24,7 +24,8 @@ class ProductController extends Controller
 
     public function index()
     {
-       //
+        
+        return view ('user.category.product');
     }
     
 
@@ -61,7 +62,7 @@ class ProductController extends Controller
     {
         $product = Product::where('product_id', $id)->first();
         // dd($product);
-        return view('user.produkDetailFikri', compact('product'));
+        return view('user.category.product', compact('product'));
     }
 
     /**

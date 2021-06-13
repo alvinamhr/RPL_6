@@ -20,7 +20,7 @@ Route::get('/category', [App\Http\Controllers\User\CategoryController::class, 'i
 
 Route::get('category/{product_category}', [App\Http\Controllers\User\CategoryController::class, 'show']); //ini untuk menampilkan isi produk apa saja dalam satu kategori
 
-Route::get('/product', [App\Http\Controllers\User\ProductController::class, 'index']);
+// Route::get('/product', [App\Http\Controllers\User\ProductController::class, 'show']);
 Route::get('produk/{product_id}', [App\Http\Controllers\ProductController::class, 'show']); //ini untuk detail produk sebelum dipesan
 
 Route::post('InsertCart/{product_id}', [App\Http\Controllers\User\CartController::class, 'store']); //ini untuk memasukkan keranjang
@@ -29,6 +29,7 @@ Route::get('cart', [App\Http\Controllers\User\CartController::class, 'index'])->
 Route::get('cart/empty', [App\Http\Controllers\User\CartController::class, 'empty']); //ini untuk masuk ke halaman keranjang
 
 Route::delete('cart/{id}', [App\Http\Controllers\User\CartController::class, 'delete']); // ini untuk melakukan delete isi keranjang
+Route::post('cart/plus/{id}', [App\Http\Controllers\User\CartController::class, 'update']); // ini untuk melakukan delete isi keranjang
 
 Route::get('/entertainment', [App\Http\Controllers\User\EntertainmentController::class, 'index'])->name('entertainment');
 Route::get('/entertainment/{entertainment}', [App\Http\Controllers\User\EntertainmentController::class, 'show']);

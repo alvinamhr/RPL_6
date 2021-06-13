@@ -30,6 +30,8 @@ class CartController extends Controller
     public function index()
     {
         $orders = Order::where('user_id', Auth::user()->id)->where('status',0)->first(); 
+
+        
         
         // dd($order_details, $order);
         if (isset($orders)) {
@@ -155,7 +157,21 @@ class CartController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        
+        $order_details = OrderDetail::where('id', $id)->first();
+        
+        $order = Order::where('id', $request->order_id)-> first();
+        $product = Product::where('product_id', $order_details->product_id)-> first();
+        // dd($request, $id, $order_details, $order, $product);  
+        $hargaLama = $order_details->price;
+        $order_details->qty = $request->order_qty;
+        $jumlah_hargaBaru = $request->order_qty*$product->product_price;
+        $order_details->price = $jumlah_hargaBaru;
+        $order->subtotal = $order->subtotal+($jumlah_hargaBaru-$hargaLama);
+        $order_details -> update();
+        $order->update();
+
+        return redirect('cart');
     }
 
     /**

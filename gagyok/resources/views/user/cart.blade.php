@@ -44,14 +44,17 @@
                     <div class="form-check header-text-cart" style="text-align:left">
                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                         <label class="form-check-label box-product-cart" for="flexCheckDefault">
-                            <img src="{{ url('assets/image/product') }}/{{ $order_detail->product->product_image }}" width="210px" height="170px" alt="make up">
+                            <a href="/produk/{{$order_detail->product_id}}"><img src="{{ url('assets/image/product') }}/{{ $order_detail->product->product_image }}" width="210px" height="170px" alt="make up"> </a>
                             <span class="merk-kategori merk-cart">{{ $order_detail->product->product_name }}</span>
                             <span class="nama-produk produk-cart">{{ $order_detail->product->product_short_desc }}</span>
                         </label>
+                   
                             <form action="{{ url('cart')}}/{{$order_detail->id}}" method="post">
                                 @csrf
+                                {{method_field('DELETE')}}
                                 <button type="submit" class="btn-hapus-cart" onclick="return confirm('Anda yakin akan menghapus data ?');">HAPUS</button>
                             </form>
+                            
                     </div>
                 </div>
                 <div class="col-sm-3">
@@ -61,11 +64,15 @@
                 </div>
                 <div class="col-sm-3">
                     <div class="header-text-cart">
-                        <div class="number-input">
-                            <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button>
-                            <input class="quantity" min="0" name="quantity" value="{{ $order_detail->qty }}" type="number">
-                            <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
-                        </div>
+                        <form action="{{ url('cart/plus')}}/{{$order_detail->id}}" method="post">
+                            @csrf
+                                <div class="number-input button-add-less">
+                                    <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button>
+                                    <input class="quantity" min="0" name="order_qty" value="{{ $order_detail->qty }}" type="number" required="">
+                                    <button  onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+                                </div>
+                                <input type="hidden" name="order_id"  value="{{$order_detail->order_id}}">
+                        </form>
                     </div>
                 </div>
                 <div class="col-auto">
