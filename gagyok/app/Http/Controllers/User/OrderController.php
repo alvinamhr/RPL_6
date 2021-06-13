@@ -4,6 +4,13 @@ namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Category;
+use App\Models\Product;
+use App\Models\Order;
+use App\Models\OrderDetail; 
+use Auth;
+use App\Models\Personalinfo;
+use App\Models\User;
 
 class OrderController extends Controller
 {
@@ -19,7 +26,7 @@ class OrderController extends Controller
 
     public function index()
     {
-        return view('user.detail-pesanan.show');
+        //
     }
 
     public function nol()
@@ -76,7 +83,11 @@ class OrderController extends Controller
      */
     public function show($id)
     {
-        //
+        $order = Order::where('id', $id)->where('status','>',0)->first(); 
+        $order_details = OrderDetail::where('order_id', $id)->get();
+        // dd($order, $order_details);
+            // return view('user.cart', compact('orders', 'order_details'));
+        return view('user.detail-pesanan.statusPesanan',compact('order', 'order_details'));
     }
 
     /**

@@ -3,9 +3,29 @@
 @section('content')
 <section class="section">
     <div class="container-alamat-co position-relative">
-        <div class="status"> 
-            <span href="/status0"> STATUS PEMBAYARAN : MENUNGGU PEMBAYARAN </span>
-        </div>
+        {{-- Kondisi pesanan -> $status --}}
+                    {{-- 1 = paket menunggu pembayaran --}}
+                    {{-- 2 = paket sedang dikemas --}}
+                    {{-- 3 = paket sedang dalam perjalanan --}}
+                    {{-- 4 = paket telah diterima --}}
+            @if ($order->status == 1)
+                <div class="status"> 
+                    <span > STATUS PEMBAYARAN : MENUNGGU PEMBAYARAN </span>
+                </div>
+            @elseif($order->status == 2)
+                <div class="status" style="background-color: #ffc107;"> 
+                    <span > STATUS PESANAN : SEDANG DIKEMAS </span>
+                </div>
+            @elseif($order->status == 3)
+                <div class="status" style="background-color: #17A2b8;"> 
+                    <span > STATUS PESANAN : DALAM PERJALANAN </span>
+                </div>
+            @elseif($order->status == 4)
+                <div class="status" style="background-color: #41CC66;"> 
+                    <span > STATUS PESANAN : BERHASIL DIKIRIMKAN </span>
+                </div>
+            @endif
+    
         <div class="alamat-pengiriman-co" style="margin-top: 50px;">
             <p>ID PESANAN: ID12345678</p>
             <p>ALAMAT PENGIRIMAN</p>

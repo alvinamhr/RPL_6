@@ -58,8 +58,8 @@ Route::get('/notification', [App\Http\Controllers\User\NotifikasiController::cla
 Route::post('/notification', [App\Http\Controllers\User\NotifikasiController::class, 'edit']);
 
 // Detail Pesanan
-Route::get('/detailpesanan', [App\Http\Controllers\User\OrderController::class, 'index']);
-Route::get('/status0', [App\Http\Controllers\User\OrderController::class, 'nol']);
+Route::get('/detailpesanan/{id}', [App\Http\Controllers\User\OrderController::class, 'show']);
+Route::get('/status 0', [App\Http\Controllers\User\OrderController::class, 'nol']);
 Route::get('/status1', [App\Http\Controllers\User\OrderController::class, 'satu']);
 
 Route::get('/pembayaran0', [App\Http\Controllers\User\OrderController::class, 'pembayarannol']);

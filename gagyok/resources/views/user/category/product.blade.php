@@ -63,56 +63,6 @@
         </div>
 
         <div class="kumpulan-serupa">
-            {{-- <button class="serupa1">
-                <div class="konten">
-                    <img src="24370-large_default.jpg" alt="foto" class="foto-produk-serupa">
-                    <ul class="list-serupa">
-                        <li class="serupa-nama-brand">HOLIKA HOLIKA</li>
-                        <li class="serupa-nama-produk">Holi Pop Jelly Tint</li>
-                        <li class="serupa-harga">IDR 88.000</li>
-                    </ul>
-                </div>
-            </button>
-            <button class="serupa2">
-                <div class="konten">
-                    <img src="24370-large_default.jpg" alt="foto" class="foto-produk-serupa">
-                    <ul class="list-serupa">
-                        <li class="serupa-nama-brand">HOLIKA HOLIKA</li>
-                        <li class="serupa-nama-produk">Holi Pop Jelly Tint</li>
-                        <li class="serupa-harga">IDR 88.000</li>
-                    </ul>
-                </div>
-            </button>
-            <button class="serupa3">
-                <div class="konten">
-                    <img src="24370-large_default.jpg" alt="foto" class="foto-produk-serupa">
-                    <ul class="list-serupa">
-                        <li class="serupa-nama-brand">HOLIKA HOLIKA</li>
-                        <li class="serupa-nama-produk">Holi Pop Jelly Tint</li>
-                        <li class="serupa-harga">IDR 88.000</li>
-                    </ul>
-                </div>
-            </button>
-            <button class="serupa4">
-                <div class="konten">
-                    <img src="{{ url('assets/image/product') }}/{{ $product->product_image }}" alt="foto" class="foto-produk-serupa">
-                    <ul class="list-serupa">
-                        <li class="serupa-nama-brand">HOLIKA HOLIKA</li>
-                        <li class="serupa-nama-produk">Holi Pop Jelly Tint</li>
-                        <li class="serupa-harga">IDR 88.000</li>
-                    </ul>
-                </div>
-            </button>
-            <button class="serupa5">
-                <div class="konten">
-                    <img src="24370-large_default.jpg" alt="foto" class="foto-produk-serupa">
-                    <ul class="list-serupa">
-                        <li class="serupa-nama-brand">HOLIKA HOLIKA</li>
-                        <li class="serupa-nama-produk">Holi Pop Jelly Tint</li>
-                        <li class="serupa-harga">IDR 88.000</li>
-                    </ul>
-                </div>
-            </button> --}}
             @foreach ($categories as $category)
                 <button class="serupa4">
                     <div class="konten">
@@ -121,7 +71,7 @@
                             <ul class="list-serupa">
                                 <li class="serupa-nama-brand">{{$category->product_name }}</li>
                                 <li class="serupa-nama-produk">{{$category->product_short_desc }}</li>
-                                <li class="serupa-harga">IDR 88.000</li>
+                                <li class="serupa-harga">IDR {{number_format($category->product_price)}}</li>
                             </ul>
                         </a>
                     </div>

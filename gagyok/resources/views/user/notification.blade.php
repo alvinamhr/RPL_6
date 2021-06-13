@@ -31,9 +31,9 @@
                                     <div class="ket-status">
                                         <span>Paket dengan ID {{$order->id}} Menunggu pembayaran!</span>
                                     </div>
-                                    <button class="btn-lihat-pesanan"> 
-                                        <a href="/detailpesanan">Lihat Pesanan</a>
-                                    </button>
+                                    <a href="{{url('detailpesanan')}}/{{$order->id}}"><button class="btn-lihat-pesanan"> 
+                                        Lihat Pesanan
+                                    </button></a>
                                 </div>
                             </div>
                         @elseif ($order->status == 2)
@@ -50,9 +50,9 @@
                                     <div class="ket-status">
                                         <span>Paket dengan ID {{$order->id}} sedang dikemas oleh penjual!</span>
                                     </div>
-                                    <button class="btn-lihat-pesanan">
+                                    <a href="{{url('detailpesanan')}}/{{$order->id}}"><button class="btn-lihat-pesanan">
                                         Lihat Pesanan
-                                    </button>
+                                    </button></a>
                                 </div>
                             </div>
                         @elseif ($order->status == 3)
@@ -64,14 +64,14 @@
                                 </div>
                                 <div class="col-sm-9" style="margin-top: 60px">
                                     <div class="status-paket">
-                                        <span>PAKET DIKIRIM</span><span class="order-date">Tanggal Pesanan : {{$order->order_date}} </span>
+                                        <span>PAKET SEDANG DIKIRIM</span><span class="order-date">Tanggal Pesanan : {{$order->order_date}} </span>
                                     </div>
                                     <div class="ket-status">
-                                        <span>Paket dengan ID {{$order->id}} sedang dikirim oleh kurir!</span>
+                                        <span >Paket dengan ID {{$order->id}} sedang dikirim oleh kurir!</span>
                                     </div>
-                                    <button class="btn-lihat-pesanan">
+                                    <a href="{{url('detailpesanan')}}/{{$order->id}}"><button class="btn-lihat-pesanan">
                                         Lihat Pesanan
-                                    </button>
+                                    </button></a>
                                 </div>
                             </div>
                         @elseif ($order->status == 4)
@@ -91,13 +91,13 @@
                                         <span>Paket dengan ID {{$order->id}} telah diterima oleh pelanggan!</span>
                                     </div>
                                     
-                                    <button class="btn-lihat-pesanan">
+                                    <a href="{{url('detailpesanan')}}/{{$order->id}}"><button class="btn-lihat-pesanan">
                                         Lihat Pesanan
-                                    </button>
-                                    <form class="del-notif"action="{{ url('notification')}}" method="post">
+                                    </button></a>
+                                    <form class="del-notif "action="{{ url('notification')}}" method="post">
                                         @csrf
                                         <input type="hidden" name="id"  value="{{$order->id}}">
-                                        <button class="btn-hapus-notif" onclick="return confirm('Anda yakin akan menghapus Notifikasi ?');">Hapus Notifikasi</button>
+                                        <button class="btn-lihat-pesanan" onclick="return confirm('Anda yakin akan menghapus Notifikasi ?')" style="background-color: #c35258;">Hapus Notifikasi</button>
                                     </form>
                                 </div>
                             </div>
