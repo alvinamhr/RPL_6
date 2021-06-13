@@ -61,8 +61,10 @@ class ProductController extends Controller
     public function show($id)
     {
         $product = Product::where('product_id', $id)->first();
-        // dd($product);
-        return view('user.category.product', compact('product'));
+        $kategori = $product->product_category;
+        $categories = Product::where('product_category', $kategori)->inRandomOrder()->limit(5)->get();
+        // dd($categories);
+        return view('user.category.product', compact('product', 'categories'));
     }
 
     /**
