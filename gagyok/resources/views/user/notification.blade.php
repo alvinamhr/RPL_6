@@ -26,8 +26,10 @@
                                 </div>
                                 <div class="col-sm-9" style="margin-top: 60px">
                                     <div class="status-paket">
-                                        <span>PESANAN BELUM DIBAYAR</span><span class="order-date">Tanggal Pesanan : {{$order->order_date}} </span>
+                                        <span>PESANAN BELUM DIBAYAR</span>
+                                        <div class="float-left">Tanggal Pesanan : {{$order->order_date}} </div>
                                     </div>
+                                    
                                     <div class="ket-status">
                                         <span>Paket dengan ID {{$order->id}} Menunggu pembayaran!</span>
                                     </div>
@@ -45,8 +47,9 @@
                                 </div>
                                 <div class="col-sm-9" style="margin-top: 60px">
                                     <div class="status-paket">
-                                        <span>PAKET DIKEMAS</span><span class="order-date">Tanggal Pesanan : {{$order->order_date}} </span>
+                                        <span>PAKET DIKEMAS</span> <div class="float-left">Tanggal Pesanan : {{$order->order_date}} </div>
                                     </div>
+                                    
                                     <div class="ket-status">
                                         <span>Paket dengan ID {{$order->id}} sedang dikemas oleh penjual!</span>
                                     </div>
@@ -64,7 +67,8 @@
                                 </div>
                                 <div class="col-sm-9" style="margin-top: 60px">
                                     <div class="status-paket">
-                                        <span>PAKET SEDANG DIKIRIM</span><span class="order-date">Tanggal Pesanan : {{$order->order_date}} </span>
+                                        <span>PAKET SEDANG DIKIRIM</span>
+                                        <div class="float-left">Tanggal Pesanan : {{$order->order_date}} </div>
                                     </div>
                                     <div class="ket-status">
                                         <span >Paket dengan ID {{$order->id}} sedang dikirim oleh kurir!</span>
@@ -85,7 +89,7 @@
                                     
                                     <div class="status-paket">
                                         <span>PAKET BERHASIL DIKIRIMKAN</span>
-                                        <span class="order-date">Tanggal Pesanan : {{$order->order_date}} </span>
+                                        <div class="order-date">Tanggal Pesanan : {{$order->order_date}} </div>
                                     </div>
                                     <div class="ket-status">
                                         <span>Paket dengan ID {{$order->id}} telah diterima oleh pelanggan!</span>

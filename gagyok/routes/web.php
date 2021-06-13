@@ -22,6 +22,7 @@ Route::get('category/{product_category}', [App\Http\Controllers\User\CategoryCon
 
 // Route::get('/product', [App\Http\Controllers\User\ProductController::class, 'show']);
 Route::get('produk/{product_id}', [App\Http\Controllers\ProductController::class, 'show']); //ini untuk detail produk sebelum dipesan
+Route::get('cari', [App\Http\Controllers\ProductController::class, 'cari']); //ini untuk detail produk sebelum dipesan
 
 Route::post('InsertCart/{product_id}', [App\Http\Controllers\User\CartController::class, 'store']); //ini untuk memasukkan keranjang
 

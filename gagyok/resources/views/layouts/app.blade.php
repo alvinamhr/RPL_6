@@ -54,7 +54,7 @@
                     </div>
                     <div class="row"> 
                         <div class="col-sm-9">  
-                            <form action="" method="get"  id="search">
+                            <form action="{{ url('cari') }}" method="get"  id="search">
                                 <input type="text" name="search_text" id="search_text" placeholder="Cari...."/>
                             </form>
                         </div>

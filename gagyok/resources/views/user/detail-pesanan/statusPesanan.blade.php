@@ -27,22 +27,25 @@
             @endif
     
         <div class="alamat-pengiriman-co" style="margin-top: 50px;">
-            <p>ID PESANAN: ID12345678</p>
+            <p>ID PESANAN: {{$order->id}}</p>
             <p>ALAMAT PENGIRIMAN</p>
         </div>
         <div class="box-alamat-dp" style="margin-top: 130px;">
             <span class="text-tempat-co">Rumah</span>
             <div class="text-alamat-dp"> 
                 <p>{{Auth::user()->name}}</p>
-                <p>$profile->phone_number</p>
-                <p>$profile->user_address</p>
-                <p>Kota $profile->user_disctrict, Kabupaten $profile->user_city,Provinsi $profile->user_province</p>
+                <p>{{$profile->phone_number}}</p>
+                <p>{{$profile->user_address}}</p>
+                <p>Kota {{$profile->user_disctrict}}, Kabupaten {{$profile->user_city}},Provinsi {{$profile->user_province}}</p>
             </div>
         </div>
         <div class="line-co" style="margin-top: 380px;"></div>
     </div>
 </section>
 <section class="section">
+        @php
+                $count=0;
+        @endphp
     <div class="container-dp position-relative" style="margin-top:-17%">
         <div class="header-dp">
             <div class="row gx-3 gy-2 align-items-center">
@@ -68,34 +71,41 @@
                 </div>
             </div>
         </div>
+
         <div class="row-dp">
+            @foreach($order_details as $order_detail)
+            @php
+                $count++;
+            @endphp
             <div class="row gx-3 gy-2 align-items-center">
                 <div class="col-sm-4">
                     <div class="form-check header-text-cart justify-content-center">
                         <div class="box-product-cart">
-                            <img src="{{ asset('assets/image/Beranda/Hiburan/1.k-pop.png') }}" width="210px" height="170px" alt="make up">
-                            <span class="merk-kategori merk-cart">CLIO</span>
-                            <span class="nama-produk produk-cart">Prism Air Shadow Sparkling</span>
+                            <a href="/produk/{{$order_detail->product_id}}"><img src="{{ url('assets/image/product') }}/{{ $order_detail->product->product_image }}" width="210px" height="170px" alt="..."></a>
+                            <span class="merk-kategori merk-cart">{{ $order_detail->product->product_name }}</span>
+                            <span class="nama-produk produk-cart">{{ $order_detail->product->product_short_desc }}</span>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-3">
                     <div class="text-harga-cart">
-                        <span>IDR HARGA SATUAN</span>
+                        <span>IDR {{ number_format($order_detail->product->product_price) }}</span>
                     </div>
                 </div>
                 <div class="col-sm-3">
                     <div class="header-text-cart">
-                        <span>10</span>
+                        <span>{{$order_detail->qty}}</span>
                     </div>
                 </div>
                 <div class="col-auto">
                     <div class="text-harga-cart">
-                        <span>IDR TOTAL HARGA</span>
+                        <span>IDR {{ number_format($order_detail->price) }}</span>
                     </div>
                 </div>
             </div>
+            @endforeach
         </div>
+
         <div class="ringkasan-belanja-dp">
             <div class="row">
                 <div class="col">
@@ -103,7 +113,7 @@
                         <span>Ringkasan Belanja</span>
                     </div>
                     <div class="total-harga-cart">
-                        <span>Total Harga (4 produk)</span>
+                        <span>Total Harga ({{$count}} produk)</span>
                     </div>
                     <div class="biaya-pengiriman-co">
                         <span>Biaya Pengiriman</span>
@@ -111,7 +121,7 @@
                 </div>
                 <div class="col">
                     <div class="total-harga-cart" style="font-weight: bold; margin-top: 5%">
-                        <span>IDR </span>
+                        <span>IDR {{ number_format($order->subtotal) }}</span>
                     </div>
                     <div class="biaya-pengiriman-co" style="font-weight: bold" >
                         <span>IDR Biaya Pengiriman</span>
@@ -127,7 +137,7 @@
                 </div>
                 <div class="col">
                     <div class="ringkasan-text-cart">
-                        <span>IDR  </span>
+                        <span>IDR  {{ number_format($order->subtotal) }}</span>
                     </div>
                 </div>
             </div>

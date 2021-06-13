@@ -7,6 +7,7 @@
                 $productByCategory = $categories;
                 $count=0;
             @endphp
+
             @foreach ($productByCategory as $product_category => $categories)
     
     <section class="section">

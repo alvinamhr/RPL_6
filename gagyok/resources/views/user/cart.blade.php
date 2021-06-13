@@ -34,8 +34,9 @@
         @php
                 $count=0;
         @endphp
-        @foreach($order_details as $order_detail)
+        
         <div class="row-cart">
+            @foreach($order_details as $order_detail)
             @php
                 $count++;
             @endphp
@@ -48,13 +49,11 @@
                             <span class="merk-kategori merk-cart">{{ $order_detail->product->product_name }}</span>
                             <span class="nama-produk produk-cart">{{ $order_detail->product->product_short_desc }}</span>
                         </label>
-                   
-                            <form action="{{ url('cart')}}/{{$order_detail->id}}" method="post">
-                                @csrf
-                                {{method_field('DELETE')}}
-                                <button type="submit" class="btn-hapus-cart" onclick="return confirm('Anda yakin akan menghapus data ?');">HAPUS</button>
-                            </form>
-                            
+                        <form action="{{ url('cart')}}/{{$order_detail->id}}" method="post">
+                            @csrf
+                            {{method_field('DELETE')}}
+                            <button type="submit" class="btn-hapus-cart" onclick="return confirm('Anda yakin akan menghapus data ?');">HAPUS</button>
+                        </form>   
                     </div>
                 </div>
                 <div class="col-sm-3">

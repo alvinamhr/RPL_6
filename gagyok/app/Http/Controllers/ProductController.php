@@ -45,9 +45,16 @@ class ProductController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function cari(Request $request)
     {
-        //
+        // dd($request);
+        // Get the search value from the request
+        $search = $request->search_text;
+
+    // Search in the title and body columns from the posts table
+        $results = Product::where('product_name', 'LIKE', "%{$search}%")->orWhere('product_short_desc', 'LIKE', "%{$search}%")->orWhere('product_long_desc', 'LIKE', "%{$search}%")->orWhere('product_category', 'LIKE', "%{$search}%")->get();
+        // dd($results); 
+        return view('user.cari',compact("results", "search"));
     }
 
     /**

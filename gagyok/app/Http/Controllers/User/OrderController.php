@@ -85,9 +85,10 @@ class OrderController extends Controller
     {
         $order = Order::where('id', $id)->where('status','>',0)->first(); 
         $order_details = OrderDetail::where('order_id', $id)->get();
+        $profile = Personalinfo::where('user_id', Auth::user()->id)->first();
         // dd($order, $order_details);
             // return view('user.cart', compact('orders', 'order_details'));
-        return view('user.detail-pesanan.statusPesanan',compact('order', 'order_details'));
+        return view('user.detail-pesanan.statusPesanan',compact('order', 'order_details', 'profile'));
     }
 
     /**

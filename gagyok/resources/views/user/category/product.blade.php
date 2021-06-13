@@ -6,7 +6,8 @@
 
 @section('content')  
 <section class="section">  
-    <h4><a style="color: #6670AD"; href="{{ url('category')}}">Kategori</a></li> > <a style="color: #6670AD" href="{{ url('category') }}/{{ $product->product_category}}">{{ $product->product_category}}</a> > {{$product->product_name }}</h4>
+    <h4><a style="color: #6670AD" href="{{ url('category')}}">Kategori</a></li> > <a style="color: #6670AD" href="{{ url('category') }}/{{ $product->product_category}}">{{ $product->product_category}}</a> > {{$product->product_name }}</h4>
+    
     <div class="isi">
         <div class="container-detail">
             <div class="container-foto">
