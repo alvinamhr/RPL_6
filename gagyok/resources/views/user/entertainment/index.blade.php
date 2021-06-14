@@ -9,7 +9,7 @@
             <div class="row">
                 <div class="col-md-3">
                     <div class="bg-kategori">
-                        <img src="{{ asset('assets/image/Beranda/hiburan/1.k-pop.png') }}" width="170px" height="170px" alt="make up">
+                        <img src="{{ asset('assets/image/Beranda/Hiburan/1.k-pop.png') }}" width="170px" height="170px" alt="make up">
                         <a class="section-title-kategori" href="/entertainment/{entertainment}">k-pop</a>
                     </div>
                 </div>
