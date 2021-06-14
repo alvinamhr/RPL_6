@@ -7,10 +7,10 @@
                 $productByCategory = $categories;
                 $count=0;
             @endphp
-
             @foreach ($productByCategory as $product_category => $categories)
-    
+            
     <section class="section">
+        
         <div class="container-kategori">
             <div class="row">
                 <div class="col-md-3">

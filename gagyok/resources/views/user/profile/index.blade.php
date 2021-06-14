@@ -6,6 +6,7 @@
 
 @section('content')
 <section class="section">
+    <h1 class="best-seller" style="margin-top:-40px; margin-left:80px; font-size:24px; ">Home</a> > <a style="color: #6670AD; font-size:30px; " href="{{ url('home')}}"><u>Profile</u></a><a></h1>
     <div class="container-profile">
         <!-- breadcrumb -->
         <!-- content -->

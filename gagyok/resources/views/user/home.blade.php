@@ -10,14 +10,14 @@
                 <h1 class="title-slider">TERBARU</h1>
                 <img src="{{ asset('assets/image/Beranda/sliderkecil.png') }}" class="img2-slider" alt="...">
                 <h2 class="capt-slider">3CE SOFT MATTE LIPSTICK #CHILL MOVE</h2>
-                <button type="button" class="btn-slider">KLIK DI SINI</button>
+                <a href="produk/8"><button type="button" class="btn-slider">KLIK DI SINI</button></a>
             </div>
             <div class="carousel-item">
             <img src="{{ asset('assets/image/Beranda/Kategori/1.makeup.png') }}" class="img-slider" alt="...">
                 <h1 class="title-slider">TERBARU</h1>
                 <img src="{{ asset('assets/image/Beranda/sliderkecil.png') }}" class="img2-slider" alt="...">
                 <h2 class="capt-slider">Prism Air Shadow Sparkling</h2>
-                <button type="button" class="btn-slider">KLIK DI SINI</button>
+                <a href="produk/1"><button type="button" class="btn-slider">KLIK DI SINI</button></a>
             </div>
         </div>
         <button class="carousel-control-prev" role="button" href="#carouselControls" data-bs-slide="prev">

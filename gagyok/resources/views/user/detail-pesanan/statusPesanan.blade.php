@@ -85,7 +85,7 @@
             @php
                 $count++;
             @endphp
-            <div class="row gx-3 gy-2 align-items-center">
+            <div class="row gx-3 gy-2 align-items-center row-detailPesanan">
                 <div class="col-sm-4">
                     <div class="form-check header-text-cart justify-content-center">
                         <div class="box-product-cart">
@@ -113,7 +113,9 @@
             </div>
             @endforeach
         </div>
-
+    </section>
+<section>
+    <div>
         <div class="ringkasan-belanja-dp">
             <div class="row">
                 <div class="col">

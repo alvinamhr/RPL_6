@@ -39,7 +39,8 @@ class CheckoutController extends Controller
         // $user = User::where('id', Auth::user()->id)->first();
         $profile = Personalinfo::where('user_id', Auth::user()->id)->first();
         $orders = Order::where('user_id', Auth::user()->id)->where('status',0)->first(); 
-        return view('user.checkout', compact('orders','profile'));
+        $request= 0;
+        return view('user.checkout', compact('orders','profile', 'request'));
     }
 
 

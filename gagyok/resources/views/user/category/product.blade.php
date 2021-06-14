@@ -6,7 +6,7 @@
 
 @section('content')  
 <section class="section">  
-    <h4><a style="color: #6670AD" href="{{ url('category')}}">Kategori</a></li> > <a style="color: #6670AD" href="{{ url('category') }}/{{ $product->product_category}}">{{ $product->product_category}}</a> > {{$product->product_name }}</h4>
+    <h4 style="margin-top: -90px;"><a style="color: #6670AD" href="{{ url('category')}}">Kategori</a></li> > <a style="color: #6670AD" href="{{ url('category') }}/{{ $product->product_category}}">{{ $product->product_category}}</a> > <u>{{$product->product_name }}</u></h4>
     
     <div class="isi">
         <div class="container-detail">
@@ -59,7 +59,7 @@
     <br>
 
     <div class="bagian-bawah">
-        <h5 class="serupa">SERUPA</h5>
+        <h5 class="serupa">PRODUK SERUPA</h5>
         <div class="pembatas">
         </div>
 

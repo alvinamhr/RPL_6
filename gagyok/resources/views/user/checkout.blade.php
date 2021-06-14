@@ -98,7 +98,12 @@
                         <span>IDR {{number_format($orders->subtotal)}}</span>
                     </div>
                     <div class="biaya-pengiriman-co" style="font-weight: bold" >
-                        <span>IDR {{number_format($request->ongkir)}}</span>
+                        <span>IDR @if (isset($request->ongkir))
+                                    {{number_format($request->ongkir)}}
+                                    @else 
+                                    0
+                                @endif
+                        </span>
                     </div>
                 </div>
             </div>
@@ -113,7 +118,15 @@
                     <form method="post" action="{{ url('/pesan') }}">
                         @csrf
                     <div class="ringkasan-text-cart">
-                        <span>Rp.   {{number_format($jumlah)}} </span>
+                        <span>Rp. @if (isset($jumlah))
+                            {{number_format($jumlah)}}
+                            @else 
+                            0
+                        @endif  </span>
+                        @php
+                        if(!isset($jumlah))
+                            $jumlah=0;
+                        @endphp
                     </div>
                     
                         <input type="hidden" name="id"  value="{{$orders->id}}">

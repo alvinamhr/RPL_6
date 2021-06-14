@@ -2,11 +2,13 @@
 
 @section('content')
 <section class="section">
+    <h1 class="best-seller" style="margin-left: 60px;"><a style="color: #6670AD; " href="{{ url('category')}}">Kategori</a> > <a style="font-size:30px;"><u>Keranjang</u></a></h1>
     <div class="container-cart">
         <div class="header-cart">
             <div class="row gx-3 gy-2 align-items-center">
                 <div class="col-sm-4">
                     <div class="form-check header-text-cart" style="text-align:left">
+                        
                         {{-- <input class="form-check-input" type="checkbox" value="" id="select-all"> --}}
                         <label class="form-check-label" for="flexCheckDefault">
                             PRODUK
@@ -34,8 +36,9 @@
         @php
                 $count=0;
         @endphp
-        
+       
         <div class="row-cart">
+            
             @foreach($order_details as $order_detail)
             @php
                 $count++;
