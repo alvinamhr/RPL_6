@@ -9,7 +9,7 @@
             <div class="row">
                 <div class="col-md-3">
                     <div class="bg-kategori">
-                        <img src="{{ asset('assets/image/Beranda/Hiburan/1.k-pop.png') }}" width="170px" height="170px" alt="make up">
+                        <img src="{{ asset('assets/image/Beranda/hiburan/1.k-pop.png') }}" width="170px" height="170px" alt="make up">
                         <a class="section-title-kategori" href="/entertainment/{entertainment}">k-pop</a>
                     </div>
                 </div>
@@ -29,13 +29,13 @@
                     </div>
                     <div class="container-trending">
                         <div class="bg-hiburan">
-                            <a href="https://internasional.kontan.co.id/news/penggemar-kecewa-saat-bts-umumkan-konser-virtual-di-bulan-ramadhan"><img class="center-hiburan rounded" src="{{ url('assets/image/Hiburan/h1.jpg') }}" width="100%" height="99%" alt="make up"></a>
+                            <a href="https://internasional.kontan.co.id/news/penggemar-kecewa-saat-bts-umumkan-konser-virtual-di-bulan-ramadhan"><img class="center-hiburan rounded" src="{{ asset('assets/image/hiburan/h1.jpg') }}" width="100%" height="99%" alt="make up"></a>
                         </div>
                         <span class="caption-trending">Penggemar kecewa saat BTS umumkan konser virtual di bulan Ramadhan</span>
                     </div>
                     <div class="container-trending">
                         <div class="bg-hiburan">
-                            <a href="https://www.marieclaire.com/culture/a26895105/best-korean-dramas/"><img class="center-hiburan rounded" src="{{ url('assets/image/Hiburan/h2.jpeg') }}" width="100%" height="99%" alt="make up"></a>
+                            <a href="https://www.marieclaire.com/culture/a26895105/best-korean-dramas/"><img class="center-hiburan rounded" src="{{ url('assets/image/hiburan/h2.jpeg') }}" width="100%" height="99%" alt="make up"></a>
                         </div>
                         <span class="caption-trending">The 50 Best Korean Dramas to Get You Completely Hooked</span>
                     </div>

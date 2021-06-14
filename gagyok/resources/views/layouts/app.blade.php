@@ -62,7 +62,7 @@
                             @php
                             $profile = \App\Models\Personalinfo::where('user_id',Auth::user()->id)->first();
                             @endphp
-							<a href="/profile" class="rounded"><img src="{{url('storage/assets/image/profile')}}/{{$profile->user_picture}}" class="rounded" alt="Avatar"  width="20px" height="20px"> <span>{{auth()->user()->name}}</span></a>
+							<a href="/profile" class="rounded"><img src="{{url('storage/assets/image/profile')}}/{{$profile->user_picture}}" class="rounded"  width="20px" height="20px"> <span>{{auth()->user()->name}}</span></a>
                         </div>
                     </div>
                     <div class="row"> 

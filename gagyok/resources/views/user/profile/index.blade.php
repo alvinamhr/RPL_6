@@ -31,7 +31,7 @@
                                 </div>
                             </div>
                             <div class="col-md-12 mb-2">
-                                <img id="preview-image-before-upload" src="{{url('storage/assets/image/profile')}}/{{$profile->user_picture}}" alt="preview image"
+                                <img id="preview-image-before-upload" src="{{asset('storage/assets/image/profile')}}/{{$profile->user_picture}}" alt="preview image"
                                     alt="preview image" width="235px" height="240px">
                             </div>
                             <div class="col-md-12">
