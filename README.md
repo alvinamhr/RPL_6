@@ -154,6 +154,7 @@ Gagyok merupakan aplikasi website yang dibuat sebagai e-commerce yang nantinya a
 # Fungsi CRUD
  ## CREATE
 - Membuat akun pada aplikasi web Gagyok
+- Memasukkan produk ke keranjang
 
 ## READ
 - Membaca input pengguna pada akun pengguna saat login web Gagyok
@@ -163,7 +164,7 @@ Gagyok merupakan aplikasi website yang dibuat sebagai e-commerce yang nantinya a
 - Mengubah kata sandi
 - Mengubah daftar produk yang ada pada keranjang
 - Mengubah profil
-- 
+
 ## DELETE
 - Menghapus barang yang ada pada keranjang
 - Menghapus akun pengguna
