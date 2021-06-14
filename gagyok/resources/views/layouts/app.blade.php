@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Gagyok" />
         <meta name="keywords" content="korean, online shop, korea, k-pop" />
+        <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <!-- favicon -->
         <link rel="shortcut icon" href="{{ asset('assets/image/favicon.png') }}">
@@ -125,6 +126,13 @@
         <script src="{{ asset('js/scrollspy.min.js') }}"></script>
         <!-- Animation Js -->
         <script src="{{ asset('js/aos.js') }}"></script>
+        <script>
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+        </script>
 
         @yield('script')
 

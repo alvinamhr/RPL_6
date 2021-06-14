@@ -16,6 +16,7 @@
                 <div class="container-foto">
                     <form method="POST" enctype="multipart/form-data" id="upload-image" action="{{ url('address/edit') }}" >
                         @csrf
+                        <meta name="csrf-token" content="{{ csrf_token() }}">
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group">
