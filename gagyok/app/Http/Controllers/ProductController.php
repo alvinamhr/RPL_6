@@ -52,7 +52,7 @@ class ProductController extends Controller
         $search = $request->search_text;
 
     // Search in the title and body columns from the posts table
-        $results = Product::where('product_name', 'LIKE', "%{$search}%")->orWhere('product_short_desc', 'LIKE', "%{$search}%")->orWhere('product_long_desc', 'LIKE', "%{$search}%")->orWhere('product_category', 'LIKE', "%{$search}%")->get();
+        $results = Product::where('product_name', 'LIKE', "%".$search."%")->orWhere('product_short_desc', 'LIKE', "%".$search."%")->orWhere('product_long_desc', 'LIKE', "%".$search."%")->orWhere('product_category', 'LIKE', "%".$search."%")->get();
         // dd($results); 
         return view('user.cari',compact("results", "search"));
     }
