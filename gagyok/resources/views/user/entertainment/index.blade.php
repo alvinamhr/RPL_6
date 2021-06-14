@@ -29,20 +29,20 @@
                     </div>
                     <div class="container-trending">
                         <div class="bg-hiburan">
-                            <a href="https://internasional.kontan.co.id/news/penggemar-kecewa-saat-bts-umumkan-konser-virtual-di-bulan-ramadhan"><img class="center-hiburan rounded" src="{{ asset('assets/image/Hiburan/h1.jpg') }}" width="100%" height="99%" alt="make up"></a>
+                            <a href="https://internasional.kontan.co.id/news/penggemar-kecewa-saat-bts-umumkan-konser-virtual-di-bulan-ramadhan"><img class="center-hiburan rounded" src="{{ url('assets/image/Hiburan/h1.jpg') }}" width="100%" height="99%" alt="make up"></a>
                         </div>
                         <span class="caption-trending">Penggemar kecewa saat BTS umumkan konser virtual di bulan Ramadhan</span>
                     </div>
                     <div class="container-trending">
                         <div class="bg-hiburan">
-                            <a href="https://www.marieclaire.com/culture/a26895105/best-korean-dramas/"><img class="center-hiburan rounded" src="{{ asset('assets/image/Hiburan/h2.jpeg') }}" width="100%" height="99%" alt="make up"></a>
+                            <a href="https://www.marieclaire.com/culture/a26895105/best-korean-dramas/"><img class="center-hiburan rounded" src="{{ url('assets/image/Hiburan/h2.jpeg') }}" width="100%" height="99%" alt="make up"></a>
                         </div>
                         <span class="caption-trending">The 50 Best Korean Dramas to Get You Completely Hooked</span>
                     </div>
 
                     <div class="container-trending">
                         <div class="bg-hiburan">
-                            <a href="https://wolipop.detik.com/entertainment-news/d-5375426/mr-queen-dan-10-drama-korea-dengan-rating-tertinggi-cetak-rekor?_ga=2.83442591.825254121.1618424762-1246019677.1615390131"><img class="center-hiburan rounded" src="{{ asset('assets/image/Hiburan/h3.jpeg') }}" width="100%" height="99%" alt="make up"></a>
+                            <a href="https://wolipop.detik.com/entertainment-news/d-5375426/mr-queen-dan-10-drama-korea-dengan-rating-tertinggi-cetak-rekor?_ga=2.83442591.825254121.1618424762-1246019677.1615390131"><img class="center-hiburan rounded" src="{{ url('assets/image/Hiburan/h3.jpeg') }}" width="100%" height="99%" alt="make up"></a>
                         </div>
                         <span class="caption-trending">Mr Queen dan 10 Drama Korea dengan Rating Tertinggi, Cetak Rekor</span>
                     </div>
