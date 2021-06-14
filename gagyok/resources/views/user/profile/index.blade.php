@@ -79,7 +79,7 @@
             <br>
             <div>
                 <button class="address-button">
-                    <a href="/address/create">Tambah Alamat</a> 
+                    <a href="/address/edit">Tambah Alamat</a> 
                 </button>
                 <button class="change-address">
                     <a href="/address/edit">Ubah Alamat</a> 
