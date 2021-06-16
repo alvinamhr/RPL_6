@@ -15,9 +15,9 @@
    | Muhammad Fauzan Ramadhan | G64180117 |
  
  # Team
- ![image](https://user-images.githubusercontent.com/65324407/121304675-da19db80-c926-11eb-84d7-8f709cf82457.png)
+ 
  | **Nama** |  **Role** | **Deskripsi** |
-   | --- | --- |
+   | --- | --- | --- |
    | Alvina Maharani Hasibuan	 | Project Manager | Manage tim dan project, dokumentasi, membuat timeline pengerjaan, analisis kebutuhan pengguna |
    | Andi Muhammad Alifikri | Back- End Develop | Frame work dan database dan semua yang berhubungan di balik layar |
    | Emilia Syafitri | Front- End Develop | Menampilkan user interface di web, mengatur posisi tombol, memberi warna |
