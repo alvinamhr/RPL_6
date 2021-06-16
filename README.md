@@ -148,7 +148,7 @@ Gagyok merupakan aplikasi website yang dibuat sebagai e-commerce yang nantinya a
 ## Use Case Diagram
 ![UML_Use_Case_Diagram_-_Gagyok](https://user-images.githubusercontent.com/65324407/120956978-00047c00-c77f-11eb-8f8b-241c9cca3829.png)
 
-## Diagram Activity
+## Activity Diagram 
 ![Untitled Diagram-Page-1 (2)](https://user-images.githubusercontent.com/65324407/122161768-7ea69b00-ce9c-11eb-8f5a-5403d0bd1749.png)
 
  ## Arsitektur Diagram
