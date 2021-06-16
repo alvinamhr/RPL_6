@@ -148,6 +148,9 @@ Gagyok merupakan aplikasi website yang dibuat sebagai e-commerce yang nantinya a
 ## Use Case Diagram
 ![UML_Use_Case_Diagram_-_Gagyok](https://user-images.githubusercontent.com/65324407/120956978-00047c00-c77f-11eb-8f8b-241c9cca3829.png)
 
+## Diagram Activity
+![Untitled Diagram-Page-1 (2)](https://user-images.githubusercontent.com/65324407/122161768-7ea69b00-ce9c-11eb-8f5a-5403d0bd1749.png)
+
  ## Arsitektur Diagram
  ![image](https://user-images.githubusercontent.com/65324407/120956896-d0ee0a80-c77e-11eb-86a1-50b267ed029f.png)
  
@@ -173,7 +176,7 @@ Gagyok merupakan aplikasi website yang dibuat sebagai e-commerce yang nantinya a
 
 # IMPLEMENTASI
 
- ![image](https://user-images.githubusercontent.com/65324407/121705631-07b97d00-caff-11eb-933a-4d355a9767d9.png)
+![image](https://user-images.githubusercontent.com/65324407/121705631-07b97d00-caff-11eb-933a-4d355a9767d9.png)
 ![image](https://user-images.githubusercontent.com/65324407/121705678-16079900-caff-11eb-9aeb-81d3892f3736.png)
 ![image](https://user-images.githubusercontent.com/65324407/121705721-23248800-caff-11eb-9ae5-11ec5c6f0d0b.png)
 ![image](https://user-images.githubusercontent.com/65324407/121705787-32a3d100-caff-11eb-95d5-7838cba9f15c.png)
@@ -193,6 +196,9 @@ Gagyok merupakan aplikasi website yang dibuat sebagai e-commerce yang nantinya a
  1. Fitur review pengguna masih belum tersedia sehingga pengguna masih belum dapat untuk melakukan ulasan produk
  2. Kedepannya, aplikasi ini akan dilengkapi fitur barcode untuk memudahkan pengguna untuk mengecek orisinilitas produk
  3. *E-money* masih belum tersedia, sehingga pengguna masih belum menimpang uang di aplikasi Gagyok
+
+## Demo App
+https://gagyok.herokuapp.com/
 
 # Collaboration Platform
  ## Trello 
